@@ -506,4 +506,4 @@ file to be you. You can also replace the text of that file, if it doesn't match
 your needs.
 
 At this point, make another commit, and continue to develop your own code based
-on this template.
+on this template!
