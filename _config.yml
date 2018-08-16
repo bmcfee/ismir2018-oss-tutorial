@@ -27,6 +27,7 @@ github_username:  bmcfee
 # Build settings
 markdown: kramdown
 theme: minima
+baseurl: /project-site
 plugins:
   - jekyll-feed
 
