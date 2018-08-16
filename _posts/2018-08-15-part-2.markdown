@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Part 2:  Setting Up Services"
+date:   2018-08-16 15:16:46 -0400
+categories: tutorial
+---
+
+## Set Up GitHub
+Some words about setting up GitHub.
+
+#### Checkpoint
+
+Run:
+{% highlight bash %}
+python --version
+{% endhighlight %}
+
+You should see:
+{% highlight bash %}
+Python 3.6.5
+{% endhighlight %}
+
+[python-download]: https://www.python.org/downloads/

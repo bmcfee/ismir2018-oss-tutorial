@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Part 1:  Installing Tools"
+date:   2018-08-16 15:16:46 -0400
+categories: tutorial
+---
+
+## Install Python
+Some words about installing Python.
+
+Some more words, maybe with [a link][python-download].
+
+#### Checkpoint
+
+Run:
+{% highlight bash %}
+python --version
+{% endhighlight %}
+
+You should see:
+{% highlight bash %}
+Python 3.6.5
+{% endhighlight %}
+
+## Install Conda
+Some words about installing Conda.
+
+#### Checkpoint
+
+etc etc etc
+
+[python-download]: https://www.python.org/downloads/
