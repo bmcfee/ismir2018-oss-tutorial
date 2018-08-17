@@ -19,7 +19,7 @@ First, create a new SSH key by [following these steps][github-ssh-1] – make su
 
 Now, we'll add the key to our GitHub account.  [The steps to do so are here][github-ssh-2] – again, make sure you pick the correct platform!
 
-Finally, let's [test our key out][github-shh-3]!
+Finally, let's verify that your key works!  [The steps are here][github-ssh-3].
 
 #### Checkpoint
 
