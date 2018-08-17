@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Part 2: Setting Up Services | Open Source and Reproducible MIR Research</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Part 2: Setting Up Services" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs." />
+<meta property="og:description" content="Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs." />
+<link rel="canonical" href="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html" />
+<meta property="og:url" content="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html" />
+<meta property="og:site_name" content="Open Source and Reproducible MIR Research" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-15T15:16:46-04:00" />
+<script type="application/ld+json">
+{"description":"Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.","@type":"BlogPosting","url":"http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html","headline":"Part 2: Setting Up Services","dateModified":"2018-08-15T15:16:46-04:00","datePublished":"2018-08-15T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/shablona/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/shablona/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/shablona/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/shablona/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Part 2:  Setting Up Services</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-08-15T15:16:46-04:00" itemprop="datePublished">Aug 15, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Welcome to Part 2!  In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.</p>
+
+<h2 id="set-up-github">Set Up GitHub</h2>
+<p>GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code</p>
+
+<p>Vist <a href="https://github.com">GitHub</a>, and create an account.  Once you’ve got an account, you need to create some SSH keys.</p>
+
+<p>SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit fincky, but we’ll get through it!</p>
+
+<p>First, create a new SSH key by <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">following these steps</a> – make sure to pick the correct platform.</p>
+
+<p>Now, we’ll add the key to our GitHub account.  <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account">The steps to do so are here</a> – again, make sure you pick the correct platform!</p>
+
+<p>Finally, let’s [test our key out][github-shh-3]!</p>
+
+<h4 id="checkpoint">Checkpoint</h4>
+
+<p>Run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh <span class="nt">-T</span> git@github.com</code></pre></figure>
+
+<p>You should see:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Hi &lt;your-username&gt;! You<span class="s1">'ve successfully authenticated, but GitHub does not provide shell access.</span></code></pre></figure>
+
+<h2 id="set-up-travis-ci">Set Up Travis CI</h2>
+<p>Travis CI is a tool for “Continuous Integration”, which is just a fancy word for running the code that tests your software whenever you change your software.
+We won’t get to using Travis for a little bit, but let’s get the setup out of the way now.</p>
+
+<p>Visit <a href="https://travis-ci.org">Travis</a>, and make an account by pressing the <code class="highlighter-rouge">Sign In With GitHub</code> button.</p>
+
+<p>You’ll be asked to authorize Travis to use your Github account.  Do so, and you’ll get redirected to your profile screen.  On your profile screen, press the “Activate” button to finish connecting Travis to you GitHub code.</p>
+
+<p>You’ll be taken to a GitHub page - just press “Approve &amp; Install”!</p>
+
+<h4 id="checkpoint-1">Checkpoint</h4>
+
+<p>No command line here - you should be able to visit <a href="https://travis-ci.org">Travis</a>, and see your name in the upper-right to indicate that you’re logged in.</p>
+
+<h2 id="set-up-readthedocs">Set Up ReadTheDocs</h2>
+<p>ReadTheDocs hosts your documentation, so that people know how to use your software!  We’ll get to ReadTheDocs nearer to the end of the tutorial, but let’s get things set up now.</p>
+
+<p>Visit <a href="https://readthedocs.org">ReadTheDocs</a>, and press <code class="highlighter-rouge">Sign up</code>, and the select <code class="highlighter-rouge">Sign Up With GitHub</code>.  Like with Travis, you’ll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
+ReadTheDocs will also ask you to confirm your email, so open up your email client and do so.</p>
+
+<h4 id="checkpoint-2">Checkpoint</h4>
+
+<p>No command line here either - you should be able to visit <a href="https://readthedocs.org">ReadTheDocs</a> and see your GitHub username in the upper-right to indicate that you’re logged in.</p>
+
+<h2 id="success">Success!</h2>
+
+<p>We’ve set up the various web services we’ll need!  Next is <a href="https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html">Part 3</a>, where we’ll get to the code!</p>
+
+<h3 id="a-note-about-the-internet">A Note About The Internet</h3>
+
+<p>All of the services we’ve go over are on the internet.  There are local tools that can do the same sorts of things that out of the scope of this tutorial.
+If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they’re much less hassle to set up.</p>
+
+
+  </div><a class="u-url" href="/shablona/tutorial/2018/08/15/part-2.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/shablona/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Open Source and Reproducible MIR Research</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Open Source and Reproducible MIR Research</li><li><a class="u-email" href="mailto:brian.mcfee@nyu.edu">brian.mcfee@nyu.edu</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/bmcfee"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#github"></use></svg> <span class="username">bmcfee</span></a></li><li><a href="https://www.twitter.com/functiontelechy"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">functiontelechy</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

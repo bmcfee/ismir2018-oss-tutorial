@@ -1,23 +1,79 @@
 ---
 layout: post
 title:  "Part 2:  Setting Up Services"
-date:   2018-08-16 15:16:46 -0400
+date:   2018-08-15 15:16:46 -0400
 categories: tutorial
 ---
 
+Welcome to Part 2!  In this section we'll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.  
+
+
 ## Set Up GitHub
-Some words about setting up GitHub.
+GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code
+
+Vist [GitHub][github-main], and create an account.  Once you've got an account, you need to create some SSH keys.
+
+SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit fincky, but we'll get through it!
+
+First, create a new SSH key by [following these steps][github-ssh-1] – make sure to pick the correct platform.
+
+Now, we'll add the key to our GitHub account.  [The steps to do so are here][github-ssh-2] – again, make sure you pick the correct platform!
+
+Finally, let's [test our key out][github-shh-3]!
 
 #### Checkpoint
 
 Run:
 {% highlight bash %}
-python --version
+ssh -T git@github.com
 {% endhighlight %}
 
 You should see:
 {% highlight bash %}
-Python 3.6.5
+Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access.
 {% endhighlight %}
 
-[python-download]: https://www.python.org/downloads/
+
+## Set Up Travis CI
+Travis CI is a tool for "Continuous Integration", which is just a fancy word for running the code that tests your software whenever you change your software.
+We won't get to using Travis for a little bit, but let's get the setup out of the way now.
+
+Visit [Travis][travis-main], and make an account by pressing the `Sign In With GitHub` button.
+
+You'll be asked to authorize Travis to use your Github account.  Do so, and you'll get redirected to your profile screen.  On your profile screen, press the "Activate" button to finish connecting Travis to you GitHub code.
+
+You'll be taken to a GitHub page - just press "Approve & Install"!
+
+#### Checkpoint
+
+No command line here - you should be able to visit [Travis][travis-main], and see your name in the upper-right to indicate that you're logged in.
+
+
+## Set Up ReadTheDocs
+ReadTheDocs hosts your documentation, so that people know how to use your software!  We'll get to ReadTheDocs nearer to the end of the tutorial, but let's get things set up now.
+
+Visit [ReadTheDocs][readthedocs-main], and press `Sign up`, and the select `Sign Up With GitHub`.  Like with Travis, you'll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
+ReadTheDocs will also ask you to confirm your email, so open up your email client and do so.
+
+#### Checkpoint
+
+No command line here either - you should be able to visit [ReadTheDocs][readthedocs-main] and see your GitHub username in the upper-right to indicate that you're logged in.
+
+## Success!
+
+We've set up the various web services we'll need!  Next is [Part 3][tutorial-part-3], where we'll get to the code!
+
+### A Note About The Internet
+
+All of the services we've go over are on the internet.  There are local tools that can do the same sorts of things that out of the scope of this tutorial.
+If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they're much less hassle to set up.
+
+[python-download]: https://www.python.org/downloads
+[github-main]: https://github.com
+[github-ssh-1]: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent 
+[github-ssh-2]: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account
+[github-ssh-3]: https://help.github.com/articles/testing-your-ssh-connection
+[travis-main]: https://travis-ci.org
+[readthedocs-main]: https://readthedocs.org
+[tutorial-part-3]: https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html 
+

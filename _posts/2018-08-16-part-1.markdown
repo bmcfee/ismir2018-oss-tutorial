@@ -84,9 +84,10 @@ git version 2.7.4
 
 ## Success!
 
-We've installed everything we'll need on our machines.  In Part 2, we'll set up the various web apps and accounts that we'll need.
+We've installed everything we'll need on our machines.  In [Part 2][tutorial-part-2], we'll set up the various web apps and accounts that we'll need.
 
 [python-download]: https://www.python.org/downloads/
 [wsl-download]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [conda-download]: https://docs.anaconda.com/anaconda/install/
 [git-download]: https://git-scm.com/downloads 
+[tutorial-part-2]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html 
