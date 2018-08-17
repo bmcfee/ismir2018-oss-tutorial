@@ -4,11 +4,17 @@ title:  "Part 1:  Installing Tools"
 date:   2018-08-16 15:16:46 -0400
 categories: tutorial
 ---
+Welcome!  This part of the tutorial will cover installing the tools that you'll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.
 
 ## Install Python
-Some words about installing Python.
+Visit the main [Python page][python-download], and download Python 3.6 or higher.
 
-Some more words, maybe with [a link][python-download].
+Mac users, you very probably have Python 2.7 on your computer – please do go and get Python 3.6.
+
+Linux users, you have some version of Python on your machine – please make sure that you have Python 3.6, and go and get it if not.
+
+Windows users, we _highly_ recommend that you install the [Windows System for Linux][wsl-install] and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
+While you're welcome to use Powershell, we can't guarantee that we'll be able to help you!
 
 #### Checkpoint
 
@@ -22,11 +28,36 @@ You should see:
 Python 3.6.5
 {% endhighlight %}
 
+(You'll see these checkpoints throughout the tutorial.  If you're doing the tutorial with us in person, we'll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something's not working, that's totally OK!  Put a red sticky note on your machine, and we'll come help.)
+
 ## Install Conda
-Some words about installing Conda.
+
+Conda is a package manager for Python code and lower-level code that supports Python.
+Anaconda is a version of Conda that comes with lots and lots of pre-installed packages for scientific computing.
+We're going to use Anaconda so we don't have to go digging for obscure Fortran and C libraries.
+
+Visit the [Anaconda website][conda-download], and follow the steps for your platform.
+
+Windows users, please use your Linux install, and install the Linux version!
+
+**Gotchas:**
+- If you're using `zsh` or another non-bash shell, you'll need to add things to your PATH yourself.  We recommend moving the lines that the installer added from your `.bash_profile` file to your `.zshrc` file
+- If you're using a `virtualenv`, you'll need to turn it off before installing Anaconda!  Conda in general does not play well with virtualenvs.
 
 #### Checkpoint
+
+Run:
+{% highlight bash %}
+conda --version
+{% endhighlight %}
+
+You should see:
+{% highlight bash %}
+conda 4.5.10
+{% endhighlight %}
 
 etc etc etc
 
 [python-download]: https://www.python.org/downloads/
+[wsl-download]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+[conda-download]: https://docs.anaconda.com/anaconda/install/

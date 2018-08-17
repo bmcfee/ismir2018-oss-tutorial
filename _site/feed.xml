@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-16T16:34:08-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
-&lt;p&gt;Some words about installing Python.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-17T15:19:05-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
-&lt;p&gt;Some more words, maybe with &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;a link&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
+&lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
+
+&lt;p&gt;Mac users, you very probably have Python 2.7 on your computer – please do go and get Python 3.6.&lt;/p&gt;
+
+&lt;p&gt;Linux users, you have some version of Python on your machine – please make sure that you have Python 3.6, and go and get it if not.&lt;/p&gt;
+
+&lt;p&gt;Windows users, we &lt;em&gt;highly&lt;/em&gt; recommend that you install the [Windows System for Linux][wsl-install] and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
+While you’re welcome to use Powershell, we can’t guarantee that we’ll be able to help you!&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -13,12 +20,35 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Python 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)&lt;/p&gt;
+
 &lt;h2 id=&quot;install-conda&quot;&gt;Install Conda&lt;/h2&gt;
-&lt;p&gt;Some words about installing Conda.&lt;/p&gt;
+
+&lt;p&gt;Conda is a package manager for Python code and lower-level code that supports Python.
+Anaconda is a version of Conda that comes with lots and lots of pre-installed packages for scientific computing.
+We’re going to use Anaconda so we don’t have to go digging for obscure Fortran and C libraries.&lt;/p&gt;
+
+&lt;p&gt;Visit the &lt;a href=&quot;https://docs.anaconda.com/anaconda/install/&quot;&gt;Anaconda website&lt;/a&gt;, and follow the steps for your platform.&lt;/p&gt;
+
+&lt;p&gt;Windows users, please use your Linux install, and install the Linux version!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gotchas:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If you’re using &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; or another non-bash shell, you’ll need to add things to your PATH yourself.  We recommend moving the lines that the installer added from your &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; file to your &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file&lt;/li&gt;
+  &lt;li&gt;If you’re using a &lt;code class=&quot;highlighter-rouge&quot;&gt;virtualenv&lt;/code&gt;, you’ll need to turn it off before installing Anaconda!  Conda in general does not play well with virtualenvs.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;etc etc etc&lt;/p&gt;</content><author><name></name></author><summary type="html">Install Python Some words about installing Python.</summary></entry><entry><title type="html">Part 2: Setting Up Services</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-2</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html">&lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda 4.5.10&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;etc etc etc&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Python programming language, the Conda package manager, and the git version control system.</summary></entry><entry><title type="html">Part 2: Setting Up Services</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-2</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html">&lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
 &lt;p&gt;Some words about setting up GitHub.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
