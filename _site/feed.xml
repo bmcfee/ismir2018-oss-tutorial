@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-17T15:19:05-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-17T15:30:31-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -48,7 +48,33 @@ We’re going to use Anaconda so we don’t have to go digging for obscure Fortr
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda 4.5.10&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;etc etc etc&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Python programming language, the Conda package manager, and the git version control system.</summary></entry><entry><title type="html">Part 2: Setting Up Services</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-2</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html">&lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
+&lt;h2 id=&quot;install-git&quot;&gt;Install git&lt;/h2&gt;
+
+&lt;p&gt;git is a version control system – it keeps track of changes that you make to your code.
+This makes it hard for you to lose changes that you have made, and makes it easy for you to return to a working version of your code.
+git in particular also makes it easy to collaborate with other folks.&lt;/p&gt;
+
+&lt;p&gt;Visit the &lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;git website&lt;/a&gt;, and follow the steps for your platform.&lt;/p&gt;
+
+&lt;p&gt;Linux users, you may already have git installed - please make sure that you’re on version 2.15 or or higher.&lt;/p&gt;
+
+&lt;p&gt;Windows users, please use your Linux install, and install the Linux version!  (We’ll stop reminding you about this soon, we promise.)&lt;/p&gt;
+
+&lt;p&gt;We recommend against using a graphical interface for git – mostly because we won’t be able to help you with it in this tutorial!&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git version 2.7.4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
+
+&lt;p&gt;We’ve installed everything we’ll need on our machines.  In Part 2, we’ll set up the various web apps and accounts that we’ll need.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Python programming language, the Conda package manager, and the git version control system.</summary></entry><entry><title type="html">Part 2: Setting Up Services</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-2</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-2.html">&lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
 &lt;p&gt;Some words about setting up GitHub.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;

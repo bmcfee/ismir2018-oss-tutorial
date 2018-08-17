@@ -56,8 +56,37 @@ You should see:
 conda 4.5.10
 {% endhighlight %}
 
-etc etc etc
+## Install git
+
+git is a version control system – it keeps track of changes that you make to your code.
+This makes it hard for you to lose changes that you have made, and makes it easy for you to return to a working version of your code.
+git in particular also makes it easy to collaborate with other folks.
+
+Visit the [git website][git-download], and follow the steps for your platform.
+
+Linux users, you may already have git installed - please make sure that you're on version 2.15 or or higher.
+
+Windows users, please use your Linux install, and install the Linux version!  (We'll stop reminding you about this soon, we promise.)
+
+We recommend against using a graphical interface for git – mostly because we won't be able to help you with it in this tutorial!
+
+#### Checkpoint
+
+Run:
+{% highlight bash %}
+git --version
+{% endhighlight %}
+
+You should see:
+{% highlight bash %}
+git version 2.7.4
+{% endhighlight %}
+
+## Success!
+
+We've installed everything we'll need on our machines.  In Part 2, we'll set up the various web apps and accounts that we'll need.
 
 [python-download]: https://www.python.org/downloads/
 [wsl-download]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [conda-download]: https://docs.anaconda.com/anaconda/install/
+[git-download]: https://git-scm.com/downloads 
