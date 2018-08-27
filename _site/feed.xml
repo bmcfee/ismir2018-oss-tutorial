@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-27T15:18:18-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-27T16:43:15-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -267,7 +267,7 @@ Date:   &amp;lt;today&amp;gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In [Part 4][tutorial-part-4], we’ll get into the details of our Python code and how it all fits together.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.</summary></entry><entry><title type="html">Part 5: Tests</title><link href="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html" rel="alternate" type="text/html" title="Part 5:  Tests" /><published>2018-08-13T15:16:46-04:00</published><updated>2018-08-13T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/13/part-5</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html">&lt;p&gt;Hello &amp;amp; welcome to Part 5!  This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.&lt;/p&gt;
+&lt;p&gt;We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-4.html&quot;&gt;Part 4&lt;/a&gt;, we’ll get into the details of our Python code and how it all fits together.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.</summary></entry><entry><title type="html">Part 5: Tests</title><link href="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html" rel="alternate" type="text/html" title="Part 5:  Tests" /><published>2018-08-13T15:16:46-04:00</published><updated>2018-08-13T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/13/part-5</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html">&lt;p&gt;Hello &amp;amp; welcome to Part 5!  This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.&lt;/p&gt;
 
 &lt;h2 id=&quot;why-shall-we-test-our-code&quot;&gt;Why Shall We Test Our Code?&lt;/h2&gt;
 
@@ -396,4 +396,57 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  This is the last bit of the tutorial proper – thanks for following along!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary></entry></feed>
+&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-7.html&quot;&gt;Part 7&lt;/a&gt;, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary></entry><entry><title type="html">Part 7: Ecosystem</title><link href="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html" rel="alternate" type="text/html" title="Part 7:  Ecosystem" /><published>2018-08-11T15:16:46-04:00</published><updated>2018-08-11T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/11/part-7</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html">&lt;p&gt;Hello, it’s Part 7!  We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Unlike the first six parts, this will be much more interactive and, after we get one thing running, will be without checkpoints.  Let’s go!&lt;/p&gt;
+
+&lt;h2 id=&quot;get-jupyter-running&quot;&gt;Get Jupyter Running&lt;/h2&gt;
+
+&lt;p&gt;Jupyter is a tool for prototyping and experimenting.  It’s like a ultra-powerful command line - you can edit past commands, run them in any order, and so on.  It should have come with your conda install, so try running &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter notebook&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Yowza&lt;/em&gt;, that should have just opened a web browser!  Press the &lt;strong&gt;New&lt;/strong&gt; button in the upper right to create a new notebook – choose &lt;strong&gt;Python 3&lt;/strong&gt; if you’re given a choice of which Python to use.&lt;/p&gt;
+
+&lt;p&gt;Now you’ve got a notebook!  This just runs Python.  Try a few commands.  You can put more than one command in a cell, too!&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;run &lt;code class=&quot;highlighter-rouge&quot;&gt;print(&quot;Hello Jupyter&quot;)&lt;/code&gt; in a cell in your notebook.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You should see:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Hello Jupyter&lt;/code&gt; output in your notebook!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;not-so-fast-rabbit&quot;&gt;Not So Fast, Rabbit&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/1iv8Ucb2bRjqi8G9Ry/giphy.gif&quot; alt=&quot;bugs loves notebooks&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notebooks are great for hacking and experimenting.  But they’re not your final output!  And taking a bit of care with your notebooks will make moving your experimental code to a module ‘way easier:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Always name your notebooks!  Even &lt;code class=&quot;highlighter-rouge&quot;&gt;scratchpad-2018-09-23.ipynb&lt;/code&gt; is better than &lt;code class=&quot;highlighter-rouge&quot;&gt;untitled.ipynb&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;You should be able to run all your cells in order, and have things work!&lt;/li&gt;
+  &lt;li&gt;Never run things out of order.  If you find yourself having to “just” run cell 3 before cell 2, stop and move your code around.&lt;/li&gt;
+  &lt;li&gt;Keep all your imports at the top of your notebook.&lt;/li&gt;
+  &lt;li&gt;If you define a function, move it up to the top - and only have one function per cell.&lt;/li&gt;
+  &lt;li&gt;Be &lt;em&gt;very careful&lt;/em&gt; with variable names.  Each notebook only has one namespace … so if you call something &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; in one cell, you could end up referring to that same &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; 10 cells in the future by accident.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-ecosystem&quot;&gt;The Ecosystem&lt;/h2&gt;
+
+&lt;p&gt;OK, now let’s take a look at some things!  We’re going to cover the following modules.  Most of them should have come with your conda installation.  If you don’t have them, exit Jupyter, run &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install &amp;lt;package-name&amp;gt;&lt;/code&gt;, and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;jupyter notebook&lt;/code&gt; again.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.numpy.org/&quot;&gt;numpy&lt;/a&gt;, &lt;a href=&quot;https://www.scipy.org/&quot;&gt;scipy&lt;/a&gt;, &lt;a href=&quot;https://matplotlib.org&quot;&gt;matplotlib&lt;/a&gt;:  The trifecta at the core of scientific Python development.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://librosa.github.io/&quot;&gt;librosa&lt;/a&gt;:  Audio analysis &amp;amp; processing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://craffel.github.io/mir_eval/&quot;&gt;mir_eval&lt;/a&gt;:  Evaluating MIR systems.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/marl/jams&quot;&gt;jams&lt;/a&gt;:  Ultra-flexible annotation format.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/craffel/pretty-midi&quot;&gt;prettymidi&lt;/a&gt;: Midi manipulation.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://web.mit.edu/music21/&quot;&gt;music21&lt;/a&gt;: Symbolic &amp;amp; musicological tools.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pysoundfile.readthedocs.io/en/0.9.0/&quot;&gt;soundfile&lt;/a&gt;: Read &amp;amp; write audio.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
+
+&lt;p&gt;We’ve gotten Jupyter working, added some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  Read on to Part 8 for the last section and next steps!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello, it’s Part 7! We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.</summary></entry></feed>

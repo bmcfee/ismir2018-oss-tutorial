@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "Part 7:  Ecosystem"
+date:   2018-08-11 15:16:46 -0400
+categories: tutorial
+---
+Hello, it's Part 7!  We've gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.  
+
+Unlike the first six parts, this will be much more interactive and, after we get one thing running, will be without checkpoints.  Let's go!
+
+## Get Jupyter Running
+
+Jupyter is a tool for prototyping and experimenting.  It's like a ultra-powerful command line - you can edit past commands, run them in any order, and so on.  It should have come with your conda install, so try running `jupyter notebook`.
+
+_Yowza_, that should have just opened a web browser!  Press the **New** button in the upper right to create a new notebook – choose **Python 3** if you're given a choice of which Python to use.
+
+Now you've got a notebook!  This just runs Python.  Try a few commands.  You can put more than one command in a cell, too!
+
+
+#### Checkpoint
+
+- run `print("Hello Jupyter")` in a cell in your notebook.
+
+You should see:
+- `Hello Jupyter` output in your notebook!
+
+
+## Not So Fast, Rabbit
+
+![bugs loves notebooks](https://media.giphy.com/media/1iv8Ucb2bRjqi8G9Ry/giphy.gif)
+
+Notebooks are great for hacking and experimenting.  But they're not your final output!  And taking a bit of care with your notebooks will make moving your experimental code to a module 'way easier:
+- Always name your notebooks!  Even `scratchpad-2018-09-23.ipynb` is better than `untitled.ipynb`.
+- You should be able to run all your cells in order, and have things work!
+- Never run things out of order.  If you find yourself having to "just" run cell 3 before cell 2, stop and move your code around.
+- Keep all your imports at the top of your notebook.
+- If you define a function, move it up to the top - and only have one function per cell.
+- Be _very careful_ with variable names.  Each notebook only has one namespace ... so if you call something `result` in one cell, you could end up referring to that same `result` 10 cells in the future by accident.
+
+
+## The Ecosystem
+
+OK, now let's take a look at some things!  We're going to cover the following modules.  Most of them should have come with your conda installation.  If you don't have them, exit Jupyter, run `conda install <package-name>`, and then run `jupyter notebook` again.
+
+- [numpy][numpy], [scipy][scipy], [matplotlib][matplotlib]:  The trifecta at the core of scientific Python development.
+- [librosa][librosa]:  Audio analysis & processing.
+- [mir_eval][mir_eval]:  Evaluating MIR systems.
+- [jams][jams]:  Ultra-flexible annotation format.
+- [prettymidi][prettymidi]: Midi manipulation.
+- [music21][music21]: Symbolic & musicological tools.
+- [soundfile][soundfile]: Read & write audio.
+
+
+## Success!
+
+We've gotten Jupyter working, added some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  Read on to Part 8 for the last section and next steps!
+
+[numpy]: http://www.numpy.org/
+[scipy]: https://www.scipy.org/
+[matplotlib]: https://matplotlib.org
+[librosa]: https://librosa.github.io/
+[mir_eval]: http://craffel.github.io/mir_eval/
+[jams]: https://github.com/marl/jams
+[prettymidi]: https://github.com/craffel/pretty-midi
+[music21]: http://web.mit.edu/music21/
+[soundfile]: https://pysoundfile.readthedocs.io/en/0.9.0/

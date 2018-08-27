@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Part 7: Ecosystem | Open Source and Reproducible MIR Research</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Part 7: Ecosystem" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hello, it’s Part 7! We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem." />
+<meta property="og:description" content="Hello, it’s Part 7! We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem." />
+<link rel="canonical" href="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html" />
+<meta property="og:url" content="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html" />
+<meta property="og:site_name" content="Open Source and Reproducible MIR Research" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-11T15:16:46-04:00" />
+<script type="application/ld+json">
+{"description":"Hello, it’s Part 7! We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.","@type":"BlogPosting","url":"http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html","headline":"Part 7: Ecosystem","dateModified":"2018-08-11T15:16:46-04:00","datePublished":"2018-08-11T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/shablona/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/shablona/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/shablona/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/shablona/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Part 7:  Ecosystem</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-08-11T15:16:46-04:00" itemprop="datePublished">Aug 11, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Hello, it’s Part 7!  We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.</p>
+
+<p>Unlike the first six parts, this will be much more interactive and, after we get one thing running, will be without checkpoints.  Let’s go!</p>
+
+<h2 id="get-jupyter-running">Get Jupyter Running</h2>
+
+<p>Jupyter is a tool for prototyping and experimenting.  It’s like a ultra-powerful command line - you can edit past commands, run them in any order, and so on.  It should have come with your conda install, so try running <code class="highlighter-rouge">jupyter notebook</code>.</p>
+
+<p><em>Yowza</em>, that should have just opened a web browser!  Press the <strong>New</strong> button in the upper right to create a new notebook – choose <strong>Python 3</strong> if you’re given a choice of which Python to use.</p>
+
+<p>Now you’ve got a notebook!  This just runs Python.  Try a few commands.  You can put more than one command in a cell, too!</p>
+
+<h4 id="checkpoint">Checkpoint</h4>
+
+<ul>
+  <li>run <code class="highlighter-rouge">print("Hello Jupyter")</code> in a cell in your notebook.</li>
+</ul>
+
+<p>You should see:</p>
+<ul>
+  <li><code class="highlighter-rouge">Hello Jupyter</code> output in your notebook!</li>
+</ul>
+
+<h2 id="not-so-fast-rabbit">Not So Fast, Rabbit</h2>
+
+<p><img src="https://media.giphy.com/media/1iv8Ucb2bRjqi8G9Ry/giphy.gif" alt="bugs loves notebooks" /></p>
+
+<p>Notebooks are great for hacking and experimenting.  But they’re not your final output!  And taking a bit of care with your notebooks will make moving your experimental code to a module ‘way easier:</p>
+<ul>
+  <li>Always name your notebooks!  Even <code class="highlighter-rouge">scratchpad-2018-09-23.ipynb</code> is better than <code class="highlighter-rouge">untitled.ipynb</code>.</li>
+  <li>You should be able to run all your cells in order, and have things work!</li>
+  <li>Never run things out of order.  If you find yourself having to “just” run cell 3 before cell 2, stop and move your code around.</li>
+  <li>Keep all your imports at the top of your notebook.</li>
+  <li>If you define a function, move it up to the top - and only have one function per cell.</li>
+  <li>Be <em>very careful</em> with variable names.  Each notebook only has one namespace … so if you call something <code class="highlighter-rouge">result</code> in one cell, you could end up referring to that same <code class="highlighter-rouge">result</code> 10 cells in the future by accident.</li>
+</ul>
+
+<h2 id="the-ecosystem">The Ecosystem</h2>
+
+<p>OK, now let’s take a look at some things!  We’re going to cover the following modules.  Most of them should have come with your conda installation.  If you don’t have them, exit Jupyter, run <code class="highlighter-rouge">conda install &lt;package-name&gt;</code>, and then run <code class="highlighter-rouge">jupyter notebook</code> again.</p>
+
+<ul>
+  <li><a href="http://www.numpy.org/">numpy</a>, <a href="https://www.scipy.org/">scipy</a>, <a href="https://matplotlib.org">matplotlib</a>:  The trifecta at the core of scientific Python development.</li>
+  <li><a href="https://librosa.github.io/">librosa</a>:  Audio analysis &amp; processing.</li>
+  <li><a href="http://craffel.github.io/mir_eval/">mir_eval</a>:  Evaluating MIR systems.</li>
+  <li><a href="https://github.com/marl/jams">jams</a>:  Ultra-flexible annotation format.</li>
+  <li><a href="https://github.com/craffel/pretty-midi">prettymidi</a>: Midi manipulation.</li>
+  <li><a href="http://web.mit.edu/music21/">music21</a>: Symbolic &amp; musicological tools.</li>
+  <li><a href="https://pysoundfile.readthedocs.io/en/0.9.0/">soundfile</a>: Read &amp; write audio.</li>
+</ul>
+
+<h2 id="success">Success!</h2>
+
+<p>We’ve gotten Jupyter working, added some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  Read on to Part 8 for the last section and next steps!</p>
+
+
+  </div><a class="u-url" href="/shablona/tutorial/2018/08/11/part-7.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/shablona/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Open Source and Reproducible MIR Research</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Open Source and Reproducible MIR Research</li><li><a class="u-email" href="mailto:brian.mcfee@nyu.edu">brian.mcfee@nyu.edu</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/bmcfee"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#github"></use></svg> <span class="username">bmcfee</span></a></li><li><a href="https://www.twitter.com/functiontelechy"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">functiontelechy</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

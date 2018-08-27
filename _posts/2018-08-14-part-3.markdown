@@ -151,4 +151,4 @@ It also means that the online, "deployed" version of master is your primary vers
 We've used git to check out code, modify it, and commit our modifications.  We've also used conda to install the code we need, in an environment that is specific to this project.  In [Part 4][tutorial-part-4], we'll get into the details of our Python code and how it all fits together.
 
 [github-flow]: https://guides.github.com/introduction/flow/
-[tutorial-part-2]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-4.html 
+[tutorial-part-4]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-4.html 
