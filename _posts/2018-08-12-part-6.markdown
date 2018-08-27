@@ -6,47 +6,61 @@ categories: tutorial
 ---
 Hello & welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.
 
-## Make Some Docs
+## Build Some Docs
 
 Documentation is super important!  Good docs help people use and understand your software.  This includes both readme files that help people get started, and detailed docs for each method.
 
 We're going to use a thing called Sphinx to generate our documentation from the comments we leave in our code.  Sphinx is really complicated and powerful, but we'll be using it in a pretty simple way.
 
-`cd` into the `doc` folder, and take a look around.  You'll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run `make html` – this will generate all your documentation for you.
+`cd` into the `doc` folder, and take a look around.  You'll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run `make html` – this will generate all your documentation for you, in `_build/html`.
 
 #### Checkpoint
 
-Run, from the `doc` folder:
-{% highlight bash %}
-make html
-{% endhighlight %}
+- Open `_build/html/index.html` in a web browser.
 
 You should see:
-{% highlight bash %}
-{% endhighlight %}
+- A working webpage!
 
 
-## Get Travis Working
+## Get ReadTheDocs Working
 
-We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new branches to GitHub.  This is useful because it means that you can't forget to run your tests – and it means that other people's PRs will have tests run against them.
+We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.
 
-Travis is controlled by a file called `.travis.yml`.  This file tells the Travis servers what to do with your code - in our case, just run the tests.
+#### Checkpoint
 
-We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the gruntwork of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
+-- invoke Brian McFee --
 
-Let's modify this to run `flake8` as well.  `flake8` checks your code style, to make sure that you're writing code that is easy to read.
 
-All you need to do is add `flake8` below the call to `pytest`, then commit and push your code.
+## Write Some Docs
 
-Then, open up Travis, and you can see your tests run!
+Rad, so we know how to make our docs, this is great.  But where do all those words come from?
 
-**Gotchas:**
-- Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.
+It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!
 
-TODO ADD SOME WORDS HERE AND A BETTER TEST TODO
+Find <function> in <file> - you'll see that it does not have any documentation.  Take a look at <other-function> - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.
+
+Based on this example, add a docstring to <function>.  Once you're happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!
+
+#### Checkpoint
+
+- Visit your site on ReadTheDocs
+
+You should see:
+- A working webpage, with your new docstring!
+
+
+## README and LICENSE
+
+We've got formal documentation working, hooray!  You should also look at two other files.  README.md is your readme file – it's the first thing that people see when they visit your project on GitHub.
+
+In general, your README should provided an overview of your project, how to install it, and maybe give one or two very simple examples.  The [librosa][librosa-github] README is a good example.
+
+Finally, there's LICENSE.md.  It turns out that if f you publish code to GitHub without an explicit license, it is not open source.
+
+We _highly_ recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called `LICENSE.md` in your repository.  You can take a look at https://choosealicense.com to help you pick one - we recommend the MIT license, ourselves.
 
 ## Success!
 
-We've added two tests, and gotten comfortable running pytest.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
+We've added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  This is the last bit of the tutorial proper – thanks for following along!
 
-[tutorial-part-6]: https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html 
+[librosa-github]: https://github.com/librosa/librosa

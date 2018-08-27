@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-27T13:53:37-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-27T14:25:31-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -336,43 +336,64 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;We’ve added two tests, and gotten comfortable running pytest.  Furthermore, we’ve enabled Travis, so that our tests always run when we push code to GitHub.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html&quot;&gt;Part 6&lt;/a&gt;, we’ll set up our documentation so that it builds automatically, and write some new docs.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.</summary></entry><entry><title type="html">Part 6: Documentation</title><link href="http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html" rel="alternate" type="text/html" title="Part 6:  Documentation" /><published>2018-08-12T15:16:46-04:00</published><updated>2018-08-12T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/12/part-6</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html">&lt;p&gt;Hello &amp;amp; welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.&lt;/p&gt;
 
-&lt;h2 id=&quot;make-some-docs&quot;&gt;Make Some Docs&lt;/h2&gt;
+&lt;h2 id=&quot;build-some-docs&quot;&gt;Build Some Docs&lt;/h2&gt;
 
 &lt;p&gt;Documentation is super important!  Good docs help people use and understand your software.  This includes both readme files that help people get started, and detailed docs for each method.&lt;/p&gt;
 
 &lt;p&gt;We’re going to use a thing called Sphinx to generate our documentation from the comments we leave in our code.  Sphinx is really complicated and powerful, but we’ll be using it in a pretty simple way.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and take a look around.  You’ll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run &lt;code class=&quot;highlighter-rouge&quot;&gt;make html&lt;/code&gt; – this will generate all your documentation for you.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and take a look around.  You’ll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run &lt;code class=&quot;highlighter-rouge&quot;&gt;make html&lt;/code&gt; – this will generate all your documentation for you, in &lt;code class=&quot;highlighter-rouge&quot;&gt;_build/html&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run, from the &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;make html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;h2 id=&quot;get-travis-working&quot;&gt;Get Travis Working&lt;/h2&gt;
-
-&lt;p&gt;We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new branches to GitHub.  This is useful because it means that you can’t forget to run your tests – and it means that other people’s PRs will have tests run against them.&lt;/p&gt;
-
-&lt;p&gt;Travis is controlled by a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt;.  This file tells the Travis servers what to do with your code - in our case, just run the tests.&lt;/p&gt;
-
-&lt;p&gt;We’ve written the file for you.  Let’s take a quick look at it.  The big &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; block handles the gruntwork of installing conda, updating it, and setting up our environment.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;script&lt;/code&gt; block is what Travis runs.  We currently just run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let’s modify this to run &lt;code class=&quot;highlighter-rouge&quot;&gt;flake8&lt;/code&gt; as well.  &lt;code class=&quot;highlighter-rouge&quot;&gt;flake8&lt;/code&gt; checks your code style, to make sure that you’re writing code that is easy to read.&lt;/p&gt;
-
-&lt;p&gt;All you need to do is add &lt;code class=&quot;highlighter-rouge&quot;&gt;flake8&lt;/code&gt; below the call to &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;, then commit and push your code.&lt;/p&gt;
-
-&lt;p&gt;Then, open up Travis, and you can see your tests run!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Gotchas:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.&lt;/li&gt;
+  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;_build/html/index.html&lt;/code&gt; in a web browser.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;TODO ADD SOME WORDS HERE AND A BETTER TEST TODO&lt;/p&gt;
+&lt;p&gt;You should see:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A working webpage!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;get-readthedocs-working&quot;&gt;Get ReadTheDocs Working&lt;/h2&gt;
+
+&lt;p&gt;We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;– invoke Brian McFee –&lt;/p&gt;
+
+&lt;h2 id=&quot;write-some-docs&quot;&gt;Write Some Docs&lt;/h2&gt;
+
+&lt;p&gt;Rad, so we know how to make our docs, this is great.  But where do all those words come from?&lt;/p&gt;
+
+&lt;p&gt;It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!&lt;/p&gt;
+
+&lt;p&gt;Find &lt;function&gt; in &lt;file&gt; - you'll see that it does not have any documentation.  Take a look at &lt;other-function&gt; - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.&lt;/other-function&gt;&lt;/file&gt;&lt;/function&gt;&lt;/p&gt;
+
+&lt;p&gt;Based on this example, add a docstring to &lt;function&gt;.  Once you're happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!&lt;/function&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Visit your site on ReadTheDocs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You should see:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A working webpage, with your new docstring!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;readme-and-license&quot;&gt;README and LICENSE&lt;/h2&gt;
+
+&lt;p&gt;We’ve got formal documentation working, hooray!  You should also look at two other files.  README.md is your readme file – it’s the first thing that people see when they visit your project on GitHub.&lt;/p&gt;
+
+&lt;p&gt;In general, your README should provided an overview of your project, how to install it, and maybe give one or two very simple examples.  The &lt;a href=&quot;https://github.com/librosa/librosa&quot;&gt;librosa&lt;/a&gt; README is a good example.&lt;/p&gt;
+
+&lt;p&gt;Finally, there’s LICENSE.md.  It turns out that if f you publish code to GitHub without an explicit license, it is not open source.&lt;/p&gt;
+
+&lt;p&gt;We &lt;em&gt;highly&lt;/em&gt; recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;LICENSE.md&lt;/code&gt; in your repository.  You can take a look at https://choosealicense.com to help you pick one - we recommend the MIT license, ourselves.&lt;/p&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve added two tests, and gotten comfortable running pytest.  Furthermore, we’ve enabled Travis, so that our tests always run when we push code to GitHub.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html&quot;&gt;Part 6&lt;/a&gt;, we’ll set up our documentation so that it builds automatically, and write some new docs.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary></entry></feed>
+&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  This is the last bit of the tutorial proper – thanks for following along!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary></entry></feed>

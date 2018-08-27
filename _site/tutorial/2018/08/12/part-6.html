@@ -47,46 +47,67 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Hello &amp; welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</p>
 
-<h2 id="make-some-docs">Make Some Docs</h2>
+<h2 id="build-some-docs">Build Some Docs</h2>
 
 <p>Documentation is super important!  Good docs help people use and understand your software.  This includes both readme files that help people get started, and detailed docs for each method.</p>
 
 <p>We’re going to use a thing called Sphinx to generate our documentation from the comments we leave in our code.  Sphinx is really complicated and powerful, but we’ll be using it in a pretty simple way.</p>
 
-<p><code class="highlighter-rouge">cd</code> into the <code class="highlighter-rouge">doc</code> folder, and take a look around.  You’ll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run <code class="highlighter-rouge">make html</code> – this will generate all your documentation for you.</p>
+<p><code class="highlighter-rouge">cd</code> into the <code class="highlighter-rouge">doc</code> folder, and take a look around.  You’ll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run <code class="highlighter-rouge">make html</code> – this will generate all your documentation for you, in <code class="highlighter-rouge">_build/html</code>.</p>
 
 <h4 id="checkpoint">Checkpoint</h4>
 
-<p>Run, from the <code class="highlighter-rouge">doc</code> folder:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">make html</code></pre></figure>
-
-<p>You should see:</p>
-
-<h2 id="get-travis-working">Get Travis Working</h2>
-
-<p>We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new branches to GitHub.  This is useful because it means that you can’t forget to run your tests – and it means that other people’s PRs will have tests run against them.</p>
-
-<p>Travis is controlled by a file called <code class="highlighter-rouge">.travis.yml</code>.  This file tells the Travis servers what to do with your code - in our case, just run the tests.</p>
-
-<p>We’ve written the file for you.  Let’s take a quick look at it.  The big <code class="highlighter-rouge">install</code> block handles the gruntwork of installing conda, updating it, and setting up our environment.  The <code class="highlighter-rouge">script</code> block is what Travis runs.  We currently just run <code class="highlighter-rouge">pytest</code>.</p>
-
-<p>Let’s modify this to run <code class="highlighter-rouge">flake8</code> as well.  <code class="highlighter-rouge">flake8</code> checks your code style, to make sure that you’re writing code that is easy to read.</p>
-
-<p>All you need to do is add <code class="highlighter-rouge">flake8</code> below the call to <code class="highlighter-rouge">pytest</code>, then commit and push your code.</p>
-
-<p>Then, open up Travis, and you can see your tests run!</p>
-
-<p><strong>Gotchas:</strong></p>
 <ul>
-  <li>Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.</li>
+  <li>Open <code class="highlighter-rouge">_build/html/index.html</code> in a web browser.</li>
 </ul>
 
-<p>TODO ADD SOME WORDS HERE AND A BETTER TEST TODO</p>
+<p>You should see:</p>
+<ul>
+  <li>A working webpage!</li>
+</ul>
+
+<h2 id="get-readthedocs-working">Get ReadTheDocs Working</h2>
+
+<p>We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.</p>
+
+<h4 id="checkpoint-1">Checkpoint</h4>
+
+<p>– invoke Brian McFee –</p>
+
+<h2 id="write-some-docs">Write Some Docs</h2>
+
+<p>Rad, so we know how to make our docs, this is great.  But where do all those words come from?</p>
+
+<p>It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!</p>
+
+<p>Find <function> in <file> - you'll see that it does not have any documentation.  Take a look at <other-function> - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.</other-function></file></function></p>
+
+<p>Based on this example, add a docstring to <function>.  Once you're happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!</function></p>
+
+<h4 id="checkpoint-2">Checkpoint</h4>
+
+<ul>
+  <li>Visit your site on ReadTheDocs</li>
+</ul>
+
+<p>You should see:</p>
+<ul>
+  <li>A working webpage, with your new docstring!</li>
+</ul>
+
+<h2 id="readme-and-license">README and LICENSE</h2>
+
+<p>We’ve got formal documentation working, hooray!  You should also look at two other files.  README.md is your readme file – it’s the first thing that people see when they visit your project on GitHub.</p>
+
+<p>In general, your README should provided an overview of your project, how to install it, and maybe give one or two very simple examples.  The <a href="https://github.com/librosa/librosa">librosa</a> README is a good example.</p>
+
+<p>Finally, there’s LICENSE.md.  It turns out that if f you publish code to GitHub without an explicit license, it is not open source.</p>
+
+<p>We <em>highly</em> recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called <code class="highlighter-rouge">LICENSE.md</code> in your repository.  You can take a look at https://choosealicense.com to help you pick one - we recommend the MIT license, ourselves.</p>
 
 <h2 id="success">Success!</h2>
 
-<p>We’ve added two tests, and gotten comfortable running pytest.  Furthermore, we’ve enabled Travis, so that our tests always run when we push code to GitHub.  In <a href="https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html">Part 6</a>, we’ll set up our documentation so that it builds automatically, and write some new docs.</p>
+<p>We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  This is the last bit of the tutorial proper – thanks for following along!</p>
 
 
   </div><a class="u-url" href="/shablona/tutorial/2018/08/12/part-6.html" hidden></a>
