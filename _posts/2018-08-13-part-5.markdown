@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "Part 5:  Tests"
+date:   2018-08-13 15:16:46 -0400
+categories: tutorial
+---
+Hello & welcome to Part 5!  This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.
+
+## Why Shall We Test Our Code?
+
+![why shall we test our code](https://media.giphy.com/media/s93TL62lMy7cI/giphy.gif)
+
+Tests make your life easier and give you confidence in your code.  Software is complicated, and tests allow you to be sure that you've not broken your project when you change something.  
+
+Writing tests slows you down in the short term, but speeds things up in the long term.  Further, as someone who is writing scientific code, tests make sure that your work can be easily reproduced.
+
+## Fix A Failing Test
+
+Let's start by working through fixing a failing test, and commiting the results to our repository.
+
+Start by making a new branch, with `git checkout -b fix-failing-test`.
+
+Then open up `<some-filename>`, uncomment the function called `<test_some_function>`, and then run `pytest`.
+
+The test failed, oh no!
+
+So, that test is testing a function that we've stubbed out, but that returns obviously incorrect results.
+
+You can find the function in `<filename>` - go ahead and fix the function so that the tests pass.  Run `pytest` as much as you want to, to make sure.
+
+Great!  You should also write a new test to verify that this function works correctly for `<some edge casee>`.
+
+Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.
+
+Once `pytest` shows that both tests are passing, commit your changes, merge on github, and then pull the results back to your local.
+
+#### Checkpoint
+
+Run:
+{% highlight bash %}
+pytest
+{% endhighlight %}
+
+You should see:
+{% highlight bash %}
+platform darwin -- Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
+rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
+collected 5 items
+
+tests/test_shablona.py .....          	                        [100%]
+{% endhighlight %}
+
+
+## Get Travis Working
+
+We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new branches to GitHub.  This is useful because it means that you can't forget to run your tests – and it means that other people's PRs will have tests run against them.
+
+Travis is controlled by a file called `.travis.yml`.  This file tells the Travis servers what to do with your code - in our case, just run the tests.
+
+We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the gruntwork of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
+
+Let's modify this to run `flake8` as well.  `flake8` checks your code style, to make sure that you're writing code that is easy to read.
+
+All you need to do is add `flake8` below the call to `pytest`, then commit and push your code.
+
+Then, open up Travis, and you can see your tests run!
+
+**Gotchas:**
+- Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.
+
+TODO ADD SOME WORDS HERE AND A BETTER TEST TODO
+
+## Success!
+
+We've added two tests, and gotten comfortable running pytest.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
+
+[tutorial-part-6]: https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html 
