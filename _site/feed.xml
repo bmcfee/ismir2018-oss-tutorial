@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-27T10:04:43-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-27T11:25:28-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -208,8 +208,63 @@ freetype                  2.9.1                hb4e5f40_0&lt;/code&gt;&lt;/pre&g
 
 &lt;p&gt;You should see:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;TODO get an example of passing tests&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;platform darwin &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
+rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
+collected 5 items
+
+tests/test_shablona.py .....          	                        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;100%]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;save-our-work&quot;&gt;Save Our Work&lt;/h2&gt;
+
+&lt;p&gt;We fixed a bug, hooray!  But we’ve only fixed our local version.  Let’s commit this to our local git repository, and then update the version on GitHub.&lt;/p&gt;
+
+&lt;p&gt;First, make a new branch to work on. Working in a branch means that we can do whatever we want without breaking our main code.  Do &lt;code class=&quot;highlighter-rouge&quot;&gt;git branch update-conda-env&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next, add and commit your files:  &lt;code class=&quot;highlighter-rouge&quot;&gt;git add requirements.txt&lt;/code&gt;, then &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Add pandas to requirements.txt&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Rad!  We’ve saved our work locally.  To push your code to GitHub, do &lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin update-conda-env&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We want to get in the habit of keeping our online work up to date with our local work.  So let’s go look at GitHub, and merge this branch there.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Visit GitHub, and find your fork of this repository:  https://github.com/&lt;your-github-username&gt;/shablona/branches&lt;/your-github-username&gt;&lt;/li&gt;
+  &lt;li&gt;You’ll see a list of branches - select &lt;strong&gt;update-conda-env&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;You’ll see a small button that says &lt;strong&gt;New pull request&lt;/strong&gt;.  Press it!&lt;/li&gt;
+  &lt;li&gt;This will take you to a nice web form.  Put in the reasons for your changes, and press &lt;strong&gt;Create Pull Request&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hooray, you’ve made a Pull Request!  Pull Requests (PRs) are the best way to contribute code to a project.  You can review &amp;amp; comment on the proposed changes before merging them, or request that things be improved.&lt;/p&gt;
+
+&lt;p&gt;🙏 Here’s an important aside:  when discussing code in PRs, please be nice!  It’s really easy for a neutral comment to be read as mean, and it’s really easy to alienate people by being mean  You should do your best to very polite and kind when dealing with people on GitHub (and probably on computers in general).&lt;/p&gt;
+
+&lt;p&gt;With that said, let’s merge our PR!  This will add the changes from your branch to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Press &lt;strong&gt;Merge&lt;/strong&gt;.  GitHub will merge your commit into master.&lt;/li&gt;
+  &lt;li&gt;Now your online repo is up to date, so let’s update your local.&lt;/li&gt;
+  &lt;li&gt;In your command line, run &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout master&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Next, do &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull origin master&lt;/code&gt; to update your local copy.  You’ll see that git adds your commit from GitHub to your local copy.&lt;/li&gt;
+  &lt;li&gt;Finally, do &lt;code class=&quot;highlighter-rouge&quot;&gt;git branch -d update-conda-env&lt;/code&gt; to delete your local branch – you’ve merged the commits to master, so you can delete it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;checkpoint-3&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;commit fc48577568d259f361a2e5f28267500ff2d4405f
+Author: &amp;lt;Your Name&amp;gt; &amp;lt;your-email@your-server&amp;gt;
+Date:   &amp;lt;today&amp;gt;
+
+    Add pandas to requirements.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We’ve just gone over the basic git and GitHub workflow that you should, in general, stick with: make a branch, make some changes, run tests, commit, push, merge, clean up.&lt;/p&gt;
+
+&lt;p&gt;This means that you never have untested code in master, and it means that master is always functional.  This is called “Continuous Integration”, or “Continuous Delivery”.  There are whole books about why this is a good idea, but you can read &lt;a href=&quot;https://guides.github.com/introduction/flow/&quot;&gt;a good summary of the GitHub version of it here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It also means that the online, “deployed” version of master is your primary version, and you just have a local version that you’re working on.&lt;/p&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve installed everything we’ll need on our machines.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;, we’ll set up the various web apps and accounts that we’ll need.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.</summary></entry></feed>
+&lt;p&gt;We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In [Part 4][tutorial-part-4], we’ll get into the details of our Python code and how it all fits together.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.</summary></entry></feed>

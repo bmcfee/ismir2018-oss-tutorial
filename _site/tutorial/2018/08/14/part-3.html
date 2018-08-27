@@ -123,11 +123,66 @@ freetype                  2.9.1                hb4e5f40_0</code></pre></figure>
 
 <p>You should see:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">TODO get an example of passing tests</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">platform darwin <span class="nt">--</span> Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
+rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
+collected 5 items
+
+tests/test_shablona.py .....          	                        <span class="o">[</span>100%]</code></pre></figure>
+
+<h2 id="save-our-work">Save Our Work</h2>
+
+<p>We fixed a bug, hooray!  But we’ve only fixed our local version.  Let’s commit this to our local git repository, and then update the version on GitHub.</p>
+
+<p>First, make a new branch to work on. Working in a branch means that we can do whatever we want without breaking our main code.  Do <code class="highlighter-rouge">git branch update-conda-env</code>.</p>
+
+<p>Next, add and commit your files:  <code class="highlighter-rouge">git add requirements.txt</code>, then <code class="highlighter-rouge">git commit -m "Add pandas to requirements.txt"</code></p>
+
+<p>Rad!  We’ve saved our work locally.  To push your code to GitHub, do <code class="highlighter-rouge">git push origin update-conda-env</code>.</p>
+
+<p>We want to get in the habit of keeping our online work up to date with our local work.  So let’s go look at GitHub, and merge this branch there.</p>
+<ul>
+  <li>Visit GitHub, and find your fork of this repository:  https://github.com/<your-github-username>/shablona/branches</your-github-username></li>
+  <li>You’ll see a list of branches - select <strong>update-conda-env</strong>.</li>
+  <li>You’ll see a small button that says <strong>New pull request</strong>.  Press it!</li>
+  <li>This will take you to a nice web form.  Put in the reasons for your changes, and press <strong>Create Pull Request</strong>.</li>
+</ul>
+
+<p>Hooray, you’ve made a Pull Request!  Pull Requests (PRs) are the best way to contribute code to a project.  You can review &amp; comment on the proposed changes before merging them, or request that things be improved.</p>
+
+<p>🙏 Here’s an important aside:  when discussing code in PRs, please be nice!  It’s really easy for a neutral comment to be read as mean, and it’s really easy to alienate people by being mean  You should do your best to very polite and kind when dealing with people on GitHub (and probably on computers in general).</p>
+
+<p>With that said, let’s merge our PR!  This will add the changes from your branch to the <code class="highlighter-rouge">master</code> branch.</p>
+<ul>
+  <li>Press <strong>Merge</strong>.  GitHub will merge your commit into master.</li>
+  <li>Now your online repo is up to date, so let’s update your local.</li>
+  <li>In your command line, run <code class="highlighter-rouge">git checkout master</code>.</li>
+  <li>Next, do <code class="highlighter-rouge">git pull origin master</code> to update your local copy.  You’ll see that git adds your commit from GitHub to your local copy.</li>
+  <li>Finally, do <code class="highlighter-rouge">git branch -d update-conda-env</code> to delete your local branch – you’ve merged the commits to master, so you can delete it.</li>
+</ul>
+
+<h4 id="checkpoint-3">Checkpoint</h4>
+
+<p>Run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git log</code></pre></figure>
+
+<p>You should see something like this:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">commit fc48577568d259f361a2e5f28267500ff2d4405f
+Author: &lt;Your Name&gt; &lt;your-email@your-server&gt;
+Date:   &lt;today&gt;
+
+    Add pandas to requirements.txt</code></pre></figure>
+
+<p>We’ve just gone over the basic git and GitHub workflow that you should, in general, stick with: make a branch, make some changes, run tests, commit, push, merge, clean up.</p>
+
+<p>This means that you never have untested code in master, and it means that master is always functional.  This is called “Continuous Integration”, or “Continuous Delivery”.  There are whole books about why this is a good idea, but you can read <a href="https://guides.github.com/introduction/flow/">a good summary of the GitHub version of it here</a>.</p>
+
+<p>It also means that the online, “deployed” version of master is your primary version, and you just have a local version that you’re working on.</p>
 
 <h2 id="success">Success!</h2>
 
-<p>We’ve installed everything we’ll need on our machines.  In <a href="https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html">Part 2</a>, we’ll set up the various web apps and accounts that we’ll need.</p>
+<p>We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In [Part 4][tutorial-part-4], we’ll get into the details of our Python code and how it all fits together.</p>
 
 
   </div><a class="u-url" href="/shablona/tutorial/2018/08/14/part-3.html" hidden></a>
