@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "Part 3:  Getting the Code"
+date:   2018-08-14 15:16:46 -0400
+categories: tutorial
+---
+Hello & welcome to Part 3!  This is where we'll start to use the various things you've installed to work with the code.
+
+## Get the Code
+
+We're going to go over some real-world basics of how git works and how conda works.
+We'll do this by getting you a copy of the code we're going to work with on to your local machine, then installing the packages we need with conda.
+
+Visit `https://github.com/bmcfee/shablona`, and press the **Fork** button.  You'll be asked where to fork the code to – select your own GitHub username.  A "fork" is your own copy of our code.  You can change it without altering our code.
+
+Now, visit `https://github.com/<your-username>/shablona`, and press the **Clone** button.  Make sure to select **Clone with SSH**, and then copy the string that looks like `git@github:<your-username>/shablona.git`
+
+Then, in your terminal, go to wherever you keep your code, and do `git clone <that string>`.  This will do a lot of stuff!  Once it is done, you should see a directory called `shablona`.  
+
+`cd` into that directory, then do `ls`.  You should see the same files that you see on GitHub!
+
+#### Checkpoint
+
+From the `shablona` directory, run:
+{% highlight bash %}
+git status
+{% endhighlight %}
+
+You should see:
+{% highlight bash %}
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+{% endhighlight %}
+
+
+## Install Things with Conda
+
+Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different indepenent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need ... and then have a different environment for a different project, with different packages installed!
+
+This may sound like overkill, but it is very helpful in the long run.  You'll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.
+
+So, let's make one and install the code that we need!  To create an environment for this tutorial, do  `conda create --name ismir-2018`.  You'll see that environment has been created at `/Users/<your-user>/miniconda3/envs/ismir-2018-tutorial`!  Hooray!  To turn it on do `conda activate ismir-2018-tutorial`.
+
+This means that any Python code you install with conda or pip will only be installed in this environment.  If you want to get out of this environment, just run `source deactivate` – but don't run it now!
+
+For now, we're going to install all the stuff we need.  Run `conda install --file requirements.txt`.  Lots of things should happen!
+
+#### Checkpoint
+
+Run:
+{% highlight bash %}
+conda list
+{% endhighlight %}
+
+You should see something like the below – make sure that `librosa` is in list!
+{% highlight bash %}
+packages in environment at /Users/thorkell/miniconda3:
+
+ Name                    Version                   Build
+conda                     4.5.10                   py36_0
+conda-env                 2.6.0                h36134e3_0
+cryptography              2.2.2            py36h1de35cc_0
+cycler                    0.10.0           py36hfc81398_0
+docutils                  0.14             py36hbfde631_0
+flake8                    3.5.0                    py36_1
+freetype                  2.9.1                hb4e5f40_0
+{% endhighlight %}
+
+## Run the Tests
+
+So we've installed all the packages we'll need.  Let's run the tests.  Tests make sure that your code is doing what your think it is doing – making sure that 2 + 2 in fact comes out to 4.
+
+You can find the test code in the `tests/` folder, and we'll talk more about testing later in the tutorial.  For now, just run the tests with `pytest`.
+
+💥🔥💥🔥💥🔥💥🔥💥🔥💥 _OH NO EVERYTHING FAILED!_ 💥🔥💥🔥💥🔥💥🔥💥🔥💥
+
+Phew, ok, this is not actually a big deal at all.  Failing tests are usually a good sign, becaue they mean that your tests found a bug or a problem.  Let's look at the error message that pytest is showing, and see if we can fix it.
+
+Ah, this does not look so bad.  We're missing a package called `pandas`.  We could just install it with conda, but we want to fix this problem for the long term.  So, open up that requirements.txt file, and add the line `pandas` at the bottom, and the save it.  Then re-run `conda install --file requirements.txt`, and then run the tests again.
+
+
+#### Checkpoint
+
+Run:
+{% highlight bash %}
+pytest
+{% endhighlight %}
+
+You should see:
+{% highlight bash %}
+TODO get an example of passing tests
+
+{% endhighlight %}
+
+## Success!
+
+We've installed everything we'll need on our machines.  In [Part 2][tutorial-part-2], we'll set up the various web apps and accounts that we'll need.
+
+[tutorial-part-2]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html 

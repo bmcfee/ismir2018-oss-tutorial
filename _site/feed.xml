@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-17T17:16:53-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-27T10:04:43-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -130,4 +130,86 @@ ReadTheDocs will also ask you to confirm your email, so open up your email clien
 &lt;h3 id=&quot;a-note-about-the-internet&quot;&gt;A Note About The Internet&lt;/h3&gt;
 
 &lt;p&gt;All of the services we’ve go over are on the internet.  There are local tools that can do the same sorts of things that out of the scope of this tutorial.
-If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they’re much less hassle to set up.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.</summary></entry></feed>
+If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they’re much less hassle to set up.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.</summary></entry><entry><title type="html">Part 3: Getting the Code</title><link href="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html" rel="alternate" type="text/html" title="Part 3:  Getting the Code" /><published>2018-08-14T15:16:46-04:00</published><updated>2018-08-14T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/14/part-3</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html">&lt;p&gt;Hello &amp;amp; welcome to Part 3!  This is where we’ll start to use the various things you’ve installed to work with the code.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-the-code&quot;&gt;Get the Code&lt;/h2&gt;
+
+&lt;p&gt;We’re going to go over some real-world basics of how git works and how conda works.
+We’ll do this by getting you a copy of the code we’re going to work with on to your local machine, then installing the packages we need with conda.&lt;/p&gt;
+
+&lt;p&gt;Visit &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/bmcfee/shablona&lt;/code&gt;, and press the &lt;strong&gt;Fork&lt;/strong&gt; button.  You’ll be asked where to fork the code to – select your own GitHub username.  A “fork” is your own copy of our code.  You can change it without altering our code.&lt;/p&gt;
+
+&lt;p&gt;Now, visit &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/&amp;lt;your-username&amp;gt;/shablona&lt;/code&gt;, and press the &lt;strong&gt;Clone&lt;/strong&gt; button.  Make sure to select &lt;strong&gt;Clone with SSH&lt;/strong&gt;, and then copy the string that looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;git@github:&amp;lt;your-username&amp;gt;/shablona.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, in your terminal, go to wherever you keep your code, and do &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone &amp;lt;that string&amp;gt;&lt;/code&gt;.  This will do a lot of stuff!  Once it is done, you should see a directory called &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into that directory, then do &lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt;.  You should see the same files that you see on GitHub!&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;From the &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona&lt;/code&gt; directory, run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git status&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;On branch master
+Your branch is up-to-date with &lt;span class=&quot;s1&quot;&gt;'origin/master'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+nothing to commit, working directory clean&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;install-things-with-conda&quot;&gt;Install Things with Conda&lt;/h2&gt;
+
+&lt;p&gt;Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different indepenent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need … and then have a different environment for a different project, with different packages installed!&lt;/p&gt;
+
+&lt;p&gt;This may sound like overkill, but it is very helpful in the long run.  You’ll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.&lt;/p&gt;
+
+&lt;p&gt;So, let’s make one and install the code that we need!  To create an environment for this tutorial, do  &lt;code class=&quot;highlighter-rouge&quot;&gt;conda create --name ismir-2018&lt;/code&gt;.  You’ll see that environment has been created at &lt;code class=&quot;highlighter-rouge&quot;&gt;/Users/&amp;lt;your-user&amp;gt;/miniconda3/envs/ismir-2018-tutorial&lt;/code&gt;!  Hooray!  To turn it on do &lt;code class=&quot;highlighter-rouge&quot;&gt;conda activate ismir-2018-tutorial&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This means that any Python code you install with conda or pip will only be installed in this environment.  If you want to get out of this environment, just run &lt;code class=&quot;highlighter-rouge&quot;&gt;source deactivate&lt;/code&gt; – but don’t run it now!&lt;/p&gt;
+
+&lt;p&gt;For now, we’re going to install all the stuff we need.  Run &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install --file requirements.txt&lt;/code&gt;.  Lots of things should happen!&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda list&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see something like the below – make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;librosa&lt;/code&gt; is in list!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;packages &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;environment at /Users/thorkell/miniconda3:
+
+ Name                    Version                   Build
+conda                     4.5.10                   py36_0
+conda-env                 2.6.0                h36134e3_0
+cryptography              2.2.2            py36h1de35cc_0
+cycler                    0.10.0           py36hfc81398_0
+docutils                  0.14             py36hbfde631_0
+flake8                    3.5.0                    py36_1
+freetype                  2.9.1                hb4e5f40_0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;run-the-tests&quot;&gt;Run the Tests&lt;/h2&gt;
+
+&lt;p&gt;So we’ve installed all the packages we’ll need.  Let’s run the tests.  Tests make sure that your code is doing what your think it is doing – making sure that 2 + 2 in fact comes out to 4.&lt;/p&gt;
+
+&lt;p&gt;You can find the test code in the &lt;code class=&quot;highlighter-rouge&quot;&gt;tests/&lt;/code&gt; folder, and we’ll talk more about testing later in the tutorial.  For now, just run the tests with &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;💥🔥💥🔥💥🔥💥🔥💥🔥💥 &lt;em&gt;OH NO EVERYTHING FAILED!&lt;/em&gt; 💥🔥💥🔥💥🔥💥🔥💥🔥💥&lt;/p&gt;
+
+&lt;p&gt;Phew, ok, this is not actually a big deal at all.  Failing tests are usually a good sign, becaue they mean that your tests found a bug or a problem.  Let’s look at the error message that pytest is showing, and see if we can fix it.&lt;/p&gt;
+
+&lt;p&gt;Ah, this does not look so bad.  We’re missing a package called &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;.  We could just install it with conda, but we want to fix this problem for the long term.  So, open up that requirements.txt file, and add the line &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt; at the bottom, and the save it.  Then re-run &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install --file requirements.txt&lt;/code&gt;, and then run the tests again.&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pytest&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;TODO get an example of passing tests&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
+
+&lt;p&gt;We’ve installed everything we’ll need on our machines.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;, we’ll set up the various web apps and accounts that we’ll need.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.</summary></entry></feed>
