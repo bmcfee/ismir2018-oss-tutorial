@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Part 8:  Next Steps"
+date:   2018-08-10 15:16:46 -0400
+categories: tutorial
+---
+Hello, it's Part 8, which is the last part!  Hooray!  We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.
+
+
+## Software Engineering Resources
+
+[Software Carpentry][software-carpentry] teaches a huge range of basic software skills, from command lines to version control to R to Python to SQL.
+
+[So You Want To Be A Wizard][wizard] is a fantastic distillation of how to work with computers and how to get better at them, by the amazing [Julia Evans][jvns].
+
+[Learn Python The Hard Way][the-hard-way] teaches Python starting from 0, and goes up to a fairly advanced level.  The books cost money, but have free samples!
+
+
+## MIR Resources & Tools
+
+[musicinformationretrieval.com][mir] is a great resource for just about everything about MIR.
+
+Some other packages and datasets you might want to look at include [crema], [pescador], [crepe], [pysox], [msaf], [motif], [lakhmidi], the [Million Song Dataset, the [Million Playlist Dataset]
+  
+
+## Success!
+
+We did ... just about everything!  
+
+[software-carpentry]: https://software-carpentry.org/
+[mir]: https://musicinformationretrieval.com/
+[the-hard-way]: https://learncodethehardway.org/python/
+[wizard]: https://jvns.ca/wizard-zine.pdf
+[jvns]: https://jvns.ca/
