@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "Part 8:  Next Steps"
+date:   2018-08-10 15:16:46 -0400
+categories: tutorial
+---
+Hello, it's Part 8, which is the last part!  Hooray!  We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.
+
+
+## Software Engineering Resources
+
+[Software Carpentry][software-carpentry] teaches a huge range of basic software skills, from command lines to version control to R to Python to SQL.
+
+[So You Want To Be A Wizard][wizard] is a fantastic distillation of how to work with computers and how to get better at them, by the amazing [Julia Evans][jvns].
+
+[Learn Python The Hard Way][the-hard-way] teaches Python starting from 0, and goes up to a fairly advanced level.  The books cost money, but have free samples!
+
+[This project][mini-kep] has a good overview of Python testing practices, and this thread has [even more testing resources][twitter-testing].
+
+## MIR Resources & Tools
+
+[musicinformationretrieval.com][mir] is a great resource for just about everything about MIR.
+
+Some other packages you might want to look at include [crema], [pescador], [crepe], [pysox], [msaf], and [motif].
+
+Useful datasets and APIs include [lakhmidi], the [Million Song Dataset][msd], the [Million Playlist Dataset][mpd], the [Spotify API][spotify-api], and the [Audio Content Analysis List][aca-list].
+
+Finally, if you want to learn more about DSP and audio processing, you could take a look at [Julius Smith's books][jos], as well as the teaching parts of [Audio Content Analysis][aca-teach].
+
+
+## Success!
+
+We did ... just about everything!
+
+We went over installing things in [Part 1][part-1], and setting up web servives in [Part 2][part-2].  [Part 3][part-3] covered git and version control, and [Part 4][part-4] went over Python and Python module structure.  Testing was covered in [Part 5][part-5], and documention in [Part 6][part-6].  Finally, [Part 7][part-8] introduced the wider Python ecosystem, and this is Part 8.
+
+Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!
+
+
+[software-carpentry]: https://software-carpentry.org/
+[mir]: https://musicinformationretrieval.com/
+[the-hard-way]: https://learncodethehardway.org/python/
+[wizard]: https://jvns.ca/wizard-zine.pdf
+[jvns]: https://jvns.ca/
+[mini-kep]: https://github.com/mini-kep/guidelines/blob/master/testing.md#learning
+[twitter-testing]: https://twitter.com/anabalica/status/1032980702759972864
+
+[crema]: https://github.com/bmcfee/crema
+[pescador]: https://github.com/pescadores/pescador
+[crepe]: https://github.com/marl/crepe 
+[pysox]: https://github.com/rabitt/pysox
+[msaf]: https://github.com/urinieto/msaf
+[motif]: https://github.com/rabitt/motif
+
+[lakhmidi]: http://colinraffel.com/projects/lmd/
+[msd]: https://labrosa.ee.columbia.edu/millionsong/
+[mpd]: https://recsys-challenge.spotify.com/details
+[spotify-api]: https://developer.spotify.com/
+[aca-list]: https://www.audiocontentanalysis.org/data-sets/
+
+[jos]: https://ccrma.stanford.edu/~jos/
+[aca-teach]: https://www.audiocontentanalysis.org/teaching/
+
+[part-1]: https://bmcfee.github.io/shablona/tutorial/2018/08/16/part-1.html 
+[part-2]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html 
+[part-3]: https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html 
+[part-4]: https://bmcfee.github.io/shablona/tutorial/2018/08/13/part-4.html 
+[part-5]: https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-5.html 
+[part-6]: https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-6.html 
+[part-7]: https://bmcfee.github.io/shablona/tutorial/2018/08/10/part-7.html 

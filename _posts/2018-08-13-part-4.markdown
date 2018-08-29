@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Part 4:  Python"
+date:   2018-08-13 15:16:46 -0400
+categories: tutorial
+---
+Hello & welcome to Part 4!  
+
+
+
+## Success!
+
+[tutorial-part-4]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-4.html 
