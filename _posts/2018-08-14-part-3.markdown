@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Part 3:  Getting the Code"
+title:  "Part 3:  Working with the Code"
 date:   2018-08-14 15:16:46 -0400
 categories: tutorial
 ---
