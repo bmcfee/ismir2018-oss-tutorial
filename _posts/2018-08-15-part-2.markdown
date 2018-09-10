@@ -38,11 +38,11 @@ Hi <your-username>! You've successfully authenticated, but GitHub does not provi
 Travis CI is a tool for "Continuous Integration", which is just a fancy word for running the code that tests your software whenever you change your software.
 We won't get to using Travis for a little bit, but let's get the setup out of the way now.
 
-Visit [Travis][travis-main], and make an account by pressing the `Sign In With GitHub` button.
+Visit [Travis][travis-main], and make an account by pressing the **Sign In With GitHub** button.
 
-You'll be asked to authorize Travis to use your Github account.  Do so, and you'll get redirected to your profile screen.  On your profile screen, press the "Activate" button to finish connecting Travis to you GitHub code.
+You'll be asked to authorize Travis to use your Github account.  Do so, and you'll get redirected to your profile screen.  On your profile screen, press the **Activate** button to finish connecting Travis to you GitHub code.
 
-You'll be taken to a GitHub page - just press "Approve & Install"!
+You'll be taken to a GitHub page - just press **Approve & Install**!
 
 #### Checkpoint
 
@@ -52,7 +52,7 @@ No command line here - you should be able to visit [Travis][travis-main], and se
 ## Set Up ReadTheDocs
 ReadTheDocs hosts your documentation, so that people know how to use your software!  We'll get to ReadTheDocs nearer to the end of the tutorial, but let's get things set up now.
 
-Visit [ReadTheDocs][readthedocs-main], and press `Sign up`, and the select `Sign Up With GitHub`.  Like with Travis, you'll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
+Visit [ReadTheDocs][readthedocs-main], and press **Sign up**, and the select **Sign Up With GitHub**.  Like with Travis, you'll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
 ReadTheDocs will also ask you to confirm your email, so open up your email client and do so.
 
 #### Checkpoint

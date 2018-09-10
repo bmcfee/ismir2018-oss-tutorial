@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-30T16:11:13-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-08-31T11:46:37-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -7,8 +7,8 @@
 
 &lt;p&gt;Linux users, you have some version of Python on your machine – please make sure that you have Python 3.6, and go and get it if not.&lt;/p&gt;
 
-&lt;p&gt;Windows users, we &lt;em&gt;highly&lt;/em&gt; recommend that you install the [Windows System for Linux][wsl-install] and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
-While you’re welcome to use Powershell, we can’t guarantee that we’ll be able to help you!&lt;/p&gt;
+&lt;p&gt;Windows users, we &lt;em&gt;highly&lt;/em&gt; recommend that you install the &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-win10&quot;&gt;Windows System for Linux&lt;/a&gt;, and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
+While you’re welcome to use Powershell, we can’t guarantee that we’ll be able to help you.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -103,11 +103,11 @@ git in particular also makes it easy to collaborate with other folks.&lt;/p&gt;
 &lt;p&gt;Travis CI is a tool for “Continuous Integration”, which is just a fancy word for running the code that tests your software whenever you change your software.
 We won’t get to using Travis for a little bit, but let’s get the setup out of the way now.&lt;/p&gt;
 
-&lt;p&gt;Visit &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis&lt;/a&gt;, and make an account by pressing the &lt;code class=&quot;highlighter-rouge&quot;&gt;Sign In With GitHub&lt;/code&gt; button.&lt;/p&gt;
+&lt;p&gt;Visit &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis&lt;/a&gt;, and make an account by pressing the &lt;strong&gt;Sign In With GitHub&lt;/strong&gt; button.&lt;/p&gt;
 
-&lt;p&gt;You’ll be asked to authorize Travis to use your Github account.  Do so, and you’ll get redirected to your profile screen.  On your profile screen, press the “Activate” button to finish connecting Travis to you GitHub code.&lt;/p&gt;
+&lt;p&gt;You’ll be asked to authorize Travis to use your Github account.  Do so, and you’ll get redirected to your profile screen.  On your profile screen, press the &lt;strong&gt;Activate&lt;/strong&gt; button to finish connecting Travis to you GitHub code.&lt;/p&gt;
 
-&lt;p&gt;You’ll be taken to a GitHub page - just press “Approve &amp;amp; Install”!&lt;/p&gt;
+&lt;p&gt;You’ll be taken to a GitHub page - just press &lt;strong&gt;Approve &amp;amp; Install&lt;/strong&gt;!&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -116,7 +116,7 @@ We won’t get to using Travis for a little bit, but let’s get the setup out o
 &lt;h2 id=&quot;set-up-readthedocs&quot;&gt;Set Up ReadTheDocs&lt;/h2&gt;
 &lt;p&gt;ReadTheDocs hosts your documentation, so that people know how to use your software!  We’ll get to ReadTheDocs nearer to the end of the tutorial, but let’s get things set up now.&lt;/p&gt;
 
-&lt;p&gt;Visit &lt;a href=&quot;https://readthedocs.org&quot;&gt;ReadTheDocs&lt;/a&gt;, and press &lt;code class=&quot;highlighter-rouge&quot;&gt;Sign up&lt;/code&gt;, and the select &lt;code class=&quot;highlighter-rouge&quot;&gt;Sign Up With GitHub&lt;/code&gt;.  Like with Travis, you’ll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
+&lt;p&gt;Visit &lt;a href=&quot;https://readthedocs.org&quot;&gt;ReadTheDocs&lt;/a&gt;, and press &lt;strong&gt;Sign up&lt;/strong&gt;, and the select &lt;strong&gt;Sign Up With GitHub&lt;/strong&gt;.  Like with Travis, you’ll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
 ReadTheDocs will also ask you to confirm your email, so open up your email client and do so.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
