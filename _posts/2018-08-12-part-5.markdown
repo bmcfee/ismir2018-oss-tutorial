@@ -59,19 +59,38 @@ Travis is controlled by a file called `.travis.yml`.  This file tells the Travis
 
 We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the gruntwork of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
 
-Let's modify this to run `flake8` as well.  `flake8` checks your code style, to make sure that you're writing code that is easy to read.
+Let's modify this to run [Flake8][flake8] as well.  Flake8 checks your code and your code style, to make sure that you're writing code that is both more correct, and easy to read.
 
 All you need to do is add `flake8` below the call to `pytest`, then commit and push your code.
 
 Then, open up Travis, and you can see your tests run!
 
+Cool, so our tests are passing!  But what will it look like when our tests fail on Travis?  Let's find out!
+
+Open up `some file`, and add `import sys` to it.  This is a valid statement, but Flake8 won't allow unused imports.  Commit this to a new branch, and push it to GitHub.
+
+Travis will start running your tests ... and Flake8 will complain!  If this were someone contributing code to your repository, you could reply to them and say something like "Great work, please fix the flake8 issues and then we can merge it!"
+
+We just wanted to see what happens when tests failed, so feel free to delete that branch, and then move on.
+
+#### Checkpoint
+
+You've seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the `shablona` directory, and then:
+
+Run:
+{% highlight bash %}
+flake8
+{% endhighlight %}
+
+You should see no output, indicating that things work!
+
 **Gotchas:**
 - Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.
 
-TODO ADD SOME WORDS HERE AND A BETTER TEST TODO
 
 ## Success!
 
 We've added two tests, and gotten comfortable running pytest.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
 
 [tutorial-part-6]: https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html 
+[flake8]: http://flake8.pycqa.org/en/latest/index.html

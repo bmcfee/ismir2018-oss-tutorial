@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-09-10T14:52:13-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-09-10T15:19:36-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -330,18 +330,34 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;We’ve written the file for you.  Let’s take a quick look at it.  The big &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; block handles the gruntwork of installing conda, updating it, and setting up our environment.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;script&lt;/code&gt; block is what Travis runs.  We currently just run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Let’s modify this to run &lt;code class=&quot;highlighter-rouge&quot;&gt;flake8&lt;/code&gt; as well.  &lt;code class=&quot;highlighter-rouge&quot;&gt;flake8&lt;/code&gt; checks your code style, to make sure that you’re writing code that is easy to read.&lt;/p&gt;
+&lt;p&gt;Let’s modify this to run &lt;a href=&quot;http://flake8.pycqa.org/en/latest/index.html&quot;&gt;Flake8&lt;/a&gt; as well.  Flake8 checks your code and your code style, to make sure that you’re writing code that is both more correct, and easy to read.&lt;/p&gt;
 
 &lt;p&gt;All you need to do is add &lt;code class=&quot;highlighter-rouge&quot;&gt;flake8&lt;/code&gt; below the call to &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;, then commit and push your code.&lt;/p&gt;
 
 &lt;p&gt;Then, open up Travis, and you can see your tests run!&lt;/p&gt;
 
+&lt;p&gt;Cool, so our tests are passing!  But what will it look like when our tests fail on Travis?  Let’s find out!&lt;/p&gt;
+
+&lt;p&gt;Open up &lt;code class=&quot;highlighter-rouge&quot;&gt;some file&lt;/code&gt;, and add &lt;code class=&quot;highlighter-rouge&quot;&gt;import sys&lt;/code&gt; to it.  This is a valid statement, but Flake8 won’t allow unused imports.  Commit this to a new branch, and push it to GitHub.&lt;/p&gt;
+
+&lt;p&gt;Travis will start running your tests … and Flake8 will complain!  If this were someone contributing code to your repository, you could reply to them and say something like “Great work, please fix the flake8 issues and then we can merge it!”&lt;/p&gt;
+
+&lt;p&gt;We just wanted to see what happens when tests failed, so feel free to delete that branch, and then move on.&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;You’ve seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona&lt;/code&gt; directory, and then:&lt;/p&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;flake8&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see no output, indicating that things work!&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Gotchas:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;TODO ADD SOME WORDS HERE AND A BETTER TEST TODO&lt;/p&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 

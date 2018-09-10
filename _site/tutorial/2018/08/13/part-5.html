@@ -97,18 +97,34 @@ tests/test_shablona.py .....          	                        <span class="o">[
 
 <p>We’ve written the file for you.  Let’s take a quick look at it.  The big <code class="highlighter-rouge">install</code> block handles the gruntwork of installing conda, updating it, and setting up our environment.  The <code class="highlighter-rouge">script</code> block is what Travis runs.  We currently just run <code class="highlighter-rouge">pytest</code>.</p>
 
-<p>Let’s modify this to run <code class="highlighter-rouge">flake8</code> as well.  <code class="highlighter-rouge">flake8</code> checks your code style, to make sure that you’re writing code that is easy to read.</p>
+<p>Let’s modify this to run <a href="http://flake8.pycqa.org/en/latest/index.html">Flake8</a> as well.  Flake8 checks your code and your code style, to make sure that you’re writing code that is both more correct, and easy to read.</p>
 
 <p>All you need to do is add <code class="highlighter-rouge">flake8</code> below the call to <code class="highlighter-rouge">pytest</code>, then commit and push your code.</p>
 
 <p>Then, open up Travis, and you can see your tests run!</p>
 
+<p>Cool, so our tests are passing!  But what will it look like when our tests fail on Travis?  Let’s find out!</p>
+
+<p>Open up <code class="highlighter-rouge">some file</code>, and add <code class="highlighter-rouge">import sys</code> to it.  This is a valid statement, but Flake8 won’t allow unused imports.  Commit this to a new branch, and push it to GitHub.</p>
+
+<p>Travis will start running your tests … and Flake8 will complain!  If this were someone contributing code to your repository, you could reply to them and say something like “Great work, please fix the flake8 issues and then we can merge it!”</p>
+
+<p>We just wanted to see what happens when tests failed, so feel free to delete that branch, and then move on.</p>
+
+<h4 id="checkpoint-1">Checkpoint</h4>
+
+<p>You’ve seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the <code class="highlighter-rouge">shablona</code> directory, and then:</p>
+
+<p>Run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">flake8</code></pre></figure>
+
+<p>You should see no output, indicating that things work!</p>
+
 <p><strong>Gotchas:</strong></p>
 <ul>
   <li>Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.</li>
 </ul>
-
-<p>TODO ADD SOME WORDS HERE AND A BETTER TEST TODO</p>
 
 <h2 id="success">Success!</h2>
 
