@@ -68,7 +68,11 @@
 
 <h2 id="get-readthedocs-working">Get ReadTheDocs Working</h2>
 
-<p>We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.</p>
+<p>We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.  It looks at the <code class="highlighter-rouge">conf.py</code> file that is in your <code class="highlighter-rouge">doc</code> folder, and goes through another million options to decide what docs to make.</p>
+
+<p>The exact options should not bother you too much right now!  The thing to know is that ReadTheDocs and Sphinx can be configured to do almost anything, but for now they’re just going to make you a nice webpage.</p>
+
+<p>To trigger RTD, we should just need to push to our repository, and RTD will notice the push and build our docs.  And given that we’ve done a bunch of pushes, maybe our docs can be found at <code class="highlighter-rouge">some-url</code>!</p>
 
 <h4 id="checkpoint-1">Checkpoint</h4>
 
@@ -80,9 +84,9 @@
 
 <p>It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!</p>
 
-<p>Find <function> in <file> - you'll see that it does not have any documentation.  Take a look at <other-function> - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.</other-function></file></function></p>
+<p>Find <code class="highlighter-rouge">some function</code> in <code class="highlighter-rouge">some file</code> - you’ll see that it does not have any documentation.  Take a look at <code class="highlighter-rouge">other-function</code> - you’ll see that it has a detailed description of how it works, what parameters it takes, and what it returns.</p>
 
-<p>Based on this example, add a docstring to <function>.  Once you're happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!</function></p>
+<p>Based on this example, add a docstring to <code class="highlighter-rouge">the first function</code>.  Once you’re happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!</p>
 
 <h4 id="checkpoint-2">Checkpoint</h4>
 

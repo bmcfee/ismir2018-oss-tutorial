@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-09-10T15:19:36-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-09-10T16:19:56-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
 &lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
@@ -384,7 +384,11 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h2 id=&quot;get-readthedocs-working&quot;&gt;Get ReadTheDocs Working&lt;/h2&gt;
 
-&lt;p&gt;We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.&lt;/p&gt;
+&lt;p&gt;We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.  It looks at the &lt;code class=&quot;highlighter-rouge&quot;&gt;conf.py&lt;/code&gt; file that is in your &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and goes through another million options to decide what docs to make.&lt;/p&gt;
+
+&lt;p&gt;The exact options should not bother you too much right now!  The thing to know is that ReadTheDocs and Sphinx can be configured to do almost anything, but for now they’re just going to make you a nice webpage.&lt;/p&gt;
+
+&lt;p&gt;To trigger RTD, we should just need to push to our repository, and RTD will notice the push and build our docs.  And given that we’ve done a bunch of pushes, maybe our docs can be found at &lt;code class=&quot;highlighter-rouge&quot;&gt;some-url&lt;/code&gt;!&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -396,9 +400,9 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!&lt;/p&gt;
 
-&lt;p&gt;Find &lt;function&gt; in &lt;file&gt; - you'll see that it does not have any documentation.  Take a look at &lt;other-function&gt; - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.&lt;/other-function&gt;&lt;/file&gt;&lt;/function&gt;&lt;/p&gt;
+&lt;p&gt;Find &lt;code class=&quot;highlighter-rouge&quot;&gt;some function&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;some file&lt;/code&gt; - you’ll see that it does not have any documentation.  Take a look at &lt;code class=&quot;highlighter-rouge&quot;&gt;other-function&lt;/code&gt; - you’ll see that it has a detailed description of how it works, what parameters it takes, and what it returns.&lt;/p&gt;
 
-&lt;p&gt;Based on this example, add a docstring to &lt;function&gt;.  Once you're happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!&lt;/function&gt;&lt;/p&gt;
+&lt;p&gt;Based on this example, add a docstring to &lt;code class=&quot;highlighter-rouge&quot;&gt;the first function&lt;/code&gt;.  Once you’re happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
 
