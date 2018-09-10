@@ -6,6 +6,13 @@ categories: tutorial
 ---
 Hello & welcome to Part 4!  
 
+- A suggestion, we can totally change all this!
+- We've got all this python code here, let's take a look at how it is structured and where everything is.
+- Cool, so why is it structured that way, and what parts of the structure do we need to have? (init.py, what's an __all__, folders, relative imports, etc)
+- How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?
+- If we do that, let's talk about how we need to update init.py, change how we'd import that code, maybe talk about versioning here? Maybe versioning is a bit boring.
+- whatever we decide, let's do it and commit the code
+
 
 
 ## Success!
