@@ -20,15 +20,15 @@ Let's start by working through fixing a failing test, and commiting the results 
 
 Start by making a new branch, with `git checkout -b fix-failing-test`.
 
-Then open up `<some-filename>`, uncomment the function called `<test_some_function>`, and then run `pytest`.
+Then open up `tests/test_shablona.py`, uncomment the two functions that start with `test_hz_to_midi`, and then run `pytest`.
 
 The test failed, oh no!
 
-So, that test is testing a function that we've stubbed out, but that returns obviously incorrect results.
+So, that test is testing a function that we've commented out.
 
-You can find the function in `<filename>` - go ahead and uncomment the code that's there, and then the test will pass!
+You can find the function in `shablona.py` - go ahead and uncomment the code that's there, and then the test will pass!
 
-Great!  You should also write a new test to verify that this function works correctly for `<some edge case>`.
+Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the `hz_to_period` function for reference.
 
 Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.
 
