@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T13:44:20-04:00</updated>
+<updated>2018-09-17T13:47:09-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -91,9 +91,9 @@ git version 2.7.4
 &lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
 &lt;p&gt;GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code&lt;/p&gt;
 
-&lt;p&gt;Vist &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, and create an account.  Once you’ve got an account, you need to create some SSH keys.&lt;/p&gt;
+&lt;p&gt;Visit &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, and create an account.  Once you’ve got an account, you need to create some SSH keys.&lt;/p&gt;
 
-&lt;p&gt;SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit fincky, but we’ll get through it!&lt;/p&gt;
+&lt;p&gt;SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit finicky, but we’ll get through it!&lt;/p&gt;
 
 &lt;p&gt;First, create a new SSH key by &lt;a href=&quot;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent&quot;&gt;following these steps&lt;/a&gt; – make sure to pick the correct platform.&lt;/p&gt;
 

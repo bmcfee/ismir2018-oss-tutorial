@@ -11,9 +11,9 @@ Welcome to Part 2!  In this section we'll set up accounts for the web services t
 ## Set Up GitHub
 GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code
 
-Vist [GitHub][github-main], and create an account.  Once you've got an account, you need to create some SSH keys.
+Visit [GitHub][github-main], and create an account.  Once you've got an account, you need to create some SSH keys.
 
-SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit fincky, but we'll get through it!
+SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit finicky, but we'll get through it!
 
 First, create a new SSH key by [following these steps][github-ssh-1] – make sure to pick the correct platform.
 
