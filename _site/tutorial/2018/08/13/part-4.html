@@ -169,7 +169,13 @@ example, if you had <code class="highlighter-rouge">submodule/even_more_function
 
 <p>Once you’ve done that and saved the result, start <code class="highlighter-rouge">ipython</code>, and import <code class="highlighter-rouge">toymir</code>.
 Instead of <code class="highlighter-rouge">toymir.midi_to_hz</code>, the function should now be located at <code class="highlighter-rouge">toymir.toymir.midi_to_hz</code>.
-Verify that this is true.</p>
+Verify this by running</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.midi_to_hz(40)
+</code></pre></div></div>
+<p>which should fail with <code class="highlighter-rouge">AttributeError</code>.  Next, run</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.toymir.midi_to_hz(40)
+</code></pre></div></div>
+<p>should return <code class="highlighter-rouge">82.4068...</code>.</p>
 
 <p>Once you’re done, reset the repository to a clean state (undoing your change) by saying:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard HEAD

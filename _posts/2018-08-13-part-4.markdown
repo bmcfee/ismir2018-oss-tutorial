@@ -132,7 +132,15 @@ from . import toymir
 
 Once you've done that and saved the result, start `ipython`, and import `toymir`.
 Instead of `toymir.midi_to_hz`, the function should now be located at `toymir.toymir.midi_to_hz`.
-Verify that this is true.
+Verify this by running
+```
+toymir.midi_to_hz(40)
+```
+which should fail with `AttributeError`.  Next, run
+```
+toymir.toymir.midi_to_hz(40)
+```
+should return `82.4068...`.
 
 Once you're done, reset the repository to a clean state (undoing your change) by saying:
 ```

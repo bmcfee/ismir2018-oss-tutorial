@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T14:53:58-04:00</updated>
+<updated>2018-09-17T15:17:41-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -425,7 +425,13 @@ example, if you had &lt;code class=&quot;highlighter-rouge&quot;&gt;submodule/ev
 
 &lt;p&gt;Once you’ve done that and saved the result, start &lt;code class=&quot;highlighter-rouge&quot;&gt;ipython&lt;/code&gt;, and import &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;.
 Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.midi_to_hz&lt;/code&gt;, the function should now be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.toymir.midi_to_hz&lt;/code&gt;.
-Verify that this is true.&lt;/p&gt;
+Verify this by running&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.midi_to_hz(40)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;which should fail with &lt;code class=&quot;highlighter-rouge&quot;&gt;AttributeError&lt;/code&gt;.  Next, run&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.toymir.midi_to_hz(40)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;should return &lt;code class=&quot;highlighter-rouge&quot;&gt;82.4068...&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Once you’re done, reset the repository to a clean state (undoing your change) by saying:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --hard HEAD
