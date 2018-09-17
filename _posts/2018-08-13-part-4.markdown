@@ -11,7 +11,7 @@ Hello & welcome to Part 4!  This is where we get into the code and start making 
 By now, you've probably had a look through the files in the `ismir2018-oss-tutorial` repository,
 and have some sense of what they all are.  Here, we'll go through it in a bit more detail.
 
-
+![Looking closer](https://media.giphy.com/media/s4qX2x5wuO8Ao/giphy.gif)
 
 ## How is code organized in Python?
 
@@ -37,6 +37,23 @@ Of course, these are just general suggestions, and there will always be exceptio
 best judgement!
 
 
+#### Checkpoint: install toymir
+In the `ismir2018-oss-tutorial` folder, type
+```
+ls -lR
+```
+to see the contents of the repository.
+
+Next, in the same folder, install the package for development by saying
+```
+pip install -e .
+```
+
+This command uses the `pip` program to place the current package (`toymir`, referenced by `.`) in the Python environment.
+The `-e` flag means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
+environment.
+
+
 ### So how do packages work?
 
 In its simplest form, a package can be defined from a single source file (e.g., `<PACKAGE>.py`), but it is more common to split even simple packages into *modules*.
@@ -57,6 +74,9 @@ and look for either `toymir.py` or `toymir/__init__.py`.
 The `__init__.py` convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
 Typically, `__init__.py` files are minimal, and only contain comments and other import functions
 necessary to initialize the package.
+
+![loading all the imports](https://media.giphy.com/media/xUNda4s9GLe2jkE7QI/giphy.gif)
+
 In this case, `__init__.py` might look like:
 ```python
 from .version import __version__
@@ -76,6 +96,8 @@ Modules can also have sub-structure, with nested folders, each including their o
 files.  In general, it's a good idea to limit submodules to not get too deep, if only because users don't like typing long strings to access functions!
 
 ### Relative and absolute imports
+
+![Which package do i load?](https://media.giphy.com/media/RjoLWhQBFEcHS/giphy.gif)
 
 You may have noticed that the import lines above look funny.  You might be used to seeing
 so-called *absolute* import
@@ -97,18 +119,25 @@ example, if you had `submodule/even_more_functions.py` depends on something defi
 from ..toymir import needed_function_name
 ```
 
-### Hiding things from import
+#### Checkpoint
 
-Sometimes, you might want to have variables or functions in a module that you don't want the
-outside world to access.  Python doesn't really provide public/private protections like C++ or
-Java, but there are some things you can do to communicate your intentions.
+Go into `toymir/__init__.py` and change the second import from
+```python
+from .toymir import *
+```
+to
+```python
+from . import toymir
+```
 
-1. Use `_` and `__` prefixes.  Variables named like `_private` are, by convention, understood to be
-   private and not messed with.  Variables starting with two underscores, like `__really_private`, are automatically renamed by the Python interpreter to make them hard to find.  This mostly matters for classes.
-2. Use the special `__all__` array to communicate to python exactly which variables and
-   functions should be exposed on import.  If you look in `toymir/toymir.py`, you'll see an
-   example of this.  Any variables not listed in `__all__` will not be exposed.
+Once you've done that and saved the result, start `ipython`, and import `toymir`.
+Instead of `toymir.midi_to_hz`, the function should now be located at `toymir.toymir.midi_to_hz`.
+Verify that this is true.
 
+Once you're done, reset the repository to a clean state (undoing your change) by saying:
+```
+git reset --hard HEAD
+```
 
 ### Including data
 Sometimes, packages need to include data as well as code.
@@ -123,9 +152,15 @@ This is the script that is executed when the package is installed and/or package
 contain all the necessary metadata (including dependencies and included data files) for
 successful installation.
 
+## Success!
 
 
-## Best practices for awesome packages
+Ready to keep going?  Onward to [Part 5](part-5)!
+
+
+## Eager for more?
+
+### Best practices for awesome packages
 
 - Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!
 - Use `numpydoc` format for your documentation strings.
@@ -136,7 +171,7 @@ successful installation.
 - Specify your dependency versions!
 - Keep a change-log in your documentation, and include the dates!
 
-## Tips and tricks for successful scripts
+### Tips and tricks for successful scripts
 
 - Always seed your random number generator!  You don't want different results if you re-run it
   next week, right?
@@ -151,6 +186,3 @@ successful installation.
 
 
 
-## Success!
-
-Ready to keep going?  Onward to [Part 5](part-5)!

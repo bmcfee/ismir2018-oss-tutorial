@@ -52,6 +52,8 @@
 <p>By now, you’ve probably had a look through the files in the <code class="highlighter-rouge">ismir2018-oss-tutorial</code> repository,
 and have some sense of what they all are.  Here, we’ll go through it in a bit more detail.</p>
 
+<p><img src="https://media.giphy.com/media/s4qX2x5wuO8Ao/giphy.gif" alt="Looking closer" /></p>
+
 <h2 id="how-is-code-organized-in-python">How is code organized in Python?</h2>
 
 <p>The first thing to understand is that Python allows two different use cases: <em>scripts</em> and
@@ -81,6 +83,20 @@ Of course, these are just general suggestions, and there will always be exceptio
 best judgement!</li>
 </ul>
 
+<h4 id="checkpoint-install-toymir">Checkpoint: install toymir</h4>
+<p>In the <code class="highlighter-rouge">ismir2018-oss-tutorial</code> folder, type</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -lR
+</code></pre></div></div>
+<p>to see the contents of the repository.</p>
+
+<p>Next, in the same folder, install the package for development by saying</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install -e .
+</code></pre></div></div>
+
+<p>This command uses the <code class="highlighter-rouge">pip</code> program to place the current package (<code class="highlighter-rouge">toymir</code>, referenced by <code class="highlighter-rouge">.</code>) in the Python environment.
+The <code class="highlighter-rouge">-e</code> flag means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
+environment.</p>
+
 <h3 id="so-how-do-packages-work">So how do packages work?</h3>
 
 <p>In its simplest form, a package can be defined from a single source file (e.g., <code class="highlighter-rouge">&lt;PACKAGE&gt;.py</code>), but it is more common to split even simple packages into <em>modules</em>.
@@ -98,8 +114,11 @@ Python packages mirror the file and directory structure of the source code to ke
 and look for either <code class="highlighter-rouge">toymir.py</code> or <code class="highlighter-rouge">toymir/__init__.py</code>.
 The <code class="highlighter-rouge">__init__.py</code> convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
 Typically, <code class="highlighter-rouge">__init__.py</code> files are minimal, and only contain comments and other import functions
-necessary to initialize the package.
-In this case, <code class="highlighter-rouge">__init__.py</code> might look like:</p>
+necessary to initialize the package.</p>
+
+<p><img src="https://media.giphy.com/media/xUNda4s9GLe2jkE7QI/giphy.gif" alt="loading all the imports" /></p>
+
+<p>In this case, <code class="highlighter-rouge">__init__.py</code> might look like:</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.version</span> <span class="kn">import</span> <span class="n">__version__</span>
 <span class="kn">from</span> <span class="nn">.toymir</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div></div>
@@ -117,6 +136,8 @@ example).</p>
 files.  In general, it’s a good idea to limit submodules to not get too deep, if only because users don’t like typing long strings to access functions!</p>
 
 <h3 id="relative-and-absolute-imports">Relative and absolute imports</h3>
+
+<p><img src="https://media.giphy.com/media/RjoLWhQBFEcHS/giphy.gif" alt="Which package do i load?" /></p>
 
 <p>You may have noticed that the import lines above look funny.  You might be used to seeing
 so-called <em>absolute</em> import
@@ -137,19 +158,22 @@ example, if you had <code class="highlighter-rouge">submodule/even_more_function
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">..toymir</span> <span class="kn">import</span> <span class="n">needed_function_name</span>
 </code></pre></div></div>
 
-<h3 id="hiding-things-from-import">Hiding things from import</h3>
+<h4 id="checkpoint">Checkpoint</h4>
 
-<p>Sometimes, you might want to have variables or functions in a module that you don’t want the
-outside world to access.  Python doesn’t really provide public/private protections like C++ or
-Java, but there are some things you can do to communicate your intentions.</p>
+<p>Go into <code class="highlighter-rouge">toymir/__init__.py</code> and change the second import from</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.toymir</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div></div>
+<p>to</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">toymir</span>
+</code></pre></div></div>
 
-<ol>
-  <li>Use <code class="highlighter-rouge">_</code> and <code class="highlighter-rouge">__</code> prefixes.  Variables named like <code class="highlighter-rouge">_private</code> are, by convention, understood to be
-private and not messed with.  Variables starting with two underscores, like <code class="highlighter-rouge">__really_private</code>, are automatically renamed by the Python interpreter to make them hard to find.  This mostly matters for classes.</li>
-  <li>Use the special <code class="highlighter-rouge">__all__</code> array to communicate to python exactly which variables and
-functions should be exposed on import.  If you look in <code class="highlighter-rouge">toymir/toymir.py</code>, you’ll see an
-example of this.  Any variables not listed in <code class="highlighter-rouge">__all__</code> will not be exposed.</li>
-</ol>
+<p>Once you’ve done that and saved the result, start <code class="highlighter-rouge">ipython</code>, and import <code class="highlighter-rouge">toymir</code>.
+Instead of <code class="highlighter-rouge">toymir.midi_to_hz</code>, the function should now be located at <code class="highlighter-rouge">toymir.toymir.midi_to_hz</code>.
+Verify that this is true.</p>
+
+<p>Once you’re done, reset the repository to a clean state (undoing your change) by saying:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard HEAD
+</code></pre></div></div>
 
 <h3 id="including-data">Including data</h3>
 <p>Sometimes, packages need to include data as well as code.
@@ -163,7 +187,13 @@ This is the script that is executed when the package is installed and/or package
 contain all the necessary metadata (including dependencies and included data files) for
 successful installation.</p>
 
-<h2 id="best-practices-for-awesome-packages">Best practices for awesome packages</h2>
+<h2 id="success">Success!</h2>
+
+<p>Ready to keep going?  Onward to <a href="part-5">Part 5</a>!</p>
+
+<h2 id="eager-for-more">Eager for more?</h2>
+
+<h3 id="best-practices-for-awesome-packages">Best practices for awesome packages</h3>
 
 <ul>
   <li>Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!</li>
@@ -179,7 +209,7 @@ successful installation.</p>
   <li>Keep a change-log in your documentation, and include the dates!</li>
 </ul>
 
-<h2 id="tips-and-tricks-for-successful-scripts">Tips and tricks for successful scripts</h2>
+<h3 id="tips-and-tricks-for-successful-scripts">Tips and tricks for successful scripts</h3>
 
 <ul>
   <li>
@@ -199,9 +229,6 @@ sure to document how to use your scripts in a README file!</p>
   </li>
 </ul>
 
-<h2 id="success">Success!</h2>
-
-<p>Ready to keep going?  Onward to <a href="part-5">Part 5</a>!</p>
 
   </div><a class="u-url" href="/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html" hidden></a>
 </article>

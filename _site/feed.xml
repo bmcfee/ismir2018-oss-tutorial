@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T13:47:09-04:00</updated>
+<updated>2018-09-17T14:48:25-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -308,6 +308,8 @@ Date:   &lt;today&gt;&lt;/today&gt;&lt;/Your&gt;&lt;/p&gt;
 &lt;p&gt;By now, you’ve probably had a look through the files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt; repository,
 and have some sense of what they all are.  Here, we’ll go through it in a bit more detail.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/s4qX2x5wuO8Ao/giphy.gif&quot; alt=&quot;Looking closer&quot; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;how-is-code-organized-in-python&quot;&gt;How is code organized in Python?&lt;/h2&gt;
 
 &lt;p&gt;The first thing to understand is that Python allows two different use cases: &lt;em&gt;scripts&lt;/em&gt; and
@@ -337,6 +339,20 @@ Of course, these are just general suggestions, and there will always be exceptio
 best judgement!&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;checkpoint-install-toymir&quot;&gt;Checkpoint: install toymir&lt;/h4&gt;
+&lt;p&gt;In the &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt; folder, type&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ls -lR
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;to see the contents of the repository.&lt;/p&gt;
+
+&lt;p&gt;Next, in the same folder, install the package for development by saying&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install -e .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; program to place the current package (&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;, referenced by &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;) in the Python environment.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;-e&lt;/code&gt; flag means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
+environment.&lt;/p&gt;
+
 &lt;h3 id=&quot;so-how-do-packages-work&quot;&gt;So how do packages work?&lt;/h3&gt;
 
 &lt;p&gt;In its simplest form, a package can be defined from a single source file (e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;PACKAGE&amp;gt;.py&lt;/code&gt;), but it is more common to split even simple packages into &lt;em&gt;modules&lt;/em&gt;.
@@ -354,8 +370,11 @@ Python packages mirror the file and directory structure of the source code to ke
 and look for either &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt;.
 The &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
 Typically, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; files are minimal, and only contain comments and other import functions
-necessary to initialize the package.
-In this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; might look like:&lt;/p&gt;
+necessary to initialize the package.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/xUNda4s9GLe2jkE7QI/giphy.gif&quot; alt=&quot;loading all the imports&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; might look like:&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.version&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__version__&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -373,6 +392,8 @@ example).&lt;/p&gt;
 files.  In general, it’s a good idea to limit submodules to not get too deep, if only because users don’t like typing long strings to access functions!&lt;/p&gt;
 
 &lt;h3 id=&quot;relative-and-absolute-imports&quot;&gt;Relative and absolute imports&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/RjoLWhQBFEcHS/giphy.gif&quot; alt=&quot;Which package do i load?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You may have noticed that the import lines above look funny.  You might be used to seeing
 so-called &lt;em&gt;absolute&lt;/em&gt; import
@@ -393,19 +414,22 @@ example, if you had &lt;code class=&quot;highlighter-rouge&quot;&gt;submodule/ev
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;..toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;needed_function_name&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;hiding-things-from-import&quot;&gt;Hiding things from import&lt;/h3&gt;
+&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Sometimes, you might want to have variables or functions in a module that you don’t want the
-outside world to access.  Python doesn’t really provide public/private protections like C++ or
-Java, but there are some things you can do to communicate your intentions.&lt;/p&gt;
+&lt;p&gt;Go into &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; and change the second import from&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;to&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toymir&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;__&lt;/code&gt; prefixes.  Variables named like &lt;code class=&quot;highlighter-rouge&quot;&gt;_private&lt;/code&gt; are, by convention, understood to be
-private and not messed with.  Variables starting with two underscores, like &lt;code class=&quot;highlighter-rouge&quot;&gt;__really_private&lt;/code&gt;, are automatically renamed by the Python interpreter to make them hard to find.  This mostly matters for classes.&lt;/li&gt;
-  &lt;li&gt;Use the special &lt;code class=&quot;highlighter-rouge&quot;&gt;__all__&lt;/code&gt; array to communicate to python exactly which variables and
-functions should be exposed on import.  If you look in &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/toymir.py&lt;/code&gt;, you’ll see an
-example of this.  Any variables not listed in &lt;code class=&quot;highlighter-rouge&quot;&gt;__all__&lt;/code&gt; will not be exposed.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Once you’ve done that and saved the result, start &lt;code class=&quot;highlighter-rouge&quot;&gt;ipython&lt;/code&gt;, and import &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;.
+Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.midi_to_hz&lt;/code&gt;, the function should now be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.toymir.midi_to_hz&lt;/code&gt;.
+Verify that this is true.&lt;/p&gt;
+
+&lt;p&gt;Once you’re done, reset the repository to a clean state (undoing your change) by saying:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --hard HEAD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;including-data&quot;&gt;Including data&lt;/h3&gt;
 &lt;p&gt;Sometimes, packages need to include data as well as code.
@@ -419,7 +443,13 @@ This is the script that is executed when the package is installed and/or package
 contain all the necessary metadata (including dependencies and included data files) for
 successful installation.&lt;/p&gt;
 
-&lt;h2 id=&quot;best-practices-for-awesome-packages&quot;&gt;Best practices for awesome packages&lt;/h2&gt;
+&lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
+
+&lt;p&gt;Ready to keep going?  Onward to &lt;a href=&quot;part-5&quot;&gt;Part 5&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;eager-for-more&quot;&gt;Eager for more?&lt;/h2&gt;
+
+&lt;h3 id=&quot;best-practices-for-awesome-packages&quot;&gt;Best practices for awesome packages&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!&lt;/li&gt;
@@ -435,7 +465,7 @@ successful installation.&lt;/p&gt;
   &lt;li&gt;Keep a change-log in your documentation, and include the dates!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;tips-and-tricks-for-successful-scripts&quot;&gt;Tips and tricks for successful scripts&lt;/h2&gt;
+&lt;h3 id=&quot;tips-and-tricks-for-successful-scripts&quot;&gt;Tips and tricks for successful scripts&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -455,9 +485,6 @@ sure to document how to use your scripts in a README file!&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
-
-&lt;p&gt;Ready to keep going?  Onward to &lt;a href=&quot;part-5&quot;&gt;Part 5&lt;/a&gt;!&lt;/p&gt;
 </content>
 <summary>Hello &amp;amp; welcome to Part 4!  This is where we get into the code and start making changes.</summary>
 </entry>
