@@ -204,16 +204,24 @@ successful installation.</p>
 <h3 id="best-practices-for-awesome-packages">Best practices for awesome packages</h3>
 
 <ul>
-  <li>Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!</li>
-  <li>Use <code class="highlighter-rouge">numpydoc</code> format for your documentation strings.  We’ll see more of that in <a href="https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html">Part 6</a>.</li>
-  <li>Allow the user to seed your random number generators.  This is critical for reproducibility.</li>
+  <li>
+    <p>Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!</p>
+  </li>
+  <li>
+    <p>Use <code class="highlighter-rouge">numpydoc</code> format for your documentation strings.  We’ll see more of that in <a href="https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html">Part 6</a>.</p>
+  </li>
+  <li>
+    <p>Allow the user to seed your random number generators.  This is critical for reproducibility.</p>
+  </li>
   <li>Provide functions, not classes.
     <ul>
       <li>Internal classes are okay, but don’t make users learn object hierarchies!</li>
       <li>If you do need classes, don’t extend from other packages.  Wrap them instead.</li>
     </ul>
   </li>
-  <li>Specify your dependency versions!</li>
+  <li>
+    <p>Specify your dependency versions!</p>
+  </li>
   <li>Keep a change-log in your documentation, and include the dates!</li>
 </ul>
 

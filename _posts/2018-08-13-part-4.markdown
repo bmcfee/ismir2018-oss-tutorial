@@ -173,12 +173,17 @@ Ready to keep going?  Onward to [Part 5](part-5)!
 ### Best practices for awesome packages
 
 - Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!
+
 - Use `numpydoc` format for your documentation strings.  We'll see more of that in [Part 6][tutorial-part-6].
+
 - Allow the user to seed your random number generators.  This is critical for reproducibility.
+
 - Provide functions, not classes.
     - Internal classes are okay, but don't make users learn object hierarchies!
     - If you do need classes, don't extend from other packages.  Wrap them instead.
+
 - Specify your dependency versions!
+
 - Keep a change-log in your documentation, and include the dates!
 
 ### Tips and tricks for successful scripts
