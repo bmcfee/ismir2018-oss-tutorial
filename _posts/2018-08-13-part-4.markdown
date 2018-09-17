@@ -61,7 +61,7 @@ Python packages mirror the file and directory structure of the source code to ke
 ```
 toymir/
     __init__.py
-    toymir.py
+    freq.py
     version.py
     ...
 ```
@@ -80,7 +80,7 @@ necessary to initialize the package.
 In this case, `__init__.py` might look like:
 ```python
 from .version import __version__
-from .toymir import *
+from .freq import *
 ```
 These lines are executed when `import toymir` is executed, and in turn, import the
 rest of the modules within the package.
@@ -88,7 +88,7 @@ The first line brings in only one variable (`__version__`) from the `version.py`
 Importing the variable directly in `__init__.py` makes it accessible to the user as
 `toymir.__version__`, which is the convention for specifying version numbers in Python packages.
 
-The second line imports all variables, classes, and functions defined in the `toymir.py` module.
+The second line imports all variables, classes, and functions defined in the `freq.py` module.
 After saying `import toymir`, a user can access functions as `toymir.hz_to_midi()` (for
 example).
 
@@ -102,43 +102,37 @@ files.  In general, it's a good idea to limit submodules to not get too deep, if
 You may have noticed that the import lines above look funny.  You might be used to seeing
 so-called *absolute* import
 statements like `import numpy`, or `from scipy.signal import convolve1d`, but what's all this
-period business in `from .toymir import *`?
+period business in `from .freq import *`?
 
 This is a special convention to make sure that Python does not get confused about where imports
 come from.  Imagine there was already a package installed on the system called
-`toymir`. Then `from toymir import *` from within `toymir/__init__.py` could be
-ambiguous!  Saying `from .toymir import *` tells Python: *the toymir.py you're looking for is in this
+`freq`. Then `from freq import *` from within `toymir/__init__.py` could be
+ambiguous!  Saying `from .freq import *` tells Python: *the freq.py you're looking for is in this
 folder*.  This is critical when you have common submodule names like `utils`, and avoiding
 unintentional recursive imports when the submodule shares the package name (like in our case
 here).
 
-Similarly, if you need to go up a level in the package structure, you can use `..`.  For
-example, if you had `submodule/even_more_functions.py` depends on something defined in
-`toymir.py`, it could be imported (within `even_more_functions.py`) as
-```python
-from ..toymir import needed_function_name
-```
 
 #### Checkpoint
 
 Go into `toymir/__init__.py` and change the second import from
 ```python
-from .toymir import *
+from .freq import *
 ```
 to
 ```python
-from . import toymir
+from . import freq
 ```
 
 Once you've done that and saved the result, start `ipython`, and import `toymir`.
-Instead of `toymir.midi_to_hz`, the function should now be located at `toymir.toymir.midi_to_hz`.
+Instead of `toymir.midi_to_hz`, the function should now be located at `toymir.freq.midi_to_hz`.
 Verify this by running
 ```
 toymir.midi_to_hz(40)
 ```
 which should fail with `AttributeError`.  Next, run
 ```
-toymir.toymir.midi_to_hz(40)
+toymir.freq.midi_to_hz(40)
 ```
 should return `82.4068...`.
 

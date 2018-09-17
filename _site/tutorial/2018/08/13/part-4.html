@@ -103,7 +103,7 @@ environment.</p>
 Python packages mirror the file and directory structure of the source code to keep things organized.  For example, our toy package looks like:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir/
     __init__.py
-    toymir.py
+    freq.py
     version.py
     ...
 </code></pre></div></div>
@@ -120,7 +120,7 @@ necessary to initialize the package.</p>
 
 <p>In this case, <code class="highlighter-rouge">__init__.py</code> might look like:</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.version</span> <span class="kn">import</span> <span class="n">__version__</span>
-<span class="kn">from</span> <span class="nn">.toymir</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.freq</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div></div>
 <p>These lines are executed when <code class="highlighter-rouge">import toymir</code> is executed, and in turn, import the
 rest of the modules within the package.
@@ -128,7 +128,7 @@ The first line brings in only one variable (<code class="highlighter-rouge">__ve
 Importing the variable directly in <code class="highlighter-rouge">__init__.py</code> makes it accessible to the user as
 <code class="highlighter-rouge">toymir.__version__</code>, which is the convention for specifying version numbers in Python packages.</p>
 
-<p>The second line imports all variables, classes, and functions defined in the <code class="highlighter-rouge">toymir.py</code> module.
+<p>The second line imports all variables, classes, and functions defined in the <code class="highlighter-rouge">freq.py</code> module.
 After saying <code class="highlighter-rouge">import toymir</code>, a user can access functions as <code class="highlighter-rouge">toymir.hz_to_midi()</code> (for
 example).</p>
 
@@ -142,38 +142,32 @@ files.  In general, it’s a good idea to limit submodules to not get too deep, 
 <p>You may have noticed that the import lines above look funny.  You might be used to seeing
 so-called <em>absolute</em> import
 statements like <code class="highlighter-rouge">import numpy</code>, or <code class="highlighter-rouge">from scipy.signal import convolve1d</code>, but what’s all this
-period business in <code class="highlighter-rouge">from .toymir import *</code>?</p>
+period business in <code class="highlighter-rouge">from .freq import *</code>?</p>
 
 <p>This is a special convention to make sure that Python does not get confused about where imports
 come from.  Imagine there was already a package installed on the system called
-<code class="highlighter-rouge">toymir</code>. Then <code class="highlighter-rouge">from toymir import *</code> from within <code class="highlighter-rouge">toymir/__init__.py</code> could be
-ambiguous!  Saying <code class="highlighter-rouge">from .toymir import *</code> tells Python: <em>the toymir.py you’re looking for is in this
+<code class="highlighter-rouge">freq</code>. Then <code class="highlighter-rouge">from freq import *</code> from within <code class="highlighter-rouge">toymir/__init__.py</code> could be
+ambiguous!  Saying <code class="highlighter-rouge">from .freq import *</code> tells Python: <em>the freq.py you’re looking for is in this
 folder</em>.  This is critical when you have common submodule names like <code class="highlighter-rouge">utils</code>, and avoiding
 unintentional recursive imports when the submodule shares the package name (like in our case
 here).</p>
 
-<p>Similarly, if you need to go up a level in the package structure, you can use <code class="highlighter-rouge">..</code>.  For
-example, if you had <code class="highlighter-rouge">submodule/even_more_functions.py</code> depends on something defined in
-<code class="highlighter-rouge">toymir.py</code>, it could be imported (within <code class="highlighter-rouge">even_more_functions.py</code>) as</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">..toymir</span> <span class="kn">import</span> <span class="n">needed_function_name</span>
-</code></pre></div></div>
-
 <h4 id="checkpoint">Checkpoint</h4>
 
 <p>Go into <code class="highlighter-rouge">toymir/__init__.py</code> and change the second import from</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.toymir</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.freq</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div></div>
 <p>to</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">toymir</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">freq</span>
 </code></pre></div></div>
 
 <p>Once you’ve done that and saved the result, start <code class="highlighter-rouge">ipython</code>, and import <code class="highlighter-rouge">toymir</code>.
-Instead of <code class="highlighter-rouge">toymir.midi_to_hz</code>, the function should now be located at <code class="highlighter-rouge">toymir.toymir.midi_to_hz</code>.
+Instead of <code class="highlighter-rouge">toymir.midi_to_hz</code>, the function should now be located at <code class="highlighter-rouge">toymir.freq.midi_to_hz</code>.
 Verify this by running</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.midi_to_hz(40)
 </code></pre></div></div>
 <p>which should fail with <code class="highlighter-rouge">AttributeError</code>.  Next, run</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.toymir.midi_to_hz(40)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.freq.midi_to_hz(40)
 </code></pre></div></div>
 <p>should return <code class="highlighter-rouge">82.4068...</code>.</p>
 

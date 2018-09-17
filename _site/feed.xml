@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T18:52:41-04:00</updated>
+<updated>2018-09-17T18:58:38-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -393,7 +393,7 @@ environment.&lt;/p&gt;
 Python packages mirror the file and directory structure of the source code to keep things organized.  For example, our toy package looks like:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir/
     __init__.py
-    toymir.py
+    freq.py
     version.py
     ...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -410,7 +410,7 @@ necessary to initialize the package.&lt;/p&gt;
 
 &lt;p&gt;In this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; might look like:&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.version&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__version__&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.freq&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;These lines are executed when &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt; is executed, and in turn, import the
 rest of the modules within the package.
@@ -418,7 +418,7 @@ The first line brings in only one variable (&lt;code class=&quot;highlighter-rou
 Importing the variable directly in &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; makes it accessible to the user as
 &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.__version__&lt;/code&gt;, which is the convention for specifying version numbers in Python packages.&lt;/p&gt;
 
-&lt;p&gt;The second line imports all variables, classes, and functions defined in the &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt; module.
+&lt;p&gt;The second line imports all variables, classes, and functions defined in the &lt;code class=&quot;highlighter-rouge&quot;&gt;freq.py&lt;/code&gt; module.
 After saying &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt;, a user can access functions as &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_midi()&lt;/code&gt; (for
 example).&lt;/p&gt;
 
@@ -432,38 +432,32 @@ files.  In general, it’s a good idea to limit submodules to not get too deep, 
 &lt;p&gt;You may have noticed that the import lines above look funny.  You might be used to seeing
 so-called &lt;em&gt;absolute&lt;/em&gt; import
 statements like &lt;code class=&quot;highlighter-rouge&quot;&gt;import numpy&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;from scipy.signal import convolve1d&lt;/code&gt;, but what’s all this
-period business in &lt;code class=&quot;highlighter-rouge&quot;&gt;from .toymir import *&lt;/code&gt;?&lt;/p&gt;
+period business in &lt;code class=&quot;highlighter-rouge&quot;&gt;from .freq import *&lt;/code&gt;?&lt;/p&gt;
 
 &lt;p&gt;This is a special convention to make sure that Python does not get confused about where imports
 come from.  Imagine there was already a package installed on the system called
-&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;. Then &lt;code class=&quot;highlighter-rouge&quot;&gt;from toymir import *&lt;/code&gt; from within &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; could be
-ambiguous!  Saying &lt;code class=&quot;highlighter-rouge&quot;&gt;from .toymir import *&lt;/code&gt; tells Python: &lt;em&gt;the toymir.py you’re looking for is in this
+&lt;code class=&quot;highlighter-rouge&quot;&gt;freq&lt;/code&gt;. Then &lt;code class=&quot;highlighter-rouge&quot;&gt;from freq import *&lt;/code&gt; from within &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; could be
+ambiguous!  Saying &lt;code class=&quot;highlighter-rouge&quot;&gt;from .freq import *&lt;/code&gt; tells Python: &lt;em&gt;the freq.py you’re looking for is in this
 folder&lt;/em&gt;.  This is critical when you have common submodule names like &lt;code class=&quot;highlighter-rouge&quot;&gt;utils&lt;/code&gt;, and avoiding
 unintentional recursive imports when the submodule shares the package name (like in our case
 here).&lt;/p&gt;
 
-&lt;p&gt;Similarly, if you need to go up a level in the package structure, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;..&lt;/code&gt;.  For
-example, if you had &lt;code class=&quot;highlighter-rouge&quot;&gt;submodule/even_more_functions.py&lt;/code&gt; depends on something defined in
-&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt;, it could be imported (within &lt;code class=&quot;highlighter-rouge&quot;&gt;even_more_functions.py&lt;/code&gt;) as&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;..toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;needed_function_name&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
 &lt;p&gt;Go into &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; and change the second import from&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.freq&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;to&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toymir&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;freq&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Once you’ve done that and saved the result, start &lt;code class=&quot;highlighter-rouge&quot;&gt;ipython&lt;/code&gt;, and import &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;.
-Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.midi_to_hz&lt;/code&gt;, the function should now be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.toymir.midi_to_hz&lt;/code&gt;.
+Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.midi_to_hz&lt;/code&gt;, the function should now be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.freq.midi_to_hz&lt;/code&gt;.
 Verify this by running&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.midi_to_hz(40)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;which should fail with &lt;code class=&quot;highlighter-rouge&quot;&gt;AttributeError&lt;/code&gt;.  Next, run&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.toymir.midi_to_hz(40)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.freq.midi_to_hz(40)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;should return &lt;code class=&quot;highlighter-rouge&quot;&gt;82.4068...&lt;/code&gt;.&lt;/p&gt;
 
