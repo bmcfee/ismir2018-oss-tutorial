@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T15:17:41-04:00</updated>
+<updated>2018-09-17T18:52:41-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -202,7 +202,7 @@ nothing to commit, working directory clean
 conda list
 {% endhighlight %}&lt;/p&gt;
 
-&lt;p&gt;You should see something like the below:&lt;/p&gt;
+&lt;p&gt;You should see something like the below:
 {% highlight bash %}
 packages in environment at /Users/thorkell/miniconda3:&lt;/p&gt;
 
@@ -225,19 +225,21 @@ freetype                  2.9.1                hb4e5f40_0
 &lt;p&gt;We want to stop here quickly and make sure of everything, so we wrote a little test script that makes sure that everything is installed.
 In the &lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt; folder, you’ll find a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;test_tutorial_install.sh&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+./scripts/test_tutorial_install.sh
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./scripts/test_tutorial_install.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Checking git and conda
+&lt;p&gt;You should see:
+{% highlight bash %}
+Checking git and conda
 git version 2.7.4
 conda 4.5.11
 Checking Python version
 Python 3.6.5 :: Anaconda, Inc.
-Checking Python packages ...
-Success! Everything appears to be installed!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+Checking Python packages …
+Success! Everything appears to be installed!
+{% endhighlight %}&lt;/p&gt;
 
 &lt;h2 id=&quot;run-the-tests&quot;&gt;Run the Tests&lt;/h2&gt;
 
