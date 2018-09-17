@@ -124,11 +124,6 @@ contain all the necessary metadata (including dependencies and included data fil
 successful installation.
 
 
-## Extending the code
-
-
-TODO
-
 
 ## Best practices for awesome packages
 
@@ -153,12 +148,6 @@ TODO
 - Use the `argparse` package to handle command-line arguments nicely!
 
 - Use `tqdm` for cool progress bars!
-
-
-#### extra stuff
-- A suggestion, we can totally change all this!
-- We've got all this python code here, let's take a look at how it is structured and where everything is.
-- How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?
 
 
 

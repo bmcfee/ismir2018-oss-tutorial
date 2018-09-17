@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T13:25:40-04:00</updated>
+<updated>2018-09-17T13:27:21-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -419,10 +419,6 @@ This is the script that is executed when the package is installed and/or package
 contain all the necessary metadata (including dependencies and included data files) for
 successful installation.&lt;/p&gt;
 
-&lt;h2 id=&quot;extending-the-code&quot;&gt;Extending the code&lt;/h2&gt;
-
-&lt;p&gt;TODO&lt;/p&gt;
-
 &lt;h2 id=&quot;best-practices-for-awesome-packages&quot;&gt;Best practices for awesome packages&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -457,13 +453,6 @@ sure to document how to use your scripts in a README file!&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;tqdm&lt;/code&gt; for cool progress bars!&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;extra-stuff&quot;&gt;extra stuff&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;A suggestion, we can totally change all this!&lt;/li&gt;
-  &lt;li&gt;We’ve got all this python code here, let’s take a look at how it is structured and where everything is.&lt;/li&gt;
-  &lt;li&gt;How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
