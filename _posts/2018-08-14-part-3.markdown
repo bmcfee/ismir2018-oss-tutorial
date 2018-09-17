@@ -68,6 +68,31 @@ freetype                  2.9.1                hb4e5f40_0
 {% endhighlight %}
 
 
+### Secret Bonus Checkpoint!
+
+![Bowser Bonus](https://i.ytimg.com/vi/tWWesdluPko/maxresdefault.jpg)
+
+Just when you thought you had done all the checkpoints!  We want to stop here quickly and make sure of everything.  In the `scripts` folder, you'll find a file called `test_tutorial_install.sh`.  
+
+Run:
+{% highlight bash %}
+./scripts/test_tutorial_install.sh
+{% endhighlight %}
+
+You should see something like the below – make sure that `librosa` is in list!
+{% highlight bash %}
+packages in environment at /Users/thorkell/miniconda3:
+
+ Name                    Version                   Build
+conda                     4.5.10                   py36_0
+conda-env                 2.6.0                h36134e3_0
+cryptography              2.2.2            py36h1de35cc_0
+cycler                    0.10.0           py36hfc81398_0
+docutils                  0.14             py36hbfde631_0
+flake8                    3.5.0                    py36_1
+freetype                  2.9.1                hb4e5f40_0
+{% endhighlight %}
+
 ## Run the Tests
 
 So we've installed all the packages we'll need.  Let's run the tests.  Tests make sure that your code is doing what your think it is doing – making sure that 2 + 2 in fact comes out to 4.
