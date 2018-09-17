@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T13:25:36-04:00</updated>
+<updated>2018-09-17T13:25:40-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -420,6 +420,8 @@ contain all the necessary metadata (including dependencies and included data fil
 successful installation.&lt;/p&gt;
 
 &lt;h2 id=&quot;extending-the-code&quot;&gt;Extending the code&lt;/h2&gt;
+
+&lt;p&gt;TODO&lt;/p&gt;
 
 &lt;h2 id=&quot;best-practices-for-awesome-packages&quot;&gt;Best practices for awesome packages&lt;/h2&gt;
 

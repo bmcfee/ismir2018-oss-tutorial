@@ -127,6 +127,9 @@ successful installation.
 ## Extending the code
 
 
+TODO
+
+
 ## Best practices for awesome packages
 
 - Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!
