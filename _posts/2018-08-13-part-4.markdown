@@ -90,12 +90,30 @@ The first line brings in only one variable (`__version__`) from the `version.py`
 Importing the variable directly in `__init__.py` makes it accessible to the user as
 `toymir.__version__`, which is the convention for specifying version numbers in Python packages.
 
-The second line imports all variables, classes, and functions defined in the `freq.py` module.
-After saying `import toymir`, a user can access functions as `toymir.hz_to_midi()` (for
+The second line imports any variables, classes, and functions defined in the `freq.py` module.
+After saying `import toymir`, a user can access functions as `toymir.hz_to_period()` (for
 example).
 
 Modules can also have sub-structure, with nested folders, each including their own `__init__.py`
 files.  In general, it's a good idea to limit submodules to not get too deep, if only because users don't like typing long strings to access functions!
+
+
+#### Checkpoint
+
+Now that you have `toymir` installed, let's see what it does.  Start an `ipython` console, and type
+```
+import toymir
+```
+at the prompt.
+
+Next, type `toymir.<TAB>` and you should see a table of the contents of the `toymir` package, which you can navigate by arrow keys.
+Select `hz_to_period` and press enter: this should leave `toymir.hz_to_period` on your input prompt.
+
+Now, add a `?` to the end of the line, so it reads `toymir.hz_to_period?` and press `<ENTER>`.
+This will bring up the documentation for the `hz_to_period` function, which you can quit by hitting `q`.
+IF you add two `??` instead of one, it will bring up both the documentation and the source code (if available).
+This can be quite handy for quickly getting a feel for how a function works!
+
 
 ### Relative and absolute imports
 
@@ -127,16 +145,16 @@ from . import freq
 ```
 
 Once you've done that and saved the result, start `ipython`, and import `toymir`.
-Instead of `toymir.midi_to_hz`, the function should now be located at `toymir.freq.midi_to_hz`.
+Instead of `toymir.hz_to_period`, the function should now be located at `toymir.freq.hz_to_period`.
 Verify this by running
 ```
-toymir.midi_to_hz(40)
+toymir.hz_to_period(40)
 ```
 which should fail with `AttributeError`.  Next, run
 ```
-toymir.freq.midi_to_hz(40)
+toymir.freq.hz_to_period(100)
 ```
-should return `82.4068...`.
+should return `0.01`.
 
 Once you're done, reset the repository to a clean state (undoing your change) by saying:
 ```

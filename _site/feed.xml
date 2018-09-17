@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T19:05:19-04:00</updated>
+<updated>2018-09-17T19:08:27-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -423,12 +423,27 @@ The first line brings in only one variable (&lt;code class=&quot;highlighter-rou
 Importing the variable directly in &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; makes it accessible to the user as
 &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.__version__&lt;/code&gt;, which is the convention for specifying version numbers in Python packages.&lt;/p&gt;
 
-&lt;p&gt;The second line imports all variables, classes, and functions defined in the &lt;code class=&quot;highlighter-rouge&quot;&gt;freq.py&lt;/code&gt; module.
-After saying &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt;, a user can access functions as &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_midi()&lt;/code&gt; (for
+&lt;p&gt;The second line imports any variables, classes, and functions defined in the &lt;code class=&quot;highlighter-rouge&quot;&gt;freq.py&lt;/code&gt; module.
+After saying &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt;, a user can access functions as &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_period()&lt;/code&gt; (for
 example).&lt;/p&gt;
 
 &lt;p&gt;Modules can also have sub-structure, with nested folders, each including their own &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt;
 files.  In general, it’s a good idea to limit submodules to not get too deep, if only because users don’t like typing long strings to access functions!&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;Now that you have &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt; installed, let’s see what it does.  Start an &lt;code class=&quot;highlighter-rouge&quot;&gt;ipython&lt;/code&gt; console, and type&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import toymir
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;at the prompt.&lt;/p&gt;
+
+&lt;p&gt;Next, type &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.&amp;lt;TAB&amp;gt;&lt;/code&gt; and you should see a table of the contents of the &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt; package, which you can navigate by arrow keys.
+Select &lt;code class=&quot;highlighter-rouge&quot;&gt;hz_to_period&lt;/code&gt; and press enter: this should leave &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_period&lt;/code&gt; on your input prompt.&lt;/p&gt;
+
+&lt;p&gt;Now, add a &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt; to the end of the line, so it reads &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_period?&lt;/code&gt; and press &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ENTER&amp;gt;&lt;/code&gt;.
+This will bring up the documentation for the &lt;code class=&quot;highlighter-rouge&quot;&gt;hz_to_period&lt;/code&gt; function, which you can quit by hitting &lt;code class=&quot;highlighter-rouge&quot;&gt;q&lt;/code&gt;.
+IF you add two &lt;code class=&quot;highlighter-rouge&quot;&gt;??&lt;/code&gt; instead of one, it will bring up both the documentation and the source code (if available).
+This can be quite handy for quickly getting a feel for how a function works!&lt;/p&gt;
 
 &lt;h3 id=&quot;relative-and-absolute-imports&quot;&gt;Relative and absolute imports&lt;/h3&gt;
 
@@ -447,7 +462,7 @@ folder&lt;/em&gt;.  This is critical when you have common submodule names like &
 unintentional recursive imports when the submodule shares the package name (like in our case
 here).&lt;/p&gt;
 
-&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
+&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
 &lt;p&gt;Go into &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; and change the second import from&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.freq&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
@@ -457,14 +472,14 @@ here).&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Once you’ve done that and saved the result, start &lt;code class=&quot;highlighter-rouge&quot;&gt;ipython&lt;/code&gt;, and import &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;.
-Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.midi_to_hz&lt;/code&gt;, the function should now be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.freq.midi_to_hz&lt;/code&gt;.
+Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_period&lt;/code&gt;, the function should now be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.freq.hz_to_period&lt;/code&gt;.
 Verify this by running&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.midi_to_hz(40)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.hz_to_period(40)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;which should fail with &lt;code class=&quot;highlighter-rouge&quot;&gt;AttributeError&lt;/code&gt;.  Next, run&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.freq.midi_to_hz(40)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.freq.hz_to_period(100)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;should return &lt;code class=&quot;highlighter-rouge&quot;&gt;82.4068...&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;should return &lt;code class=&quot;highlighter-rouge&quot;&gt;0.01&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Once you’re done, reset the repository to a clean state (undoing your change) by saying:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --hard HEAD

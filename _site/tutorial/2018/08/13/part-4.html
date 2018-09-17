@@ -133,12 +133,27 @@ The first line brings in only one variable (<code class="highlighter-rouge">__ve
 Importing the variable directly in <code class="highlighter-rouge">__init__.py</code> makes it accessible to the user as
 <code class="highlighter-rouge">toymir.__version__</code>, which is the convention for specifying version numbers in Python packages.</p>
 
-<p>The second line imports all variables, classes, and functions defined in the <code class="highlighter-rouge">freq.py</code> module.
-After saying <code class="highlighter-rouge">import toymir</code>, a user can access functions as <code class="highlighter-rouge">toymir.hz_to_midi()</code> (for
+<p>The second line imports any variables, classes, and functions defined in the <code class="highlighter-rouge">freq.py</code> module.
+After saying <code class="highlighter-rouge">import toymir</code>, a user can access functions as <code class="highlighter-rouge">toymir.hz_to_period()</code> (for
 example).</p>
 
 <p>Modules can also have sub-structure, with nested folders, each including their own <code class="highlighter-rouge">__init__.py</code>
 files.  In general, it’s a good idea to limit submodules to not get too deep, if only because users don’t like typing long strings to access functions!</p>
+
+<h4 id="checkpoint">Checkpoint</h4>
+
+<p>Now that you have <code class="highlighter-rouge">toymir</code> installed, let’s see what it does.  Start an <code class="highlighter-rouge">ipython</code> console, and type</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import toymir
+</code></pre></div></div>
+<p>at the prompt.</p>
+
+<p>Next, type <code class="highlighter-rouge">toymir.&lt;TAB&gt;</code> and you should see a table of the contents of the <code class="highlighter-rouge">toymir</code> package, which you can navigate by arrow keys.
+Select <code class="highlighter-rouge">hz_to_period</code> and press enter: this should leave <code class="highlighter-rouge">toymir.hz_to_period</code> on your input prompt.</p>
+
+<p>Now, add a <code class="highlighter-rouge">?</code> to the end of the line, so it reads <code class="highlighter-rouge">toymir.hz_to_period?</code> and press <code class="highlighter-rouge">&lt;ENTER&gt;</code>.
+This will bring up the documentation for the <code class="highlighter-rouge">hz_to_period</code> function, which you can quit by hitting <code class="highlighter-rouge">q</code>.
+IF you add two <code class="highlighter-rouge">??</code> instead of one, it will bring up both the documentation and the source code (if available).
+This can be quite handy for quickly getting a feel for how a function works!</p>
 
 <h3 id="relative-and-absolute-imports">Relative and absolute imports</h3>
 
@@ -157,7 +172,7 @@ folder</em>.  This is critical when you have common submodule names like <code c
 unintentional recursive imports when the submodule shares the package name (like in our case
 here).</p>
 
-<h4 id="checkpoint">Checkpoint</h4>
+<h4 id="checkpoint-1">Checkpoint</h4>
 
 <p>Go into <code class="highlighter-rouge">toymir/__init__.py</code> and change the second import from</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.freq</span> <span class="kn">import</span> <span class="o">*</span>
@@ -167,14 +182,14 @@ here).</p>
 </code></pre></div></div>
 
 <p>Once you’ve done that and saved the result, start <code class="highlighter-rouge">ipython</code>, and import <code class="highlighter-rouge">toymir</code>.
-Instead of <code class="highlighter-rouge">toymir.midi_to_hz</code>, the function should now be located at <code class="highlighter-rouge">toymir.freq.midi_to_hz</code>.
+Instead of <code class="highlighter-rouge">toymir.hz_to_period</code>, the function should now be located at <code class="highlighter-rouge">toymir.freq.hz_to_period</code>.
 Verify this by running</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.midi_to_hz(40)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.hz_to_period(40)
 </code></pre></div></div>
 <p>which should fail with <code class="highlighter-rouge">AttributeError</code>.  Next, run</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.freq.midi_to_hz(40)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir.freq.hz_to_period(100)
 </code></pre></div></div>
-<p>should return <code class="highlighter-rouge">82.4068...</code>.</p>
+<p>should return <code class="highlighter-rouge">0.01</code>.</p>
 
 <p>Once you’re done, reset the repository to a clean state (undoing your change) by saying:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard HEAD
