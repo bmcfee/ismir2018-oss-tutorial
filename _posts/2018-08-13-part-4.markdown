@@ -153,4 +153,4 @@ successful installation.
 
 ## Success!
 
-[tutorial-part-4]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-4.html 
+Ready to keep going?  Onward to [Part 5](part-5)!

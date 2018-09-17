@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T13:27:21-04:00</updated>
+<updated>2018-09-17T13:41:08-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -457,6 +457,7 @@ sure to document how to use your scripts in a README file!&lt;/p&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
+&lt;p&gt;Ready to keep going?  Onward to &lt;a href=&quot;part-5&quot;&gt;Part 5&lt;/a&gt;!&lt;/p&gt;
 </content>
 <summary>Hello &amp;amp; welcome to Part 4!  This is where we get into the code and start making changes.</summary>
 </entry>
@@ -736,7 +737,7 @@ flake8
 
 &lt;p&gt;We did … just about everything!&lt;/p&gt;
 
-&lt;p&gt;We went over installing things in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1.html&quot;&gt;Part 1&lt;/a&gt;, and setting up web servives in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;.  &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt; covered git and version control, and &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html&quot;&gt;Part 4&lt;/a&gt; went over Python and Python module structure.  Testing was covered in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-5.html&quot;&gt;Part 5&lt;/a&gt;, and documention in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html&quot;&gt;Part 6&lt;/a&gt;.  Finally, [Part 7][part-8] introduced the wider Python ecosystem, and this is Part 8.&lt;/p&gt;
+&lt;p&gt;We went over installing things in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1.html&quot;&gt;Part 1&lt;/a&gt;, and setting up web servives in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;.  &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt; covered git and version control, and &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html&quot;&gt;Part 4&lt;/a&gt; went over Python and Python module structure.  Testing was covered in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-5.html&quot;&gt;Part 5&lt;/a&gt;, and documentation in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html&quot;&gt;Part 6&lt;/a&gt;.  Finally, &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/10/part-7.html&quot;&gt;Part 7&lt;/a&gt; introduced the wider Python ecosystem, and this is Part 8.&lt;/p&gt;
 
 &lt;p&gt;Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!&lt;/p&gt;
 
