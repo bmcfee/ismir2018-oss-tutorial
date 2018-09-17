@@ -19,6 +19,8 @@ While you’re welcome to use Powershell, we can’t guarantee that we’ll be a
 
 &lt;h2 id=&quot;install-conda&quot;&gt;Install Conda&lt;/h2&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1920/1*y3tLpsCpNj-ev4v7jO-C5g.png&quot; alt=&quot;conda&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Conda is a package manager for Python code and lower-level code that supports Python.
 Anaconda is a version of Conda that comes with lots and lots of pre-installed packages for scientific computing.
 We’re going to use Anaconda so we don’t have to go digging for obscure Fortran and C libraries.&lt;/p&gt;
@@ -48,6 +50,8 @@ conda 4.5.10
 &lt;p&gt;(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)&lt;/p&gt;
 
 &lt;h2 id=&quot;install-git&quot;&gt;Install git&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://git-scm.com/images/branching-illustration.png&quot; alt=&quot;git&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;git is a version control system – it keeps track of changes that you make to your code.
 This makes it hard for you to lose changes that you have made, and makes it easy for you to return to a working version of your code.
