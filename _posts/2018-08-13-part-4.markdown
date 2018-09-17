@@ -4,14 +4,152 @@ title:  "Part 4:  Python"
 date:   2018-08-13 15:16:46 -0400
 categories: tutorial
 ---
-Hello & welcome to Part 4!  
+Hello & welcome to Part 4!  This is where we get into the code and start making changes.
+
+## What is all this stuff?
+
+By now, you've probably had a look through the files in the `ismir2018-oss-tutorial` repository,
+and have some sense of what they all are.  Here, we'll go through it in a bit more detail.
+
+
+
+## How is code organized in Python?
+
+The first thing to understand is that Python allows two different use cases: *scripts* and
+*packages*:
+
+- A **script** is a file containing Python code, e.g., `myscript.py` that's meant to be executed directly by a user.
+
+- A **package** is a way of bundling up pieces of code for use by other packages and scripts in the
+future.
+
+When you say `pip install <SOMETHING>` or `conda install <SOMETHING>`, you're installing a
+package.  `numpy` is a package, for example.
+
+
+Both scripts and packages are important for reproducibility, but it's important to know when to
+use each.  Some rules of thumb:
+- If you want a bit of code to be usable across multiple
+projects, put it in a package.
+- If you just want someone else to be able to run your exact code,
+a script might be better.
+Of course, these are just general suggestions, and there will always be exceptions.  Use your
+best judgement!
+
+
+### So how do packages work?
+
+In its simplest form, a package can be defined from a single source file (e.g., `<PACKAGE>.py`), but it is more common to split even simple packages into *modules*.
+Python packages mirror the file and directory structure of the source code to keep things organized.  For example, our toy package looks like:
+```
+toymir/
+    __init__.py
+    toymir.py
+    version.py
+    ...
+```
+The package is called `toymir`, and you would use it in a script by saying
+```python
+import toymir
+```
+When Python encounters the `import` command, it will locate `toymir` in its search path,
+and look for either `toymir.py` or `toymir/__init__.py`.
+The `__init__.py` convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
+Typically, `__init__.py` files are minimal, and only contain comments and other import functions
+necessary to initialize the package.
+In this case, `__init__.py` might look like:
+```python
+from .version import __version__
+from .toymir import *
+```
+These lines are executed when `import toymir` is executed, and in turn, import the
+rest of the modules within the package.
+The first line brings in only one variable (`__version__`) from the `version.py` module.
+Importing the variable directly in `__init__.py` makes it accessible to the user as
+`toymir.__version__`, which is the convention for specifying version numbers in Python packages.
+
+The second line imports all variables, classes, and functions defined in the `toymir.py` module.
+After saying `import toymir`, a user can access functions as `toymir.hz_to_midi()` (for
+example).
+
+Modules can also have sub-structure, with nested folders, each including their own `__init__.py`
+files.  In general, it's a good idea to limit submodules to not get too deep, if only because users don't like typing long strings to access functions!
+
+### Relative and absolute imports
+
+You may have noticed that the import lines above look funny.  You might be used to seeing
+so-called *absolute* import
+statements like `import numpy`, or `from scipy.signal import convolve1d`, but what's all this
+period business in `from .toymir import *`?
+
+This is a special convention to make sure that Python does not get confused about where imports
+come from.  Imagine there was already a package installed on the system called
+`toymir`. Then `from toymir import *` from within `toymir/__init__.py` could be
+ambiguous!  Saying `from .toymir import *` tells Python: *the toymir.py you're looking for is in this
+folder*.  This is critical when you have common submodule names like `utils`, and avoiding
+unintentional recursive imports when the submodule shares the package name (like in our case
+here).
+
+Similarly, if you need to go up a level in the package structure, you can use `..`.  For
+example, if you had `submodule/even_more_functions.py` depends on something defined in
+`toymir.py`, it could be imported (within `even_more_functions.py`) as
+```python
+from ..toymir import needed_function_name
+```
+
+### Hiding things from import
+
+Sometimes, you might want to have variables or functions in a module that you don't want the
+outside world to access.  Python doesn't really provide public/private protections like C++ or
+Java, but there are some things you can do to communicate your intentions.
+
+1. Use `_` and `__` prefixes.  Variables named like `_private` are, by convention, understood to be
+   private and not messed with.  Variables starting with two underscores, like `__really_private`, are automatically renamed by the Python interpreter to make them hard to find.  This mostly matters for classes.
+2. Use the special `__all__` array to communicate to python exactly which variables and
+   functions should be exposed on import.  If you look in `toymir/toymir.py`, you'll see an
+   example of this.  Any variables not listed in `__all__` will not be exposed.
+
+
+### Including data
+Sometimes, packages need to include data as well as code.
+The tool to do this is called `pkg_resources`.  Typically, a package will provide functions to
+make it easy for a user to access any bundled data, or load it directly if the data is necessary
+for internal use by the package (e.g., model parameters).
+
+
+### The installer
+Finally, outside of the package directory (but still in the repository), you'll see `setup.py`.
+This is the script that is executed when the package is installed and/or packaged, and should
+contain all the necessary metadata (including dependencies and included data files) for
+successful installation.
+
+
+## Extending the code
+
+
+## Best practices for awesome packages
+
+- Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!
+- Use `numpydoc` format for your documentation strings.
+- Allow the user to seed your random number generators.  This is critical for reproducibility.
+- Provide functions, not classes.
+    - Internal classes are okay, but don't make users learn object hierarchies!
+    - If you do need classes, don't extend from other packages.  Wrap them instead.
+- Specify your dependency versions!
+- Keep a change-log in your documentation, and include the dates!
+
+## Tips and tricks for successful scripts
+
+- Always seed your random number generator
+- If you have an experiment that consists of multiple sequential stages, make separate scripts
+  and prefix them with numbers.
+- Use the `argparse` package to handle command-line arguments nicely!
+- Use `tqdm` for progress bars
+
 
 - A suggestion, we can totally change all this!
 - We've got all this python code here, let's take a look at how it is structured and where everything is.
-- Cool, so why is it structured that way, and what parts of the structure do we need to have? (init.py, what's an __all__, folders, relative imports, etc)
 - How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?
-- If we do that, let's talk about how we need to update init.py, change how we'd import that code, maybe talk about versioning here? Maybe versioning is a bit boring.
-- whatever we decide, let's do it and commit the code
 
 
 

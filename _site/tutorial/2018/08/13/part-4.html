@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v3.7.3" />
 <meta property="og:title" content="Part 4: Python" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Hello &amp; welcome to Part 4!" />
-<meta property="og:description" content="Hello &amp; welcome to Part 4!" />
+<meta name="description" content="Hello &amp; welcome to Part 4! This is where we get into the code and start making changes." />
+<meta property="og:description" content="Hello &amp; welcome to Part 4! This is where we get into the code and start making changes." />
 <link rel="canonical" href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html" />
 <meta property="og:url" content="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html" />
 <meta property="og:site_name" content="Open Source and Reproducible MIR Research" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-13T15:16:46-04:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html"},"url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html","headline":"Part 4: Python","dateModified":"2018-08-13T15:16:46-04:00","datePublished":"2018-08-13T15:16:46-04:00","description":"Hello &amp; welcome to Part 4!","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html"},"url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html","headline":"Part 4: Python","dateModified":"2018-08-13T15:16:46-04:00","datePublished":"2018-08-13T15:16:46-04:00","description":"Hello &amp; welcome to Part 4! This is where we get into the code and start making changes.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="" /></head>
 <body><header class="site-header" role="banner">
@@ -45,15 +45,155 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Hello &amp; welcome to Part 4!</p>
+    <p>Hello &amp; welcome to Part 4!  This is where we get into the code and start making changes.</p>
+
+<h2 id="what-is-all-this-stuff">What is all this stuff?</h2>
+
+<p>By now, you’ve probably had a look through the files in the <code class="highlighter-rouge">ismir2018-oss-tutorial</code> repository,
+and have some sense of what they all are.  Here, we’ll go through it in a bit more detail.</p>
+
+<h2 id="how-is-code-organized-in-python">How is code organized in Python?</h2>
+
+<p>The first thing to understand is that Python allows two different use cases: <em>scripts</em> and
+<em>packages</em>:</p>
 
 <ul>
+  <li>
+    <p>A <strong>script</strong> is a file containing Python code, e.g., <code class="highlighter-rouge">myscript.py</code> that’s meant to be executed directly by a user.</p>
+  </li>
+  <li>
+    <p>A <strong>package</strong> is a way of bundling up pieces of code for use by other packages and scripts in the
+future.</p>
+  </li>
+</ul>
+
+<p>When you say <code class="highlighter-rouge">pip install &lt;SOMETHING&gt;</code> or <code class="highlighter-rouge">conda install &lt;SOMETHING&gt;</code>, you’re installing a
+package.  <code class="highlighter-rouge">numpy</code> is a package, for example.</p>
+
+<p>Both scripts and packages are important for reproducibility, but it’s important to know when to
+use each.  Some rules of thumb:</p>
+<ul>
+  <li>If you want a bit of code to be usable across multiple
+projects, put it in a package.</li>
+  <li>If you just want someone else to be able to run your exact code,
+a script might be better.
+Of course, these are just general suggestions, and there will always be exceptions.  Use your
+best judgement!</li>
+</ul>
+
+<h3 id="so-how-do-packages-work">So how do packages work?</h3>
+
+<p>In its simplest form, a package can be defined from a single source file (e.g., <code class="highlighter-rouge">&lt;PACKAGE&gt;.py</code>), but it is more common to split even simple packages into <em>modules</em>.
+Python packages mirror the file and directory structure of the source code to keep things organized.  For example, our toy package looks like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toymir/
+    __init__.py
+    toymir.py
+    version.py
+    ...
+</code></pre></div></div>
+<p>The package is called <code class="highlighter-rouge">toymir</code>, and you would use it in a script by saying</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">toymir</span>
+</code></pre></div></div>
+<p>When Python encounters the <code class="highlighter-rouge">import</code> command, it will locate <code class="highlighter-rouge">toymir</code> in its search path,
+and look for either <code class="highlighter-rouge">toymir.py</code> or <code class="highlighter-rouge">toymir/__init__.py</code>.
+The <code class="highlighter-rouge">__init__.py</code> convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
+Typically, <code class="highlighter-rouge">__init__.py</code> files are minimal, and only contain comments and other import functions
+necessary to initialize the package.
+In this case, <code class="highlighter-rouge">__init__.py</code> might look like:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.version</span> <span class="kn">import</span> <span class="n">__version__</span>
+<span class="kn">from</span> <span class="nn">.toymir</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div></div>
+<p>These lines are executed when <code class="highlighter-rouge">import toymir</code> is executed, and in turn, import the
+rest of the modules within the package.
+The first line brings in only one variable (<code class="highlighter-rouge">__version__</code>) from the <code class="highlighter-rouge">version.py</code> module.
+Importing the variable directly in <code class="highlighter-rouge">__init__.py</code> makes it accessible to the user as
+<code class="highlighter-rouge">toymir.__version__</code>, which is the convention for specifying version numbers in Python packages.</p>
+
+<p>The second line imports all variables, classes, and functions defined in the <code class="highlighter-rouge">toymir.py</code> module.
+After saying <code class="highlighter-rouge">import toymir</code>, a user can access functions as <code class="highlighter-rouge">toymir.hz_to_midi()</code> (for
+example).</p>
+
+<p>Modules can also have sub-structure, with nested folders, each including their own <code class="highlighter-rouge">__init__.py</code>
+files.  In general, it’s a good idea to limit submodules to not get too deep, if only because users don’t like typing long strings to access functions!</p>
+
+<h3 id="relative-and-absolute-imports">Relative and absolute imports</h3>
+
+<p>You may have noticed that the import lines above look funny.  You might be used to seeing
+so-called <em>absolute</em> import
+statements like <code class="highlighter-rouge">import numpy</code>, or <code class="highlighter-rouge">from scipy.signal import convolve1d</code>, but what’s all this
+period business in <code class="highlighter-rouge">from .toymir import *</code>?</p>
+
+<p>This is a special convention to make sure that Python does not get confused about where imports
+come from.  Imagine there was already a package installed on the system called
+<code class="highlighter-rouge">toymir</code>. Then <code class="highlighter-rouge">from toymir import *</code> from within <code class="highlighter-rouge">toymir/__init__.py</code> could be
+ambiguous!  Saying <code class="highlighter-rouge">from .toymir import *</code> tells Python: <em>the toymir.py you’re looking for is in this
+folder</em>.  This is critical when you have common submodule names like <code class="highlighter-rouge">utils</code>, and avoiding
+unintentional recursive imports when the submodule shares the package name (like in our case
+here).</p>
+
+<p>Similarly, if you need to go up a level in the package structure, you can use <code class="highlighter-rouge">..</code>.  For
+example, if you had <code class="highlighter-rouge">submodule/even_more_functions.py</code> depends on something defined in
+<code class="highlighter-rouge">toymir.py</code>, it could be imported (within <code class="highlighter-rouge">even_more_functions.py</code>) as</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">..toymir</span> <span class="kn">import</span> <span class="n">needed_function_name</span>
+</code></pre></div></div>
+
+<h3 id="hiding-things-from-import">Hiding things from import</h3>
+
+<p>Sometimes, you might want to have variables or functions in a module that you don’t want the
+outside world to access.  Python doesn’t really provide public/private protections like C++ or
+Java, but there are some things you can do to communicate your intentions.</p>
+
+<ol>
+  <li>Use <code class="highlighter-rouge">_</code> and <code class="highlighter-rouge">__</code> prefixes.  Variables named like <code class="highlighter-rouge">_private</code> are, by convention, understood to be
+private and not messed with.  Variables starting with two underscores, like <code class="highlighter-rouge">__really_private</code>, are automatically renamed by the Python interpreter to make them hard to find.  This mostly matters for classes.</li>
+  <li>Use the special <code class="highlighter-rouge">__all__</code> array to communicate to python exactly which variables and
+functions should be exposed on import.  If you look in <code class="highlighter-rouge">toymir/toymir.py</code>, you’ll see an
+example of this.  Any variables not listed in <code class="highlighter-rouge">__all__</code> will not be exposed.</li>
+</ol>
+
+<h3 id="including-data">Including data</h3>
+<p>Sometimes, packages need to include data as well as code.
+The tool to do this is called <code class="highlighter-rouge">pkg_resources</code>.  Typically, a package will provide functions to
+make it easy for a user to access any bundled data, or load it directly if the data is necessary
+for internal use by the package (e.g., model parameters).</p>
+
+<h3 id="the-installer">The installer</h3>
+<p>Finally, outside of the package directory (but still in the repository), you’ll see <code class="highlighter-rouge">setup.py</code>.
+This is the script that is executed when the package is installed and/or packaged, and should
+contain all the necessary metadata (including dependencies and included data files) for
+successful installation.</p>
+
+<h2 id="extending-the-code">Extending the code</h2>
+
+<h2 id="best-practices-for-awesome-packages">Best practices for awesome packages</h2>
+
+<ul>
+  <li>Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!</li>
+  <li>Use <code class="highlighter-rouge">numpydoc</code> format for your documentation strings.</li>
+  <li>Allow the user to seed your random number generators.  This is critical for reproducibility.</li>
+  <li>Provide functions, not classes.
+    <ul>
+      <li>Internal classes are okay, but don’t make users learn object hierarchies!</li>
+      <li>If you do need classes, don’t extend from other packages.  Wrap them instead.</li>
+    </ul>
+  </li>
+  <li>Specify your dependency versions!</li>
+  <li>Keep a change-log in your documentation, and include the dates!</li>
+</ul>
+
+<h2 id="tips-and-tricks-for-successful-scripts">Tips and tricks for successful scripts</h2>
+
+<ul>
+  <li>Always seed your random number generator</li>
+  <li>If you have an experiment that consists of multiple sequential stages, make separate scripts
+and prefix them with numbers.</li>
+  <li>Use the <code class="highlighter-rouge">argparse</code> package to handle command-line arguments nicely!</li>
+  <li>
+    <p>Use <code class="highlighter-rouge">tqdm</code> for progress bars</p>
+  </li>
   <li>A suggestion, we can totally change all this!</li>
   <li>We’ve got all this python code here, let’s take a look at how it is structured and where everything is.</li>
-  <li>Cool, so why is it structured that way, and what parts of the structure do we need to have? (init.py, what’s an <strong>all</strong>, folders, relative imports, etc)</li>
   <li>How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?</li>
-  <li>If we do that, let’s talk about how we need to update init.py, change how we’d import that code, maybe talk about versioning here? Maybe versioning is a bit boring.</li>
-  <li>whatever we decide, let’s do it and commit the code</li>
 </ul>
 
 <h2 id="success">Success!</h2>

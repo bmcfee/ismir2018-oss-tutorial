@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T12:14:52-04:00</updated>
+<updated>2018-09-17T13:23:08-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -301,21 +301,161 @@ Date:   &lt;today&gt;&lt;/today&gt;&lt;/Your&gt;&lt;/p&gt;
 <published>2018-08-13T15:16:46-04:00</published>
 <updated>2018-08-13T15:16:46-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4</id>
-<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html">&lt;p&gt;Hello &amp;amp; welcome to Part 4!&lt;/p&gt;
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html">&lt;p&gt;Hello &amp;amp; welcome to Part 4!  This is where we get into the code and start making changes.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-all-this-stuff&quot;&gt;What is all this stuff?&lt;/h2&gt;
+
+&lt;p&gt;By now, you’ve probably had a look through the files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt; repository,
+and have some sense of what they all are.  Here, we’ll go through it in a bit more detail.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-is-code-organized-in-python&quot;&gt;How is code organized in Python?&lt;/h2&gt;
+
+&lt;p&gt;The first thing to understand is that Python allows two different use cases: &lt;em&gt;scripts&lt;/em&gt; and
+&lt;em&gt;packages&lt;/em&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;script&lt;/strong&gt; is a file containing Python code, e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;myscript.py&lt;/code&gt; that’s meant to be executed directly by a user.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;package&lt;/strong&gt; is a way of bundling up pieces of code for use by other packages and scripts in the
+future.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you say &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install &amp;lt;SOMETHING&amp;gt;&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install &amp;lt;SOMETHING&amp;gt;&lt;/code&gt;, you’re installing a
+package.  &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; is a package, for example.&lt;/p&gt;
+
+&lt;p&gt;Both scripts and packages are important for reproducibility, but it’s important to know when to
+use each.  Some rules of thumb:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If you want a bit of code to be usable across multiple
+projects, put it in a package.&lt;/li&gt;
+  &lt;li&gt;If you just want someone else to be able to run your exact code,
+a script might be better.
+Of course, these are just general suggestions, and there will always be exceptions.  Use your
+best judgement!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;so-how-do-packages-work&quot;&gt;So how do packages work?&lt;/h3&gt;
+
+&lt;p&gt;In its simplest form, a package can be defined from a single source file (e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;PACKAGE&amp;gt;.py&lt;/code&gt;), but it is more common to split even simple packages into &lt;em&gt;modules&lt;/em&gt;.
+Python packages mirror the file and directory structure of the source code to keep things organized.  For example, our toy package looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir/
+    __init__.py
+    toymir.py
+    version.py
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The package is called &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;, and you would use it in a script by saying&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;toymir&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;When Python encounters the &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; command, it will locate &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt; in its search path,
+and look for either &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt;.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
+Typically, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; files are minimal, and only contain comments and other import functions
+necessary to initialize the package.
+In this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; might look like:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.version&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__version__&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;These lines are executed when &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt; is executed, and in turn, import the
+rest of the modules within the package.
+The first line brings in only one variable (&lt;code class=&quot;highlighter-rouge&quot;&gt;__version__&lt;/code&gt;) from the &lt;code class=&quot;highlighter-rouge&quot;&gt;version.py&lt;/code&gt; module.
+Importing the variable directly in &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; makes it accessible to the user as
+&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.__version__&lt;/code&gt;, which is the convention for specifying version numbers in Python packages.&lt;/p&gt;
+
+&lt;p&gt;The second line imports all variables, classes, and functions defined in the &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt; module.
+After saying &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt;, a user can access functions as &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_midi()&lt;/code&gt; (for
+example).&lt;/p&gt;
+
+&lt;p&gt;Modules can also have sub-structure, with nested folders, each including their own &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt;
+files.  In general, it’s a good idea to limit submodules to not get too deep, if only because users don’t like typing long strings to access functions!&lt;/p&gt;
+
+&lt;h3 id=&quot;relative-and-absolute-imports&quot;&gt;Relative and absolute imports&lt;/h3&gt;
+
+&lt;p&gt;You may have noticed that the import lines above look funny.  You might be used to seeing
+so-called &lt;em&gt;absolute&lt;/em&gt; import
+statements like &lt;code class=&quot;highlighter-rouge&quot;&gt;import numpy&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;from scipy.signal import convolve1d&lt;/code&gt;, but what’s all this
+period business in &lt;code class=&quot;highlighter-rouge&quot;&gt;from .toymir import *&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;This is a special convention to make sure that Python does not get confused about where imports
+come from.  Imagine there was already a package installed on the system called
+&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;. Then &lt;code class=&quot;highlighter-rouge&quot;&gt;from toymir import *&lt;/code&gt; from within &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; could be
+ambiguous!  Saying &lt;code class=&quot;highlighter-rouge&quot;&gt;from .toymir import *&lt;/code&gt; tells Python: &lt;em&gt;the toymir.py you’re looking for is in this
+folder&lt;/em&gt;.  This is critical when you have common submodule names like &lt;code class=&quot;highlighter-rouge&quot;&gt;utils&lt;/code&gt;, and avoiding
+unintentional recursive imports when the submodule shares the package name (like in our case
+here).&lt;/p&gt;
+
+&lt;p&gt;Similarly, if you need to go up a level in the package structure, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;..&lt;/code&gt;.  For
+example, if you had &lt;code class=&quot;highlighter-rouge&quot;&gt;submodule/even_more_functions.py&lt;/code&gt; depends on something defined in
+&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt;, it could be imported (within &lt;code class=&quot;highlighter-rouge&quot;&gt;even_more_functions.py&lt;/code&gt;) as&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;..toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;needed_function_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;hiding-things-from-import&quot;&gt;Hiding things from import&lt;/h3&gt;
+
+&lt;p&gt;Sometimes, you might want to have variables or functions in a module that you don’t want the
+outside world to access.  Python doesn’t really provide public/private protections like C++ or
+Java, but there are some things you can do to communicate your intentions.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;__&lt;/code&gt; prefixes.  Variables named like &lt;code class=&quot;highlighter-rouge&quot;&gt;_private&lt;/code&gt; are, by convention, understood to be
+private and not messed with.  Variables starting with two underscores, like &lt;code class=&quot;highlighter-rouge&quot;&gt;__really_private&lt;/code&gt;, are automatically renamed by the Python interpreter to make them hard to find.  This mostly matters for classes.&lt;/li&gt;
+  &lt;li&gt;Use the special &lt;code class=&quot;highlighter-rouge&quot;&gt;__all__&lt;/code&gt; array to communicate to python exactly which variables and
+functions should be exposed on import.  If you look in &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/toymir.py&lt;/code&gt;, you’ll see an
+example of this.  Any variables not listed in &lt;code class=&quot;highlighter-rouge&quot;&gt;__all__&lt;/code&gt; will not be exposed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;including-data&quot;&gt;Including data&lt;/h3&gt;
+&lt;p&gt;Sometimes, packages need to include data as well as code.
+The tool to do this is called &lt;code class=&quot;highlighter-rouge&quot;&gt;pkg_resources&lt;/code&gt;.  Typically, a package will provide functions to
+make it easy for a user to access any bundled data, or load it directly if the data is necessary
+for internal use by the package (e.g., model parameters).&lt;/p&gt;
+
+&lt;h3 id=&quot;the-installer&quot;&gt;The installer&lt;/h3&gt;
+&lt;p&gt;Finally, outside of the package directory (but still in the repository), you’ll see &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;.
+This is the script that is executed when the package is installed and/or packaged, and should
+contain all the necessary metadata (including dependencies and included data files) for
+successful installation.&lt;/p&gt;
+
+&lt;h2 id=&quot;extending-the-code&quot;&gt;Extending the code&lt;/h2&gt;
+
+&lt;h2 id=&quot;best-practices-for-awesome-packages&quot;&gt;Best practices for awesome packages&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!&lt;/li&gt;
+  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;numpydoc&lt;/code&gt; format for your documentation strings.&lt;/li&gt;
+  &lt;li&gt;Allow the user to seed your random number generators.  This is critical for reproducibility.&lt;/li&gt;
+  &lt;li&gt;Provide functions, not classes.
+    &lt;ul&gt;
+      &lt;li&gt;Internal classes are okay, but don’t make users learn object hierarchies!&lt;/li&gt;
+      &lt;li&gt;If you do need classes, don’t extend from other packages.  Wrap them instead.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Specify your dependency versions!&lt;/li&gt;
+  &lt;li&gt;Keep a change-log in your documentation, and include the dates!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tips-and-tricks-for-successful-scripts&quot;&gt;Tips and tricks for successful scripts&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Always seed your random number generator&lt;/li&gt;
+  &lt;li&gt;If you have an experiment that consists of multiple sequential stages, make separate scripts
+and prefix them with numbers.&lt;/li&gt;
+  &lt;li&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; package to handle command-line arguments nicely!&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;tqdm&lt;/code&gt; for progress bars&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;A suggestion, we can totally change all this!&lt;/li&gt;
   &lt;li&gt;We’ve got all this python code here, let’s take a look at how it is structured and where everything is.&lt;/li&gt;
-  &lt;li&gt;Cool, so why is it structured that way, and what parts of the structure do we need to have? (init.py, what’s an &lt;strong&gt;all&lt;/strong&gt;, folders, relative imports, etc)&lt;/li&gt;
   &lt;li&gt;How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?&lt;/li&gt;
-  &lt;li&gt;If we do that, let’s talk about how we need to update init.py, change how we’d import that code, maybe talk about versioning here? Maybe versioning is a bit boring.&lt;/li&gt;
-  &lt;li&gt;whatever we decide, let’s do it and commit the code&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
 </content>
-<summary>Hello &amp;amp; welcome to Part 4!</summary>
+<summary>Hello &amp;amp; welcome to Part 4!  This is where we get into the code and start making changes.</summary>
 </entry>
 <entry>
 <title>Part 5:  Tests</title>
@@ -428,7 +568,7 @@ flake8
 
 &lt;p&gt;We’re going to use a thing called Sphinx to generate our documentation from the comments we leave in our code.  Sphinx is really complicated and powerful, but we’ll be using it in a pretty simple way.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and take a look around.  You’ll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run &lt;code class=&quot;highlighter-rouge&quot;&gt;make html&lt;/code&gt; – this will generate all your documentation for you, in &lt;code class=&quot;highlighter-rouge&quot;&gt;_build/html&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and take a look around.  You’ll see a bunch of Sphinx boilerplate code.  The exact code here is not something you should worry about!  Instead, run &lt;code class=&quot;highlighter-rouge&quot;&gt;make html&lt;/code&gt; – this will generate all your documentation for you, in &lt;code class=&quot;highlighter-rouge&quot;&gt;_build/html&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -468,11 +608,11 @@ flake8
 
 &lt;p&gt;Lucky for us, there is a web service called &lt;a href=&quot;https://readthedocs.org/&quot;&gt;ReadTheDocs&lt;/a&gt; that does exactly that.  It works like Travis CI – when you merge new code to GitHub, ReadTheDocs will build and display your documentation for you.  You can look at an example from one of our project &lt;a href=&quot;https://amen.readthedocs.io/en/latest/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Due to a bunch of techincal hoo-hoorah, ReadTheDocs won’t let each of you build your own verison of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.&lt;/p&gt;
+&lt;p&gt;Due to a bunch of technical hoo-hoorah, ReadTheDocs won’t let each of you build your own version of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.&lt;/p&gt;
 
-&lt;p&gt;Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select &lt;code class=&quot;highlighter-rouge&quot;&gt;bmcfee/toymir&lt;/code&gt;, rather than &lt;code class=&quot;highlighter-rouge&quot;&gt;your-user-name/toymir&lt;/code&gt;.  Then create the PR as normal from there.&lt;/p&gt;
+&lt;p&gt;Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select &lt;code class=&quot;highlighter-rouge&quot;&gt;bmcfee/ismir2018-oss-tutorial&lt;/code&gt;, rather than &lt;code class=&quot;highlighter-rouge&quot;&gt;your-user-name/ismir2018-oss-tutorial&lt;/code&gt;.  Then create the PR as normal from there.&lt;/p&gt;
 
-&lt;p&gt;(If you’re doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs][appendix-1], so you can make your own docs!]&lt;/p&gt;
+&lt;p&gt;(If you’re doing this tutorial later, you should take a look at our &lt;a href=&quot;appendix-1&quot;&gt;appendix on how to set up Read The Docs&lt;/a&gt;, so you can make your own docs!)&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -492,7 +632,7 @@ flake8
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix-1.html&quot;&gt;Part 7&lt;/a&gt;, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.&lt;/p&gt;
+&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix-1.html&quot;&gt;Part 7&lt;/a&gt;, we’ll talk about Jupyter notebooks, and take a tour of the Python ecosystem.&lt;/p&gt;
 
 </content>
 <summary>Hello &amp;amp; welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary>
