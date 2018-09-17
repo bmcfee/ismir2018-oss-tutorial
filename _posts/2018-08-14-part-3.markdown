@@ -53,7 +53,7 @@ Run:
 conda list
 {% endhighlight %}
 
-You should see something like the below – make sure that `librosa` is in list!
+You should see something like the below:
 {% highlight bash %}
 packages in environment at /Users/thorkell/miniconda3:
 
@@ -72,25 +72,25 @@ freetype                  2.9.1                hb4e5f40_0
 
 ![Bowser Bonus](https://i.ytimg.com/vi/tWWesdluPko/maxresdefault.jpg)
 
-Just when you thought you had done all the checkpoints!  We want to stop here quickly and make sure of everything.  In the `scripts` folder, you'll find a file called `test_tutorial_install.sh`.  
+Just when you thought you had done all the checkpoints!
+
+We want to stop here quickly and make sure of everything, so we wrote a little test script that makes sure that everything is installed.
+In the `scripts` folder, you'll find a file called `test_tutorial_install.sh`.  
 
 Run:
 {% highlight bash %}
 ./scripts/test_tutorial_install.sh
 {% endhighlight %}
 
-You should see something like the below – make sure that `librosa` is in list!
+You should see:
 {% highlight bash %}
-packages in environment at /Users/thorkell/miniconda3:
-
- Name                    Version                   Build
-conda                     4.5.10                   py36_0
-conda-env                 2.6.0                h36134e3_0
-cryptography              2.2.2            py36h1de35cc_0
-cycler                    0.10.0           py36hfc81398_0
-docutils                  0.14             py36hbfde631_0
-flake8                    3.5.0                    py36_1
-freetype                  2.9.1                hb4e5f40_0
+Checking git and conda
+git version 2.7.4
+conda 4.5.11
+Checking Python version
+Python 3.6.5 :: Anaconda, Inc.
+Checking Python packages ...
+Success! Everything appears to be installed!
 {% endhighlight %}
 
 ## Run the Tests
