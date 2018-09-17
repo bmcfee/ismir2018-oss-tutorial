@@ -64,5 +64,5 @@ If you need to keep you code secret, they might be right for you.  In general, w
 [github-ssh-3]: https://help.github.com/articles/testing-your-ssh-connection
 [travis-main]: https://travis-ci.org
 [readthedocs-main]: https://readthedocs.org
-[tutorial-part-3]: https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html 
+[tutorial-part-3]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html 
 

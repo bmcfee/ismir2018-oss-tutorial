@@ -61,10 +61,10 @@ Thanks for coming along for the ride, and please feel free to ask us questions o
 [jos]: https://ccrma.stanford.edu/~jos/
 [aca-teach]: https://www.audiocontentanalysis.org/teaching/
 
-[part-1]: https://bmcfee.github.io/shablona/tutorial/2018/08/16/part-1.html 
-[part-2]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html 
-[part-3]: https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html 
-[part-4]: https://bmcfee.github.io/shablona/tutorial/2018/08/13/part-4.html 
-[part-5]: https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-5.html 
-[part-6]: https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-6.html 
-[part-7]: https://bmcfee.github.io/shablona/tutorial/2018/08/10/part-7.html 
+[part-1]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1.html 
+[part-2]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html 
+[part-3]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html 
+[part-4]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html 
+[part-5]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-5.html 
+[part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html 
+[part-7]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/10/part-7.html 
