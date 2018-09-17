@@ -19,6 +19,8 @@ While you’re welcome to use Powershell, we can’t guarantee that we’ll be a
 
 &lt;h2 id=&quot;install-conda&quot;&gt;Install Conda&lt;/h2&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1920/1*y3tLpsCpNj-ev4v7jO-C5g.png&quot; alt=&quot;conda&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Conda is a package manager for Python code and lower-level code that supports Python.
 Anaconda is a version of Conda that comes with lots and lots of pre-installed packages for scientific computing.
 We’re going to use Anaconda so we don’t have to go digging for obscure Fortran and C libraries.&lt;/p&gt;
@@ -48,6 +50,8 @@ conda 4.5.10
 &lt;p&gt;(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)&lt;/p&gt;
 
 &lt;h2 id=&quot;install-git&quot;&gt;Install git&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://git-scm.com/images/branching-illustration.png&quot; alt=&quot;git&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;git is a version control system – it keeps track of changes that you make to your code.
 This makes it hard for you to lose changes that you have made, and makes it easy for you to return to a working version of your code.
@@ -88,6 +92,8 @@ git version 2.7.4
 <id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2</id>
 <content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html">&lt;p&gt;Welcome to Part 2!  In this section we’ll set up accounts for the web services that we need – GitHub and Travis CI.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://kanbanize.com/blog/wp-content/uploads/2014/11/GitHub.jpg&quot; alt=&quot;github&quot; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
 &lt;p&gt;GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code&lt;/p&gt;
 
@@ -114,6 +120,9 @@ Hi &lt;your-username&gt;! You've successfully authenticated, but GitHub does not
 {% endhighlight %}&lt;/your-username&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;set-up-travis-ci&quot;&gt;Set Up Travis CI&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://travis-ci.org/images/logos/TravisCI-Mascot-1.png&quot; alt=&quot;travis&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Travis CI is a tool for “Continuous Integration”, which is just a fancy word for running the code that tests your software whenever you change your software.
 We won’t get to using Travis for a little bit, but let’s get the setup out of the way now.&lt;/p&gt;
 
@@ -193,7 +202,7 @@ nothing to commit, working directory clean
 conda list
 {% endhighlight %}&lt;/p&gt;
 
-&lt;p&gt;You should see something like the below – make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;librosa&lt;/code&gt; is in list!
+&lt;p&gt;You should see something like the below:&lt;/p&gt;
 {% highlight bash %}
 packages in environment at /Users/thorkell/miniconda3:&lt;/p&gt;
 
@@ -206,6 +215,29 @@ docutils                  0.14             py36hbfde631_0
 flake8                    3.5.0                    py36_1
 freetype                  2.9.1                hb4e5f40_0
 {% endhighlight %}&lt;/p&gt;
+
+&lt;h3 id=&quot;secret-bonus-checkpoint&quot;&gt;Secret Bonus Checkpoint!&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.ytimg.com/vi/tWWesdluPko/maxresdefault.jpg&quot; alt=&quot;Bowser Bonus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just when you thought you had done all the checkpoints!&lt;/p&gt;
+
+&lt;p&gt;We want to stop here quickly and make sure of everything, so we wrote a little test script that makes sure that everything is installed.
+In the &lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt; folder, you’ll find a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;test_tutorial_install.sh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Run:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./scripts/test_tutorial_install.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You should see:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Checking git and conda
+git version 2.7.4
+conda 4.5.11
+Checking Python version
+Python 3.6.5 :: Anaconda, Inc.
+Checking Python packages ...
+Success! Everything appears to be installed!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;run-the-tests&quot;&gt;Run the Tests&lt;/h2&gt;
 

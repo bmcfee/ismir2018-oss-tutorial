@@ -7,6 +7,7 @@ categories: tutorial
 
 Welcome to Part 2!  In this section we'll set up accounts for the web services that we need – GitHub and Travis CI.
 
+![github](https://kanbanize.com/blog/wp-content/uploads/2014/11/GitHub.jpg)
 
 ## Set Up GitHub
 GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code
@@ -35,6 +36,9 @@ Hi <your-username>! You've successfully authenticated, but GitHub does not provi
 
 
 ## Set Up Travis CI
+
+![travis](https://travis-ci.org/images/logos/TravisCI-Mascot-1.png)
+
 Travis CI is a tool for "Continuous Integration", which is just a fancy word for running the code that tests your software whenever you change your software.
 We won't get to using Travis for a little bit, but let's get the setup out of the way now.
 
