@@ -140,13 +140,19 @@ successful installation.
 
 ## Tips and tricks for successful scripts
 
-- Always seed your random number generator
+- Always seed your random number generator!  You don't want different results if you re-run it
+  next week, right?
+
 - If you have an experiment that consists of multiple sequential stages, make separate scripts
-  and prefix them with numbers.
+  and prefix them with numbers: `01-preprocess.py`, `02-train.py`, `03-evaluate.py`, etc.  Be
+  sure to document how to use your scripts in a README file!
+
 - Use the `argparse` package to handle command-line arguments nicely!
-- Use `tqdm` for progress bars
+
+- Use `tqdm` for cool progress bars!
 
 
+#### extra stuff
 - A suggestion, we can totally change all this!
 - We've got all this python code here, let's take a look at how it is structured and where everything is.
 - How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?

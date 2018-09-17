@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T13:23:08-04:00</updated>
+<updated>2018-09-17T13:25:36-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -440,13 +440,25 @@ successful installation.&lt;/p&gt;
 &lt;h2 id=&quot;tips-and-tricks-for-successful-scripts&quot;&gt;Tips and tricks for successful scripts&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Always seed your random number generator&lt;/li&gt;
-  &lt;li&gt;If you have an experiment that consists of multiple sequential stages, make separate scripts
-and prefix them with numbers.&lt;/li&gt;
-  &lt;li&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; package to handle command-line arguments nicely!&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;tqdm&lt;/code&gt; for progress bars&lt;/p&gt;
+    &lt;p&gt;Always seed your random number generator!  You don’t want different results if you re-run it
+next week, right?&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you have an experiment that consists of multiple sequential stages, make separate scripts
+and prefix them with numbers: &lt;code class=&quot;highlighter-rouge&quot;&gt;01-preprocess.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;02-train.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;03-evaluate.py&lt;/code&gt;, etc.  Be
+sure to document how to use your scripts in a README file!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; package to handle command-line arguments nicely!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;tqdm&lt;/code&gt; for cool progress bars!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;extra-stuff&quot;&gt;extra stuff&lt;/h4&gt;
+&lt;ul&gt;
   &lt;li&gt;A suggestion, we can totally change all this!&lt;/li&gt;
   &lt;li&gt;We’ve got all this python code here, let’s take a look at how it is structured and where everything is.&lt;/li&gt;
   &lt;li&gt;How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?&lt;/li&gt;

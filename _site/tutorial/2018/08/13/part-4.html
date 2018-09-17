@@ -184,13 +184,25 @@ successful installation.</p>
 <h2 id="tips-and-tricks-for-successful-scripts">Tips and tricks for successful scripts</h2>
 
 <ul>
-  <li>Always seed your random number generator</li>
-  <li>If you have an experiment that consists of multiple sequential stages, make separate scripts
-and prefix them with numbers.</li>
-  <li>Use the <code class="highlighter-rouge">argparse</code> package to handle command-line arguments nicely!</li>
   <li>
-    <p>Use <code class="highlighter-rouge">tqdm</code> for progress bars</p>
+    <p>Always seed your random number generator!  You don’t want different results if you re-run it
+next week, right?</p>
   </li>
+  <li>
+    <p>If you have an experiment that consists of multiple sequential stages, make separate scripts
+and prefix them with numbers: <code class="highlighter-rouge">01-preprocess.py</code>, <code class="highlighter-rouge">02-train.py</code>, <code class="highlighter-rouge">03-evaluate.py</code>, etc.  Be
+sure to document how to use your scripts in a README file!</p>
+  </li>
+  <li>
+    <p>Use the <code class="highlighter-rouge">argparse</code> package to handle command-line arguments nicely!</p>
+  </li>
+  <li>
+    <p>Use <code class="highlighter-rouge">tqdm</code> for cool progress bars!</p>
+  </li>
+</ul>
+
+<h4 id="extra-stuff">extra stuff</h4>
+<ul>
   <li>A suggestion, we can totally change all this!</li>
   <li>We’ve got all this python code here, let’s take a look at how it is structured and where everything is.</li>
   <li>How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?</li>
