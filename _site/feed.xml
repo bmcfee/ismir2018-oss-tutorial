@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T18:58:38-04:00</updated>
+<updated>2018-09-17T19:05:19-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -364,14 +364,18 @@ package.  &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; is 
 
 &lt;p&gt;Both scripts and packages are important for reproducibility, but it’s important to know when to
 use each.  Some rules of thumb:&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;If you want a bit of code to be usable across multiple
-projects, put it in a package.&lt;/li&gt;
-  &lt;li&gt;If you just want someone else to be able to run your exact code,
-a script might be better.
-Of course, these are just general suggestions, and there will always be exceptions.  Use your
-best judgement!&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you want a bit of code to be usable across multiple projects, put it in a package.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you just want someone else to be able to run your exact code, a script might be better.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Of course, these are just general suggestions, and there will always be exceptions.  Use your
+best judgement!&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-install-toymir&quot;&gt;Checkpoint: install toymir&lt;/h4&gt;
 &lt;p&gt;In the &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt; folder, type&lt;/p&gt;
@@ -380,12 +384,13 @@ best judgement!&lt;/li&gt;
 &lt;p&gt;to see the contents of the repository.&lt;/p&gt;
 
 &lt;p&gt;Next, in the same folder, install the package for development by saying&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install -e .
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python setup.py develop
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This command uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; program to place the current package (&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;, referenced by &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;) in the Python environment.
-The &lt;code class=&quot;highlighter-rouge&quot;&gt;-e&lt;/code&gt; flag means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
-environment.&lt;/p&gt;
+&lt;p&gt;This command uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt; script to install the current package in the Python environment.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;develop&lt;/code&gt; action means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
+environment.
+This way, you can work on the code as a developer without having to reinstall it after every change.&lt;/p&gt;
 
 &lt;h3 id=&quot;so-how-do-packages-work&quot;&gt;So how do packages work?&lt;/h3&gt;
 

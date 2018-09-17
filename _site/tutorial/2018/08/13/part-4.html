@@ -74,14 +74,18 @@ package.  <code class="highlighter-rouge">numpy</code> is a package, for example
 
 <p>Both scripts and packages are important for reproducibility, but it’s important to know when to
 use each.  Some rules of thumb:</p>
+
 <ul>
-  <li>If you want a bit of code to be usable across multiple
-projects, put it in a package.</li>
-  <li>If you just want someone else to be able to run your exact code,
-a script might be better.
-Of course, these are just general suggestions, and there will always be exceptions.  Use your
-best judgement!</li>
+  <li>
+    <p>If you want a bit of code to be usable across multiple projects, put it in a package.</p>
+  </li>
+  <li>
+    <p>If you just want someone else to be able to run your exact code, a script might be better.</p>
+  </li>
 </ul>
+
+<p>Of course, these are just general suggestions, and there will always be exceptions.  Use your
+best judgement!</p>
 
 <h4 id="checkpoint-install-toymir">Checkpoint: install toymir</h4>
 <p>In the <code class="highlighter-rouge">ismir2018-oss-tutorial</code> folder, type</p>
@@ -90,12 +94,13 @@ best judgement!</li>
 <p>to see the contents of the repository.</p>
 
 <p>Next, in the same folder, install the package for development by saying</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install -e .
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python setup.py develop
 </code></pre></div></div>
 
-<p>This command uses the <code class="highlighter-rouge">pip</code> program to place the current package (<code class="highlighter-rouge">toymir</code>, referenced by <code class="highlighter-rouge">.</code>) in the Python environment.
-The <code class="highlighter-rouge">-e</code> flag means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
-environment.</p>
+<p>This command uses the <code class="highlighter-rouge">setup.py</code> script to install the current package in the Python environment.
+The <code class="highlighter-rouge">develop</code> action means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
+environment.
+This way, you can work on the code as a developer without having to reinstall it after every change.</p>
 
 <h3 id="so-how-do-packages-work">So how do packages work?</h3>
 

@@ -29,10 +29,11 @@ package.  `numpy` is a package, for example.
 
 Both scripts and packages are important for reproducibility, but it's important to know when to
 use each.  Some rules of thumb:
-- If you want a bit of code to be usable across multiple
-projects, put it in a package.
-- If you just want someone else to be able to run your exact code,
-a script might be better.
+
+- If you want a bit of code to be usable across multiple projects, put it in a package.
+
+- If you just want someone else to be able to run your exact code, a script might be better.
+
 Of course, these are just general suggestions, and there will always be exceptions.  Use your
 best judgement!
 
@@ -46,12 +47,13 @@ to see the contents of the repository.
 
 Next, in the same folder, install the package for development by saying
 ```
-pip install -e .
+python setup.py develop
 ```
 
-This command uses the `pip` program to place the current package (`toymir`, referenced by `.`) in the Python environment.
-The `-e` flag means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
+This command uses the `setup.py` script to install the current package in the Python environment.
+The `develop` action means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
 environment.
+This way, you can work on the code as a developer without having to reinstall it after every change.
 
 
 ### So how do packages work?
