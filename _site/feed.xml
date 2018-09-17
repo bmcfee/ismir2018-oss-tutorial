@@ -1,26 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-09-10T16:19:56-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-09-17T11:26:26-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Conda package manager, and the git version control system.&lt;/p&gt;
 
-&lt;h2 id=&quot;install-python&quot;&gt;Install Python&lt;/h2&gt;
-&lt;p&gt;Visit the main &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python page&lt;/a&gt;, and download Python 3.6 or higher.&lt;/p&gt;
-
-&lt;p&gt;Mac users, you very probably have Python 2.7 on your computer – please do go and get Python 3.6.&lt;/p&gt;
-
-&lt;p&gt;Linux users, you have some version of Python on your machine – please make sure that you have Python 3.6, and go and get it if not.&lt;/p&gt;
-
-&lt;p&gt;Windows users, we &lt;em&gt;highly&lt;/em&gt; recommend that you install the &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-win10&quot;&gt;Windows System for Linux&lt;/a&gt;, and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
+&lt;p&gt;A special note for Windows users: we &lt;em&gt;highly&lt;/em&gt; recommend that you install the &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-win10&quot;&gt;Windows System for Linux&lt;/a&gt;, and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
 While you’re welcome to use Powershell, we can’t guarantee that we’ll be able to help you.&lt;/p&gt;
-
-&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
-
-&lt;p&gt;Run:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;python &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Python 3.6.5&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)&lt;/p&gt;
 
 &lt;h2 id=&quot;install-conda&quot;&gt;Install Conda&lt;/h2&gt;
 
@@ -38,7 +19,7 @@ We’re going to use Anaconda so we don’t have to go digging for obscure Fortr
   &lt;li&gt;If you’re using a &lt;code class=&quot;highlighter-rouge&quot;&gt;virtualenv&lt;/code&gt;, you’ll need to turn it off before installing Anaconda!  Conda in general does not play well with virtualenvs.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
+&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
 &lt;p&gt;Run:&lt;/p&gt;
 
@@ -47,6 +28,8 @@ We’re going to use Anaconda so we don’t have to go digging for obscure Fortr
 &lt;p&gt;You should see:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda 4.5.10&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)&lt;/p&gt;
 
 &lt;h2 id=&quot;install-git&quot;&gt;Install git&lt;/h2&gt;
 
@@ -62,7 +45,7 @@ git in particular also makes it easy to collaborate with other folks.&lt;/p&gt;
 
 &lt;p&gt;We recommend against using a graphical interface for git – mostly because we won’t be able to help you with it in this tutorial!&lt;/p&gt;
 
-&lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
+&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
 &lt;p&gt;Run:&lt;/p&gt;
 
@@ -74,7 +57,7 @@ git in particular also makes it easy to collaborate with other folks.&lt;/p&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve installed everything we’ll need on our machines.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;, we’ll set up the various web apps and accounts that we’ll need.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Python programming language, the Conda package manager, and the git version control system.</summary></entry><entry><title type="html">Part 2: Setting Up Services</title><link href="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" /><published>2018-08-15T15:16:46-04:00</published><updated>2018-08-15T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/15/part-2</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html">&lt;p&gt;Welcome to Part 2!  In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.&lt;/p&gt;
+&lt;p&gt;We’ve installed everything we’ll need on our machines.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;, we’ll set up the various web apps and accounts that we’ll need.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Conda package manager, and the git version control system.</summary></entry><entry><title type="html">Part 2: Setting Up Services</title><link href="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" /><published>2018-08-15T15:16:46-04:00</published><updated>2018-08-15T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/15/part-2</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html">&lt;p&gt;Welcome to Part 2!  In this section we’ll set up accounts for the web services that we need – GitHub and Travis CI.&lt;/p&gt;
 
 &lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
 &lt;p&gt;GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code&lt;/p&gt;
@@ -113,16 +96,6 @@ We won’t get to using Travis for a little bit, but let’s get the setup out o
 
 &lt;p&gt;No command line here - you should be able to visit &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis&lt;/a&gt;, and see your name in the upper-right to indicate that you’re logged in.&lt;/p&gt;
 
-&lt;h2 id=&quot;set-up-readthedocs&quot;&gt;Set Up ReadTheDocs&lt;/h2&gt;
-&lt;p&gt;ReadTheDocs hosts your documentation, so that people know how to use your software!  We’ll get to ReadTheDocs nearer to the end of the tutorial, but let’s get things set up now.&lt;/p&gt;
-
-&lt;p&gt;Visit &lt;a href=&quot;https://readthedocs.org&quot;&gt;ReadTheDocs&lt;/a&gt;, and press &lt;strong&gt;Sign up&lt;/strong&gt;, and the select &lt;strong&gt;Sign Up With GitHub&lt;/strong&gt;.  Like with Travis, you’ll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
-ReadTheDocs will also ask you to confirm your email, so open up your email client and do so.&lt;/p&gt;
-
-&lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
-
-&lt;p&gt;No command line here either - you should be able to visit &lt;a href=&quot;https://readthedocs.org&quot;&gt;ReadTheDocs&lt;/a&gt; and see your GitHub username in the upper-right to indicate that you’re logged in.&lt;/p&gt;
-
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
 &lt;p&gt;We’ve set up the various web services we’ll need!  Next is &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt;, where we’ll get to the code!&lt;/p&gt;
@@ -130,7 +103,7 @@ ReadTheDocs will also ask you to confirm your email, so open up your email clien
 &lt;h3 id=&quot;a-note-about-the-internet&quot;&gt;A Note About The Internet&lt;/h3&gt;
 
 &lt;p&gt;All of the services we’ve go over are on the internet.  There are local tools that can do the same sorts of things that out of the scope of this tutorial.
-If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they’re much less hassle to set up.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.</summary></entry><entry><title type="html">Part 3: Working with the Code</title><link href="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html" rel="alternate" type="text/html" title="Part 3:  Working with the Code" /><published>2018-08-14T15:16:46-04:00</published><updated>2018-08-14T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/14/part-3</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html">&lt;p&gt;Hello &amp;amp; welcome to Part 3!  This is where we’ll start to use the various things you’ve installed to work with the code.&lt;/p&gt;
+If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they’re much less hassle to set up.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub and Travis CI.</summary></entry><entry><title type="html">Part 3: Working with the Code</title><link href="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html" rel="alternate" type="text/html" title="Part 3:  Working with the Code" /><published>2018-08-14T15:16:46-04:00</published><updated>2018-08-14T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/14/part-3</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html">&lt;p&gt;Hello &amp;amp; welcome to Part 3!  This is where we’ll start to use the various things you’ve installed to work with the code.&lt;/p&gt;
 
 &lt;h2 id=&quot;get-the-code&quot;&gt;Get the Code&lt;/h2&gt;
 
@@ -294,15 +267,15 @@ Date:   &amp;lt;today&amp;gt;
 
 &lt;p&gt;Start by making a new branch, with &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b fix-failing-test&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Then open up &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;some-filename&amp;gt;&lt;/code&gt;, uncomment the function called &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;test_some_function&amp;gt;&lt;/code&gt;, and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Then open up &lt;code class=&quot;highlighter-rouge&quot;&gt;tests/test_shablona.py&lt;/code&gt;, uncomment the two functions that start with &lt;code class=&quot;highlighter-rouge&quot;&gt;test_hz_to_midi&lt;/code&gt;, and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;The test failed, oh no!&lt;/p&gt;
 
-&lt;p&gt;So, that test is testing a function that we’ve stubbed out, but that returns obviously incorrect results.&lt;/p&gt;
+&lt;p&gt;So, that test is testing a function that we’ve commented out.&lt;/p&gt;
 
-&lt;p&gt;You can find the function in &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;filename&amp;gt;&lt;/code&gt; - go ahead and fix the function so that the tests pass.  Run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt; as much as you want to, to make sure.&lt;/p&gt;
+&lt;p&gt;You can find the function in &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona.py&lt;/code&gt; - go ahead and uncomment the code that’s there, and then the test will pass!&lt;/p&gt;
 
-&lt;p&gt;Great!  You should also write a new test to verify that this function works correctly for &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;some edge case&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;hz_to_period&lt;/code&gt; function for reference.&lt;/p&gt;
 
 &lt;p&gt;Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.&lt;/p&gt;
 
@@ -382,18 +355,6 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
   &lt;li&gt;A working webpage!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;get-readthedocs-working&quot;&gt;Get ReadTheDocs Working&lt;/h2&gt;
-
-&lt;p&gt;We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.  It looks at the &lt;code class=&quot;highlighter-rouge&quot;&gt;conf.py&lt;/code&gt; file that is in your &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and goes through another million options to decide what docs to make.&lt;/p&gt;
-
-&lt;p&gt;The exact options should not bother you too much right now!  The thing to know is that ReadTheDocs and Sphinx can be configured to do almost anything, but for now they’re just going to make you a nice webpage.&lt;/p&gt;
-
-&lt;p&gt;To trigger RTD, we should just need to push to our repository, and RTD will notice the push and build our docs.  And given that we’ve done a bunch of pushes, maybe our docs can be found at &lt;code class=&quot;highlighter-rouge&quot;&gt;some-url&lt;/code&gt;!&lt;/p&gt;
-
-&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
-
-&lt;p&gt;– invoke Brian McFee –&lt;/p&gt;
-
 &lt;h2 id=&quot;write-some-docs&quot;&gt;Write Some Docs&lt;/h2&gt;
 
 &lt;p&gt;Rad, so we know how to make our docs, this is great.  But where do all those words come from?&lt;/p&gt;
@@ -402,17 +363,35 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;Find &lt;code class=&quot;highlighter-rouge&quot;&gt;some function&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;some file&lt;/code&gt; - you’ll see that it does not have any documentation.  Take a look at &lt;code class=&quot;highlighter-rouge&quot;&gt;other-function&lt;/code&gt; - you’ll see that it has a detailed description of how it works, what parameters it takes, and what it returns.&lt;/p&gt;
 
-&lt;p&gt;Based on this example, add a docstring to &lt;code class=&quot;highlighter-rouge&quot;&gt;the first function&lt;/code&gt;.  Once you’re happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!&lt;/p&gt;
+&lt;p&gt;Based on this example, add a docstring to &lt;code class=&quot;highlighter-rouge&quot;&gt;the first function&lt;/code&gt;.  Once you’re happy with your docs, run &lt;code class=&quot;highlighter-rouge&quot;&gt;make html&lt;/code&gt; again, to generate your new docs!&lt;/p&gt;
 
-&lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
+&lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Visit your site on ReadTheDocs&lt;/li&gt;
+  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;_build/html/index.html&lt;/code&gt; in a web browser. !!needs exact path to new page!!&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;You should see:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;A working webpage, with your new docstring!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;update-some-docs--read-the-docs&quot;&gt;Update Some Docs / Read The Docs&lt;/h2&gt;
+
+&lt;p&gt;So now our local documentation is updated.  You are probably thinking that it is not much good to have local documentation – if only there were some way to put our documentation on the Internet in an easy way!&lt;/p&gt;
+
+&lt;p&gt;Lucky for us, there is a web service called &lt;a href=&quot;https://readthedocs.org/&quot;&gt;ReadTheDocs&lt;/a&gt; that does exactly that.  It works like Travis CI – when you merge new code to GitHub, ReadTheDocs will build and display your documentation for you.  You can look at an example from one of our project &lt;a href=&quot;https://amen.readthedocs.io/en/latest/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Due to a bunch of techincal hoo-hoorah, ReadTheDocs won’t let each of you build your own verison of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.&lt;/p&gt;
+
+&lt;p&gt;Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select &lt;code class=&quot;highlighter-rouge&quot;&gt;bmcfee/toymir&lt;/code&gt;, rather than &lt;code class=&quot;highlighter-rouge&quot;&gt;your-user-name/toymir&lt;/code&gt;.  Then create the PR as normal from there.&lt;/p&gt;
+
+&lt;p&gt;(If you’re doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs][appendix-1], so you can make your own docs!]&lt;/p&gt;
+
+&lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You should see your PR on GitHub … and we’ll work through merging each one!&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;readme-and-license&quot;&gt;README and LICENSE&lt;/h2&gt;
@@ -427,7 +406,7 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-7.html&quot;&gt;Part 7&lt;/a&gt;, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary></entry><entry><title type="html">Part 7: Ecosystem</title><link href="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html" rel="alternate" type="text/html" title="Part 7:  Ecosystem" /><published>2018-08-11T15:16:46-04:00</published><updated>2018-08-11T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/11/part-7</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html">&lt;p&gt;Hello, it’s Part 7!  We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.&lt;/p&gt;
+&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/08/appendix-1.html&quot;&gt;Part 7&lt;/a&gt;, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary></entry><entry><title type="html">Part 7: Ecosystem</title><link href="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html" rel="alternate" type="text/html" title="Part 7:  Ecosystem" /><published>2018-08-11T15:16:46-04:00</published><updated>2018-08-11T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/11/part-7</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html">&lt;p&gt;Hello, it’s Part 7!  We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.&lt;/p&gt;
 
 &lt;p&gt;Unlike the first six parts, this will be much more interactive and, after we get one thing running, will be without checkpoints.  Let’s go!&lt;/p&gt;
 
@@ -508,4 +487,10 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;We went over installing things in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/16/part-1.html&quot;&gt;Part 1&lt;/a&gt;, and setting up web servives in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;.  &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt; covered git and version control, and &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/13/part-4.html&quot;&gt;Part 4&lt;/a&gt; went over Python and Python module structure.  Testing was covered in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-5.html&quot;&gt;Part 5&lt;/a&gt;, and documention in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-6.html&quot;&gt;Part 6&lt;/a&gt;.  Finally, [Part 7][part-8] introduced the wider Python ecosystem, and this is Part 8.&lt;/p&gt;
 
-&lt;p&gt;Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello, it’s Part 8, which is the last part! Hooray! We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.</summary></entry></feed>
+&lt;p&gt;Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello, it’s Part 8, which is the last part! Hooray! We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.</summary></entry><entry><title type="html">Appendix 1: Read The Docs</title><link href="http://localhost:4000/shablona/tutorial/2018/08/08/appdendix-1.html" rel="alternate" type="text/html" title="Appendix 1:  Read The Docs" /><published>2018-08-08T15:16:46-04:00</published><updated>2018-08-08T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/08/appdendix-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/08/appdendix-1.html">&lt;p&gt;This is the Appendix!  It covers a few things we didn’t cover in much detail in much more detail (or links to documentation for the same)&lt;/p&gt;
+
+&lt;h2 id=&quot;read-the-docs&quot;&gt;Read The Docs&lt;/h2&gt;
+
+&lt;h2 id=&quot;git--version-control&quot;&gt;Git &amp;amp; Version Control&lt;/h2&gt;
+
+&lt;h2&gt;??&lt;/h2&gt;</content><author><name></name></author><summary type="html">This is the Appendix! It covers a few things we didn’t cover in much detail in much more detail (or links to documentation for the same)</summary></entry></feed>

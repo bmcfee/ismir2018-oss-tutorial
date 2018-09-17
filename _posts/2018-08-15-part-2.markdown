@@ -5,7 +5,7 @@ date:   2018-08-15 15:16:46 -0400
 categories: tutorial
 ---
 
-Welcome to Part 2!  In this section we'll set up accounts for the web services that we need – GitHub, Travis CI, and ReadTheDocs.  
+Welcome to Part 2!  In this section we'll set up accounts for the web services that we need – GitHub and Travis CI.
 
 
 ## Set Up GitHub
@@ -47,17 +47,6 @@ You'll be taken to a GitHub page - just press **Approve & Install**!
 #### Checkpoint
 
 No command line here - you should be able to visit [Travis][travis-main], and see your name in the upper-right to indicate that you're logged in.
-
-
-## Set Up ReadTheDocs
-ReadTheDocs hosts your documentation, so that people know how to use your software!  We'll get to ReadTheDocs nearer to the end of the tutorial, but let's get things set up now.
-
-Visit [ReadTheDocs][readthedocs-main], and press **Sign up**, and the select **Sign Up With GitHub**.  Like with Travis, you'll be asked to authorize ReadTheDocs to use your GitHub account – do the same as you did before.
-ReadTheDocs will also ask you to confirm your email, so open up your email client and do so.
-
-#### Checkpoint
-
-No command line here either - you should be able to visit [ReadTheDocs][readthedocs-main] and see your GitHub username in the upper-right to indicate that you're logged in.
 
 ## Success!
 

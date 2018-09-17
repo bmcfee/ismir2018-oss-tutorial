@@ -66,18 +66,6 @@
   <li>A working webpage!</li>
 </ul>
 
-<h2 id="get-readthedocs-working">Get ReadTheDocs Working</h2>
-
-<p>We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.  It looks at the <code class="highlighter-rouge">conf.py</code> file that is in your <code class="highlighter-rouge">doc</code> folder, and goes through another million options to decide what docs to make.</p>
-
-<p>The exact options should not bother you too much right now!  The thing to know is that ReadTheDocs and Sphinx can be configured to do almost anything, but for now they’re just going to make you a nice webpage.</p>
-
-<p>To trigger RTD, we should just need to push to our repository, and RTD will notice the push and build our docs.  And given that we’ve done a bunch of pushes, maybe our docs can be found at <code class="highlighter-rouge">some-url</code>!</p>
-
-<h4 id="checkpoint-1">Checkpoint</h4>
-
-<p>– invoke Brian McFee –</p>
-
 <h2 id="write-some-docs">Write Some Docs</h2>
 
 <p>Rad, so we know how to make our docs, this is great.  But where do all those words come from?</p>
@@ -86,17 +74,35 @@
 
 <p>Find <code class="highlighter-rouge">some function</code> in <code class="highlighter-rouge">some file</code> - you’ll see that it does not have any documentation.  Take a look at <code class="highlighter-rouge">other-function</code> - you’ll see that it has a detailed description of how it works, what parameters it takes, and what it returns.</p>
 
-<p>Based on this example, add a docstring to <code class="highlighter-rouge">the first function</code>.  Once you’re happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!</p>
+<p>Based on this example, add a docstring to <code class="highlighter-rouge">the first function</code>.  Once you’re happy with your docs, run <code class="highlighter-rouge">make html</code> again, to generate your new docs!</p>
 
-<h4 id="checkpoint-2">Checkpoint</h4>
+<h4 id="checkpoint-1">Checkpoint</h4>
 
 <ul>
-  <li>Visit your site on ReadTheDocs</li>
+  <li>Open <code class="highlighter-rouge">_build/html/index.html</code> in a web browser. !!needs exact path to new page!!</li>
 </ul>
 
 <p>You should see:</p>
 <ul>
   <li>A working webpage, with your new docstring!</li>
+</ul>
+
+<h2 id="update-some-docs--read-the-docs">Update Some Docs / Read The Docs</h2>
+
+<p>So now our local documentation is updated.  You are probably thinking that it is not much good to have local documentation – if only there were some way to put our documentation on the Internet in an easy way!</p>
+
+<p>Lucky for us, there is a web service called <a href="https://readthedocs.org/">ReadTheDocs</a> that does exactly that.  It works like Travis CI – when you merge new code to GitHub, ReadTheDocs will build and display your documentation for you.  You can look at an example from one of our project <a href="https://amen.readthedocs.io/en/latest/">here</a>.</p>
+
+<p>Due to a bunch of techincal hoo-hoorah, ReadTheDocs won’t let each of you build your own verison of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.</p>
+
+<p>Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select <code class="highlighter-rouge">bmcfee/toymir</code>, rather than <code class="highlighter-rouge">your-user-name/toymir</code>.  Then create the PR as normal from there.</p>
+
+<p>(If you’re doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs][appendix-1], so you can make your own docs!]</p>
+
+<h4 id="checkpoint-2">Checkpoint</h4>
+
+<ul>
+  <li>You should see your PR on GitHub … and we’ll work through merging each one!</li>
 </ul>
 
 <h2 id="readme-and-license">README and LICENSE</h2>
@@ -111,7 +117,7 @@
 
 <h2 id="success">Success!</h2>
 
-<p>We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In <a href="https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-7.html">Part 7</a>, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.</p>
+<p>We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In <a href="https://bmcfee.github.io/shablona/tutorial/2018/08/08/appendix-1.html">Part 7</a>, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.</p>
 
 
   </div><a class="u-url" href="/shablona/tutorial/2018/08/12/part-6.html" hidden></a>

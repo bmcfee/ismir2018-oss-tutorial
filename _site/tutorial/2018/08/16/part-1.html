@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v3.7.3" />
 <meta property="og:title" content="Part 1: Installing Tools" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Python programming language, the Conda package manager, and the git version control system." />
-<meta property="og:description" content="Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Python programming language, the Conda package manager, and the git version control system." />
+<meta name="description" content="Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Conda package manager, and the git version control system." />
+<meta property="og:description" content="Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Conda package manager, and the git version control system." />
 <link rel="canonical" href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" />
 <meta property="og:url" content="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" />
 <meta property="og:site_name" content="Open Source and Reproducible MIR Research" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-16T15:16:46-04:00" />
 <script type="application/ld+json">
-{"description":"Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Python programming language, the Conda package manager, and the git version control system.","@type":"BlogPosting","url":"http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html","headline":"Part 1: Installing Tools","dateModified":"2018-08-16T15:16:46-04:00","datePublished":"2018-08-16T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html"},"@context":"http://schema.org"}</script>
+{"description":"Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Conda package manager, and the git version control system.","@type":"BlogPosting","url":"http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html","headline":"Part 1: Installing Tools","dateModified":"2018-08-16T15:16:46-04:00","datePublished":"2018-08-16T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/shablona/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/shablona/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
 <body><header class="site-header" role="banner">
@@ -45,29 +45,10 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.</p>
+    <p>Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Conda package manager, and the git version control system.</p>
 
-<h2 id="install-python">Install Python</h2>
-<p>Visit the main <a href="https://www.python.org/downloads/">Python page</a>, and download Python 3.6 or higher.</p>
-
-<p>Mac users, you very probably have Python 2.7 on your computer – please do go and get Python 3.6.</p>
-
-<p>Linux users, you have some version of Python on your machine – please make sure that you have Python 3.6, and go and get it if not.</p>
-
-<p>Windows users, we <em>highly</em> recommend that you install the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows System for Linux</a>, and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
+<p>A special note for Windows users: we <em>highly</em> recommend that you install the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows System for Linux</a>, and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
 While you’re welcome to use Powershell, we can’t guarantee that we’ll be able to help you.</p>
-
-<h4 id="checkpoint">Checkpoint</h4>
-
-<p>Run:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">python <span class="nt">--version</span></code></pre></figure>
-
-<p>You should see:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Python 3.6.5</code></pre></figure>
-
-<p>(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)</p>
 
 <h2 id="install-conda">Install Conda</h2>
 
@@ -85,7 +66,7 @@ We’re going to use Anaconda so we don’t have to go digging for obscure Fortr
   <li>If you’re using a <code class="highlighter-rouge">virtualenv</code>, you’ll need to turn it off before installing Anaconda!  Conda in general does not play well with virtualenvs.</li>
 </ul>
 
-<h4 id="checkpoint-1">Checkpoint</h4>
+<h4 id="checkpoint">Checkpoint</h4>
 
 <p>Run:</p>
 
@@ -94,6 +75,8 @@ We’re going to use Anaconda so we don’t have to go digging for obscure Fortr
 <p>You should see:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">conda 4.5.10</code></pre></figure>
+
+<p>(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)</p>
 
 <h2 id="install-git">Install git</h2>
 
@@ -109,7 +92,7 @@ git in particular also makes it easy to collaborate with other folks.</p>
 
 <p>We recommend against using a graphical interface for git – mostly because we won’t be able to help you with it in this tutorial!</p>
 
-<h4 id="checkpoint-2">Checkpoint</h4>
+<h4 id="checkpoint-1">Checkpoint</h4>
 
 <p>Run:</p>
 

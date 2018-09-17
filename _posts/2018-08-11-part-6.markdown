@@ -22,20 +22,6 @@ You should see:
 - A working webpage!
 
 
-## Get ReadTheDocs Working
-
-We set up our ReadTheDocs account in Part 2 – RTD is a service that builds and hosts your docs for you.  It looks at the `conf.py` file that is in your `doc` folder, and goes through another million options to decide what docs to make.
-
-The exact options should not bother you too much right now!  The thing to know is that ReadTheDocs and Sphinx can be configured to do almost anything, but for now they're just going to make you a nice webpage.
-
-To trigger RTD, we should just need to push to our repository, and RTD will notice the push and build our docs.  And given that we've done a bunch of pushes, maybe our docs can be found at `some-url`!
-
-
-#### Checkpoint
-
--- invoke Brian McFee --
-
-
 ## Write Some Docs
 
 Rad, so we know how to make our docs, this is great.  But where do all those words come from?
@@ -44,14 +30,31 @@ It turns out that Sphinx reads from comments that are formatted in a certain way
 
 Find `some function` in `some file` - you'll see that it does not have any documentation.  Take a look at `other-function` - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.
 
-Based on this example, add a docstring to `the first function`.  Once you're happy with your docs, commit, push, and merge them to github - and Read The Docs will build your new docs for you!
+Based on this example, add a docstring to `the first function`.  Once you're happy with your docs, run `make html` again, to generate your new docs!
 
 #### Checkpoint
 
-- Visit your site on ReadTheDocs
+- Open `_build/html/index.html` in a web browser. !!needs exact path to new page!!
 
 You should see:
 - A working webpage, with your new docstring!
+
+
+## Update Some Docs / Read The Docs
+
+So now our local documentation is updated.  You are probably thinking that it is not much good to have local documentation – if only there were some way to put our documentation on the Internet in an easy way!
+
+Lucky for us, there is a web service called [ReadTheDocs][readthedocs] that does exactly that.  It works like Travis CI – when you merge new code to GitHub, ReadTheDocs will build and display your documentation for you.  You can look at an example from one of our project [here][amen-docs].
+
+Due to a bunch of techincal hoo-hoorah, ReadTheDocs won't let each of you build your own verison of the documentation for this module ... but our original repository can.  So, we're going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.
+
+Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select `bmcfee/toymir`, rather than `your-user-name/toymir`.  Then create the PR as normal from there.
+
+(If you're doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs][appendix-1], so you can make your own docs!]
+
+#### Checkpoint
+
+- You should see your PR on GitHub ... and we'll work through merging each one!
 
 
 ## README and LICENSE
@@ -70,3 +73,6 @@ We've added some documentation, and set up ReadTheDocs so that our docs will alw
 
 [librosa-github]: https://github.com/librosa/librosa
 [tutorial-part-7]: https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-7.html
+[readthedocs]: https://readthedocs.org/
+[amen-docs]: https://amen.readthedocs.io/en/latest/
+[tutorial-part-7]: https://bmcfee.github.io/shablona/tutorial/2018/08/08/appendix-1.html

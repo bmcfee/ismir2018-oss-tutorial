@@ -61,15 +61,15 @@
 
 <p>Start by making a new branch, with <code class="highlighter-rouge">git checkout -b fix-failing-test</code>.</p>
 
-<p>Then open up <code class="highlighter-rouge">&lt;some-filename&gt;</code>, uncomment the function called <code class="highlighter-rouge">&lt;test_some_function&gt;</code>, and then run <code class="highlighter-rouge">pytest</code>.</p>
+<p>Then open up <code class="highlighter-rouge">tests/test_shablona.py</code>, uncomment the two functions that start with <code class="highlighter-rouge">test_hz_to_midi</code>, and then run <code class="highlighter-rouge">pytest</code>.</p>
 
 <p>The test failed, oh no!</p>
 
-<p>So, that test is testing a function that we’ve stubbed out, but that returns obviously incorrect results.</p>
+<p>So, that test is testing a function that we’ve commented out.</p>
 
-<p>You can find the function in <code class="highlighter-rouge">&lt;filename&gt;</code> - go ahead and fix the function so that the tests pass.  Run <code class="highlighter-rouge">pytest</code> as much as you want to, to make sure.</p>
+<p>You can find the function in <code class="highlighter-rouge">shablona.py</code> - go ahead and uncomment the code that’s there, and then the test will pass!</p>
 
-<p>Great!  You should also write a new test to verify that this function works correctly for <code class="highlighter-rouge">&lt;some edge case&gt;</code>.</p>
+<p>Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the <code class="highlighter-rouge">hz_to_period</code> function for reference.</p>
 
 <p>Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.</p>
 

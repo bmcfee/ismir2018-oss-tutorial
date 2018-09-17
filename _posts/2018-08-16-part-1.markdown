@@ -4,31 +4,10 @@ title:  "Part 1:  Installing Tools"
 date:   2018-08-16 15:16:46 -0400
 categories: tutorial
 ---
-Welcome!  This part of the tutorial will cover installing the tools that you'll need to have on your laptop:  the Python programming language, the Conda package manager, and the git version control system.
+Welcome!  This part of the tutorial will cover installing the tools that you'll need to have on your laptop:  the Conda package manager, and the git version control system.
 
-## Install Python
-Visit the main [Python page][python-download], and download Python 3.6 or higher.
-
-Mac users, you very probably have Python 2.7 on your computer – please do go and get Python 3.6.
-
-Linux users, you have some version of Python on your machine – please make sure that you have Python 3.6, and go and get it if not.
-
-Windows users, we _highly_ recommend that you install the [Windows System for Linux][wsl-download], and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
+A special note for Windows users: we _highly_ recommend that you install the [Windows System for Linux][wsl-download], and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
 While you're welcome to use Powershell, we can't guarantee that we'll be able to help you.
-
-#### Checkpoint
-
-Run:
-{% highlight bash %}
-python --version
-{% endhighlight %}
-
-You should see:
-{% highlight bash %}
-Python 3.6.5
-{% endhighlight %}
-
-(You'll see these checkpoints throughout the tutorial.  If you're doing the tutorial with us in person, we'll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something's not working, that's totally OK!  Put a red sticky note on your machine, and we'll come help.)
 
 ## Install Conda
 
@@ -55,6 +34,8 @@ You should see:
 {% highlight bash %}
 conda 4.5.10
 {% endhighlight %}
+
+(You'll see these checkpoints throughout the tutorial.  If you're doing the tutorial with us in person, we'll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something's not working, that's totally OK!  Put a red sticky note on your machine, and we'll come help.)
 
 ## Install git
 
