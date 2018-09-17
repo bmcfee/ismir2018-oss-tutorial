@@ -16,17 +16,17 @@ Writing tests slows you down in the short term, but speeds things up in the long
 
 ## Fix a Test
 
-Let's start by working through fixing a failing test, and commiting the results to our repository.
+Let's start by working through fixing a failing test, and committing the results to our repository.
 
 Start by making a new branch, with `git checkout -b fix-failing-test`.
 
-Then open up `tests/test_shablona.py`, uncomment the two functions that start with `test_hz_to_midi`, and then run `pytest`.
+Then open up `tests/test_toymir.py`, uncomment the two functions that start with `test_hz_to_midi`, and then run `pytest`.
 
 The test failed, oh no!
 
 So, that test is testing a function that we've commented out.
 
-You can find the function in `shablona.py` - go ahead and uncomment the code that's there, and then the test will pass!
+You can find the function in `toymir.py` - go ahead and uncomment the code that's there, and then the test will pass!
 
 Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the `hz_to_period` function for reference.
 
@@ -44,10 +44,10 @@ pytest
 You should see:
 {% highlight bash %}
 platform darwin -- Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
-rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
+rootdir: /Users/thorkell/Code/bmcfee/ismir2018-oss-tutorial, inifile:
 collected 5 items
 
-tests/test_shablona.py .....          	                        [100%]
+tests/test_toymir.py .....          	                        [100%]
 {% endhighlight %}
 
 
@@ -57,7 +57,7 @@ We set up our Travis account in Part 2!  Travis is a service that runs your test
 
 Travis is controlled by a file called `.travis.yml`.  This file tells the Travis servers what to do with your code - in our case, just run the tests.
 
-We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the gruntwork of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
+We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the grunt-work of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
 
 Let's modify this to run [Flake8][flake8] as well.  Flake8 checks your code and your code style, to make sure that you're writing code that is both more correct, and easy to read.
 
@@ -75,7 +75,7 @@ We just wanted to see what happens when tests failed, so feel free to delete tha
 
 #### Checkpoint
 
-You've seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the `shablona` directory, and then:
+You've seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the `toymir` directory, and then:
 
 Run:
 {% highlight bash %}
@@ -92,5 +92,5 @@ You should see no output, indicating that things work!
 
 We've added two tests, and gotten comfortable running pytest.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
 
-[tutorial-part-6]: https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html 
+[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html 
 [flake8]: http://flake8.pycqa.org/en/latest/index.html

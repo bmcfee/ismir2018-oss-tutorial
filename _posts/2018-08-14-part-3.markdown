@@ -11,17 +11,17 @@ Hello & welcome to Part 3!  This is where we'll start to use the various things 
 We're going to go over some real-world basics of how git works and how conda works.
 We'll do this by getting you a copy of the code we're going to work with on to your local machine, then installing the packages we need with conda.
 
-Visit `https://github.com/bmcfee/shablona`, and press the **Fork** button.  You'll be asked where to fork the code to – select your own GitHub username.  A "fork" is your own copy of our code.  You can change it without altering our code.
+Visit `https://github.com/bmcfee/ismir2018-oss-tutorial`, and press the **Fork** button.  You'll be asked where to fork the code to – select your own GitHub username.  A "fork" is your own copy of our code.  You can change it without altering our code.
 
-Now, visit `https://github.com/<your-username>/shablona`, and press the **Clone** button.  Make sure to select **Clone with SSH**, and then copy the string that looks like `git@github:<your-username>/shablona.git`
+Now, visit `https://github.com/<your-username>/ismir2018-oss-tutorial`, and press the **Clone** button.  Make sure to select **Clone with SSH**, and then copy the string that looks like `git@github:<your-username>/ismir2018-oss-tutorial.git`
 
-Then, in your terminal, go to wherever you keep your code, and do `git clone <that string>`.  This will do a lot of stuff!  Once it is done, you should see a directory called `shablona`.  
+Then, in your terminal, go to wherever you keep your code, and do `git clone <that string>`.  This will do a lot of stuff!  Once it is done, you should see a directory called `ismir2018-oss-tutorial`.  
 
 `cd` into that directory, then do `ls`.  You should see the same files that you see on GitHub!
 
 #### Checkpoint
 
-From the `shablona` directory, run:
+From the `ismir2018-oss-tutorial` directory, run:
 {% highlight bash %}
 git status
 {% endhighlight %}
@@ -36,7 +36,7 @@ nothing to commit, working directory clean
 
 ## Install Things with Conda
 
-Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different indepenent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need ... and then have a different environment for a different project, with different packages installed!
+Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different independent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need ... and then have a different environment for a different project, with different packages installed!
 
 This may sound like overkill, but it is very helpful in the long run.  You'll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.
 
@@ -90,10 +90,10 @@ pytest
 You should see:
 {% highlight bash %}
 platform darwin -- Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
-rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
+rootdir: /Users/thorkell/Code/bmcfee/ismir2018-oss-tutorial, inifile:
 collected 5 items
 
-tests/test_shablona.py .....          	                        [100%]
+tests/test_ismir2018-oss-tutorial.py .....          	                        [100%]
 {% endhighlight %}
 
 
@@ -108,7 +108,7 @@ Next, add and commit your files:  `git add requirements.txt`, then `git commit -
 Rad!  We've saved our work locally.  To push your code to GitHub, do `git push origin update-conda-env`.
 
 We want to get in the habit of keeping our online work up to date with our local work.  So let's go look at GitHub, and merge this branch there.
-- Visit GitHub, and find your fork of this repository:  https://github.com/<your-github-username>/shablona/branches
+- Visit GitHub, and find your fork of this repository:  https://github.com/<your-github-username>/ismir2018-oss-tutorial/branches
 - You'll see a list of branches - select **update-conda-env**.
 - You'll see a small button that says **New pull request**.  Press it!
 - This will take you to a nice web form.  Put in the reasons for your changes, and press **Create Pull Request**.
@@ -151,4 +151,4 @@ It also means that the online, "deployed" version of master is your primary vers
 We've used git to check out code, modify it, and commit our modifications.  We've also used conda to install the code we need, in an environment that is specific to this project.  In [Part 4][tutorial-part-4], we'll get into the details of our Python code and how it all fits together.
 
 [github-flow]: https://guides.github.com/introduction/flow/
-[tutorial-part-4]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-4.html 
+[tutorial-part-4]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html 

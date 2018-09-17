@@ -18,9 +18,9 @@ Thanks!
 
 
 [ismir]: http://ismir2018.ircam.fr/
-[part-one]: https://bmcfee.github.io/shablona/tutorial/2018/08/16/part-1.html
+[part-one]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1.html
 [creative-commons]: https://creativecommons.org/licenses/by-sa/4.0/
-[website-source]: https://github.com/bmcfee/shablona/tree/gh-pages
+[website-source]: https://github.com/bmcfee/ismir2018-oss-tutorial/tree/gh-pages
 [tutorial-formal]: http://ismir2018.ircam.fr/pages/events-tutorial-14.html
 [thor-twitter]:  https://twitter.com/djfractal
 [brian-twitter]: https://twitter.com/functiontelechy

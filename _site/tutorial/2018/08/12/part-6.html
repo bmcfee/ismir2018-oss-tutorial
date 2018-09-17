@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hello &amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet." />
 <meta property="og:description" content="Hello &amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet." />
-<link rel="canonical" href="http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html" />
-<meta property="og:url" content="http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html" />
+<link rel="canonical" href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html" />
+<meta property="og:url" content="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html" />
 <meta property="og:site_name" content="Open Source and Reproducible MIR Research" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-12T15:16:46-04:00" />
 <script type="application/ld+json">
-{"description":"Hello &amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.","@type":"BlogPosting","url":"http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html","headline":"Part 6: Documentation","dateModified":"2018-08-12T15:16:46-04:00","datePublished":"2018-08-12T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html"},"@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html"},"url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html","headline":"Part 6: Documentation","dateModified":"2018-08-12T15:16:46-04:00","datePublished":"2018-08-12T15:16:46-04:00","description":"Hello &amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/shablona/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/shablona/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
+<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/shablona/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/ismir2018-oss-tutorial/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -30,7 +30,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/shablona/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/ismir2018-oss-tutorial/about/">About</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -53,7 +53,7 @@
 
 <p>We’re going to use a thing called Sphinx to generate our documentation from the comments we leave in our code.  Sphinx is really complicated and powerful, but we’ll be using it in a pretty simple way.</p>
 
-<p><code class="highlighter-rouge">cd</code> into the <code class="highlighter-rouge">doc</code> folder, and take a look around.  You’ll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run <code class="highlighter-rouge">make html</code> – this will generate all your documentation for you, in <code class="highlighter-rouge">_build/html</code>.</p>
+<p><code class="highlighter-rouge">cd</code> into the <code class="highlighter-rouge">doc</code> folder, and take a look around.  You’ll see a bunch of Sphinx boilerplate code.  The exact code here is not something you should worry about!  Instead, run <code class="highlighter-rouge">make html</code> – this will generate all your documentation for you, in <code class="highlighter-rouge">_build/html</code>.</p>
 
 <h4 id="checkpoint">Checkpoint</h4>
 
@@ -93,11 +93,11 @@
 
 <p>Lucky for us, there is a web service called <a href="https://readthedocs.org/">ReadTheDocs</a> that does exactly that.  It works like Travis CI – when you merge new code to GitHub, ReadTheDocs will build and display your documentation for you.  You can look at an example from one of our project <a href="https://amen.readthedocs.io/en/latest/">here</a>.</p>
 
-<p>Due to a bunch of techincal hoo-hoorah, ReadTheDocs won’t let each of you build your own verison of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.</p>
+<p>Due to a bunch of technical hoo-hoorah, ReadTheDocs won’t let each of you build your own version of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.</p>
 
-<p>Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select <code class="highlighter-rouge">bmcfee/toymir</code>, rather than <code class="highlighter-rouge">your-user-name/toymir</code>.  Then create the PR as normal from there.</p>
+<p>Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select <code class="highlighter-rouge">bmcfee/ismir2018-oss-tutorial</code>, rather than <code class="highlighter-rouge">your-user-name/ismir2018-oss-tutorial</code>.  Then create the PR as normal from there.</p>
 
-<p>(If you’re doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs][appendix-1], so you can make your own docs!]</p>
+<p>(If you’re doing this tutorial later, you should take a look at our <a href="appendix-1">appendix on how to set up Read The Docs</a>, so you can make your own docs!)</p>
 
 <h4 id="checkpoint-2">Checkpoint</h4>
 
@@ -117,15 +117,15 @@
 
 <h2 id="success">Success!</h2>
 
-<p>We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In <a href="https://bmcfee.github.io/shablona/tutorial/2018/08/08/appendix-1.html">Part 7</a>, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.</p>
+<p>We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In <a href="https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix-1.html">Part 7</a>, we’ll talk about Jupyter notebooks, and take a tour of the Python ecosystem.</p>
 
 
-  </div><a class="u-url" href="/shablona/tutorial/2018/08/12/part-6.html" hidden></a>
+  </div><a class="u-url" href="/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/shablona/"></data>
+  <data class="u-url" href="/ismir2018-oss-tutorial/"></data>
 
   <div class="wrapper">
 
@@ -134,10 +134,10 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Open Source and Reproducible MIR Research</li><li><a class="u-email" href="mailto:brian.mcfee@nyu.edu">brian.mcfee@nyu.edu</a></li></ul>
+          <li class="p-name">Open Source and Reproducible MIR Research</li><li><a class="u-email" href="mailto:brian.mcfee@nyu.edu, thorkell@spotify.com">brian.mcfee@nyu.edu, thorkell@spotify.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/bmcfee"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#github"></use></svg> <span class="username">bmcfee</span></a></li><li><a href="https://www.twitter.com/functiontelechy"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">functiontelechy</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/bmcfee"><svg class="svg-icon"><use xlink:href="/ismir2018-oss-tutorial/assets/minima-social-icons.svg#github"></use></svg> <span class="username">bmcfee</span></a></li><li><a href="https://www.twitter.com/functiontelechy"><svg class="svg-icon"><use xlink:href="/ismir2018-oss-tutorial/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">functiontelechy</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">

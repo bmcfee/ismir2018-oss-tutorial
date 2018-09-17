@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/shablona/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/shablona/" rel="alternate" type="text/html" /><updated>2018-09-17T11:26:26-04:00</updated><id>http://localhost:4000/shablona/</id><title type="html">Open Source and Reproducible MIR Research</title><subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle><entry><title type="html">Part 1: Installing Tools</title><link href="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" /><published>2018-08-16T15:16:46-04:00</published><updated>2018-08-16T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/16/part-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Conda package manager, and the git version control system.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
+<link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
+<updated>2018-09-17T15:17:41-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/</id>
+<subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
+<entry>
+<title>Part 1:  Installing Tools</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1.html" rel="alternate" type="text/html" title="Part 1:  Installing Tools" />
+<published>2018-08-16T15:16:46-04:00</published>
+<updated>2018-08-16T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1.html">&lt;p&gt;Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Conda package manager, and the git version control system.&lt;/p&gt;
 
 &lt;p&gt;A special note for Windows users: we &lt;em&gt;highly&lt;/em&gt; recommend that you install the &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/install-win10&quot;&gt;Windows System for Linux&lt;/a&gt;, and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
 While you’re welcome to use Powershell, we can’t guarantee that we’ll be able to help you.&lt;/p&gt;
@@ -21,13 +35,15 @@ We’re going to use Anaconda so we don’t have to go digging for obscure Fortr
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+conda –version
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda 4.5.10&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see:
+{% highlight bash %}
+conda 4.5.10
+{% endhighlight %}&lt;/p&gt;
 
 &lt;p&gt;(You’ll see these checkpoints throughout the tutorial.  If you’re doing the tutorial with us in person, we’ll stop at these points to make sure that everyone is in the same place.  If your checkpoint is working, you can put a blue sticky note on your laptop.  If something’s not working, that’s totally OK!  Put a red sticky note on your machine, and we’ll come help.)&lt;/p&gt;
 
@@ -47,24 +63,37 @@ git in particular also makes it easy to collaborate with other folks.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+git –version
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git version 2.7.4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see:
+{% highlight bash %}
+git version 2.7.4
+{% endhighlight %}&lt;/p&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve installed everything we’ll need on our machines.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;, we’ll set up the various web apps and accounts that we’ll need.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome! This part of the tutorial will cover installing the tools that you’ll need to have on your laptop: the Conda package manager, and the git version control system.</summary></entry><entry><title type="html">Part 2: Setting Up Services</title><link href="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" /><published>2018-08-15T15:16:46-04:00</published><updated>2018-08-15T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/15/part-2</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/15/part-2.html">&lt;p&gt;Welcome to Part 2!  In this section we’ll set up accounts for the web services that we need – GitHub and Travis CI.&lt;/p&gt;
+&lt;p&gt;We’ve installed everything we’ll need on our machines.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;, we’ll set up the various web apps and accounts that we’ll need.&lt;/p&gt;
+
+</content>
+<summary>Welcome!  This part of the tutorial will cover installing the tools that you’ll need to have on your laptop:  the Conda package manager, and the git version control system.</summary>
+</entry>
+<entry>
+<title>Part 2:  Setting Up Services</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html" rel="alternate" type="text/html" title="Part 2:  Setting Up Services" />
+<published>2018-08-15T15:16:46-04:00</published>
+<updated>2018-08-15T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html">&lt;p&gt;Welcome to Part 2!  In this section we’ll set up accounts for the web services that we need – GitHub and Travis CI.&lt;/p&gt;
 
 &lt;h2 id=&quot;set-up-github&quot;&gt;Set Up GitHub&lt;/h2&gt;
 &lt;p&gt;GitHub hosts your code, makes it easy for other folks to collaborate with you, and makes it easier for other web services to hook into your code&lt;/p&gt;
 
-&lt;p&gt;Vist &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, and create an account.  Once you’ve got an account, you need to create some SSH keys.&lt;/p&gt;
+&lt;p&gt;Visit &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;, and create an account.  Once you’ve got an account, you need to create some SSH keys.&lt;/p&gt;
 
-&lt;p&gt;SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit fincky, but we’ll get through it!&lt;/p&gt;
+&lt;p&gt;SSH keys are big numbers that GitHub uses for authorization.  Setting them up can be a bit finicky, but we’ll get through it!&lt;/p&gt;
 
 &lt;p&gt;First, create a new SSH key by &lt;a href=&quot;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent&quot;&gt;following these steps&lt;/a&gt; – make sure to pick the correct platform.&lt;/p&gt;
 
@@ -74,13 +103,15 @@ git in particular also makes it easy to collaborate with other folks.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+ssh -T git@github.com
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh &lt;span class=&quot;nt&quot;&gt;-T&lt;/span&gt; git@github.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Hi &amp;lt;your-username&amp;gt;! You&lt;span class=&quot;s1&quot;&gt;'ve successfully authenticated, but GitHub does not provide shell access.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see:
+{% highlight bash %}
+Hi &lt;your-username&gt;! You've successfully authenticated, but GitHub does not provide shell access.
+{% endhighlight %}&lt;/your-username&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;set-up-travis-ci&quot;&gt;Set Up Travis CI&lt;/h2&gt;
 &lt;p&gt;Travis CI is a tool for “Continuous Integration”, which is just a fancy word for running the code that tests your software whenever you change your software.
@@ -98,41 +129,54 @@ We won’t get to using Travis for a little bit, but let’s get the setup out o
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve set up the various web services we’ll need!  Next is &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt;, where we’ll get to the code!&lt;/p&gt;
+&lt;p&gt;We’ve set up the various web services we’ll need!  Next is &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt;, where we’ll get to the code!&lt;/p&gt;
 
 &lt;h3 id=&quot;a-note-about-the-internet&quot;&gt;A Note About The Internet&lt;/h3&gt;
 
 &lt;p&gt;All of the services we’ve go over are on the internet.  There are local tools that can do the same sorts of things that out of the scope of this tutorial.
-If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they’re much less hassle to set up.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome to Part 2! In this section we’ll set up accounts for the web services that we need – GitHub and Travis CI.</summary></entry><entry><title type="html">Part 3: Working with the Code</title><link href="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html" rel="alternate" type="text/html" title="Part 3:  Working with the Code" /><published>2018-08-14T15:16:46-04:00</published><updated>2018-08-14T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/14/part-3</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/14/part-3.html">&lt;p&gt;Hello &amp;amp; welcome to Part 3!  This is where we’ll start to use the various things you’ve installed to work with the code.&lt;/p&gt;
+If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they’re much less hassle to set up.&lt;/p&gt;
+
+</content>
+<summary>Welcome to Part 2!  In this section we’ll set up accounts for the web services that we need – GitHub and Travis CI.</summary>
+</entry>
+<entry>
+<title>Part 3:  Working with the Code</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html" rel="alternate" type="text/html" title="Part 3:  Working with the Code" />
+<published>2018-08-14T15:16:46-04:00</published>
+<updated>2018-08-14T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html">&lt;p&gt;Hello &amp;amp; welcome to Part 3!  This is where we’ll start to use the various things you’ve installed to work with the code.&lt;/p&gt;
 
 &lt;h2 id=&quot;get-the-code&quot;&gt;Get the Code&lt;/h2&gt;
 
 &lt;p&gt;We’re going to go over some real-world basics of how git works and how conda works.
 We’ll do this by getting you a copy of the code we’re going to work with on to your local machine, then installing the packages we need with conda.&lt;/p&gt;
 
-&lt;p&gt;Visit &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/bmcfee/shablona&lt;/code&gt;, and press the &lt;strong&gt;Fork&lt;/strong&gt; button.  You’ll be asked where to fork the code to – select your own GitHub username.  A “fork” is your own copy of our code.  You can change it without altering our code.&lt;/p&gt;
+&lt;p&gt;Visit &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/bmcfee/ismir2018-oss-tutorial&lt;/code&gt;, and press the &lt;strong&gt;Fork&lt;/strong&gt; button.  You’ll be asked where to fork the code to – select your own GitHub username.  A “fork” is your own copy of our code.  You can change it without altering our code.&lt;/p&gt;
 
-&lt;p&gt;Now, visit &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/&amp;lt;your-username&amp;gt;/shablona&lt;/code&gt;, and press the &lt;strong&gt;Clone&lt;/strong&gt; button.  Make sure to select &lt;strong&gt;Clone with SSH&lt;/strong&gt;, and then copy the string that looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;git@github:&amp;lt;your-username&amp;gt;/shablona.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now, visit &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/&amp;lt;your-username&amp;gt;/ismir2018-oss-tutorial&lt;/code&gt;, and press the &lt;strong&gt;Clone&lt;/strong&gt; button.  Make sure to select &lt;strong&gt;Clone with SSH&lt;/strong&gt;, and then copy the string that looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;git@github:&amp;lt;your-username&amp;gt;/ismir2018-oss-tutorial.git&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Then, in your terminal, go to wherever you keep your code, and do &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone &amp;lt;that string&amp;gt;&lt;/code&gt;.  This will do a lot of stuff!  Once it is done, you should see a directory called &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Then, in your terminal, go to wherever you keep your code, and do &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone &amp;lt;that string&amp;gt;&lt;/code&gt;.  This will do a lot of stuff!  Once it is done, you should see a directory called &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into that directory, then do &lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt;.  You should see the same files that you see on GitHub!&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;From the &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona&lt;/code&gt; directory, run:&lt;/p&gt;
+&lt;p&gt;From the &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt; directory, run:
+{% highlight bash %}
+git status
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git status&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;On branch master
-Your branch is up-to-date with &lt;span class=&quot;s1&quot;&gt;'origin/master'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-nothing to commit, working directory clean&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see:
+{% highlight bash %}
+On branch master
+Your branch is up-to-date with ‘origin/master’.
+nothing to commit, working directory clean
+{% endhighlight %}&lt;/p&gt;
 
 &lt;h2 id=&quot;install-things-with-conda&quot;&gt;Install Things with Conda&lt;/h2&gt;
 
-&lt;p&gt;Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different indepenent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need … and then have a different environment for a different project, with different packages installed!&lt;/p&gt;
+&lt;p&gt;Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different independent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need … and then have a different environment for a different project, with different packages installed!&lt;/p&gt;
 
 &lt;p&gt;This may sound like overkill, but it is very helpful in the long run.  You’ll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.&lt;/p&gt;
 
@@ -144,22 +188,24 @@ nothing to commit, working directory clean&lt;/code&gt;&lt;/pre&gt;&lt;/figure&g
 
 &lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+conda list
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;conda list&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see something like the below – make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;librosa&lt;/code&gt; is in list!
+{% highlight bash %}
+packages in environment at /Users/thorkell/miniconda3:&lt;/p&gt;
 
-&lt;p&gt;You should see something like the below – make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;librosa&lt;/code&gt; is in list!&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;packages &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;environment at /Users/thorkell/miniconda3:
-
- Name                    Version                   Build
+&lt;p&gt;Name                    Version                   Build
 conda                     4.5.10                   py36_0
 conda-env                 2.6.0                h36134e3_0
 cryptography              2.2.2            py36h1de35cc_0
 cycler                    0.10.0           py36hfc81398_0
 docutils                  0.14             py36hbfde631_0
 flake8                    3.5.0                    py36_1
-freetype                  2.9.1                hb4e5f40_0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+freetype                  2.9.1                hb4e5f40_0
+{% endhighlight %}&lt;/p&gt;
 
 &lt;h2 id=&quot;run-the-tests&quot;&gt;Run the Tests&lt;/h2&gt;
 
@@ -175,17 +221,19 @@ freetype                  2.9.1                hb4e5f40_0&lt;/code&gt;&lt;/pre&g
 
 &lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+pytest
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pytest&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see:
+{% highlight bash %}
+platform darwin – Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
+rootdir: /Users/thorkell/Code/bmcfee/ismir2018-oss-tutorial, inifile:
+collected 5 items&lt;/p&gt;
 
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;platform darwin &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
-rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
-collected 5 items
-
-tests/test_shablona.py .....          	                        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;100%]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;tests/test_ismir2018-oss-tutorial.py …..          	                        [100%]
+{% endhighlight %}&lt;/p&gt;
 
 &lt;h2 id=&quot;save-our-work&quot;&gt;Save Our Work&lt;/h2&gt;
 
@@ -199,7 +247,7 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;We want to get in the habit of keeping our online work up to date with our local work.  So let’s go look at GitHub, and merge this branch there.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Visit GitHub, and find your fork of this repository:  https://github.com/&lt;your-github-username&gt;/shablona/branches&lt;/your-github-username&gt;&lt;/li&gt;
+  &lt;li&gt;Visit GitHub, and find your fork of this repository:  https://github.com/&lt;your-github-username&gt;/ismir2018-oss-tutorial/branches&lt;/your-github-username&gt;&lt;/li&gt;
   &lt;li&gt;You’ll see a list of branches - select &lt;strong&gt;update-conda-env&lt;/strong&gt;.&lt;/li&gt;
   &lt;li&gt;You’ll see a small button that says &lt;strong&gt;New pull request&lt;/strong&gt;.  Press it!&lt;/li&gt;
   &lt;li&gt;This will take you to a nice web form.  Put in the reasons for your changes, and press &lt;strong&gt;Create Pull Request&lt;/strong&gt;.&lt;/li&gt;
@@ -220,17 +268,19 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h4 id=&quot;checkpoint-3&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+git log
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see something like this:
+{% highlight bash %}
+commit fc48577568d259f361a2e5f28267500ff2d4405f
+Author: &lt;Your Name=&quot;&quot;&gt; &amp;lt;your-email@your-server&amp;gt;
+Date:   &lt;today&gt;&lt;/today&gt;&lt;/Your&gt;&lt;/p&gt;
 
-&lt;p&gt;You should see something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;commit fc48577568d259f361a2e5f28267500ff2d4405f
-Author: &amp;lt;Your Name&amp;gt; &amp;lt;your-email@your-server&amp;gt;
-Date:   &amp;lt;today&amp;gt;
-
-    Add pandas to requirements.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Add pandas to requirements.txt {% endhighlight %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;We’ve just gone over the basic git and GitHub workflow that you should, in general, stick with: make a branch, make some changes, run tests, commit, push, merge, clean up.&lt;/p&gt;
 
@@ -240,18 +290,227 @@ Date:   &amp;lt;today&amp;gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-4.html&quot;&gt;Part 4&lt;/a&gt;, we’ll get into the details of our Python code and how it all fits together.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.</summary></entry><entry><title type="html">Part 4: Python</title><link href="http://localhost:4000/shablona/tutorial/2018/08/13/part-4.html" rel="alternate" type="text/html" title="Part 4:  Python" /><published>2018-08-13T15:16:46-04:00</published><updated>2018-08-13T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/13/part-4</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/13/part-4.html">&lt;p&gt;Hello &amp;amp; welcome to Part 4!&lt;/p&gt;
+&lt;p&gt;We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html&quot;&gt;Part 4&lt;/a&gt;, we’ll get into the details of our Python code and how it all fits together.&lt;/p&gt;
+
+</content>
+<summary>Hello &amp;amp; welcome to Part 3!  This is where we’ll start to use the various things you’ve installed to work with the code.</summary>
+</entry>
+<entry>
+<title>Part 4:  Python</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html" rel="alternate" type="text/html" title="Part 4:  Python" />
+<published>2018-08-13T15:16:46-04:00</published>
+<updated>2018-08-13T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html">&lt;p&gt;Hello &amp;amp; welcome to Part 4!  This is where we get into the code and start making changes.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-all-this-stuff&quot;&gt;What is all this stuff?&lt;/h2&gt;
+
+&lt;p&gt;By now, you’ve probably had a look through the files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt; repository,
+and have some sense of what they all are.  Here, we’ll go through it in a bit more detail.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/s4qX2x5wuO8Ao/giphy.gif&quot; alt=&quot;Looking closer&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-is-code-organized-in-python&quot;&gt;How is code organized in Python?&lt;/h2&gt;
+
+&lt;p&gt;The first thing to understand is that Python allows two different use cases: &lt;em&gt;scripts&lt;/em&gt; and
+&lt;em&gt;packages&lt;/em&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;A suggestion, we can totally change all this!&lt;/li&gt;
-  &lt;li&gt;We’ve got all this python code here, let’s take a look at how it is structured and where everything is.&lt;/li&gt;
-  &lt;li&gt;Cool, so why is it structured that way, and what parts of the structure do we need to have? (init.py, what’s an &lt;strong&gt;all&lt;/strong&gt;, folders, relative imports, etc)&lt;/li&gt;
-  &lt;li&gt;How can we extend this? We could make a new file, we could make a new folder, we could do both?  Maybe move some code out of the main file and into an import?&lt;/li&gt;
-  &lt;li&gt;If we do that, let’s talk about how we need to update init.py, change how we’d import that code, maybe talk about versioning here? Maybe versioning is a bit boring.&lt;/li&gt;
-  &lt;li&gt;whatever we decide, let’s do it and commit the code&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;script&lt;/strong&gt; is a file containing Python code, e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;myscript.py&lt;/code&gt; that’s meant to be executed directly by a user.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;package&lt;/strong&gt; is a way of bundling up pieces of code for use by other packages and scripts in the
+future.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 4!</summary></entry><entry><title type="html">Part 5: Tests</title><link href="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html" rel="alternate" type="text/html" title="Part 5:  Tests" /><published>2018-08-13T15:16:46-04:00</published><updated>2018-08-13T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/13/part-5</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html">&lt;p&gt;Hello &amp;amp; welcome to Part 5!  This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.&lt;/p&gt;
+&lt;p&gt;When you say &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install &amp;lt;SOMETHING&amp;gt;&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;conda install &amp;lt;SOMETHING&amp;gt;&lt;/code&gt;, you’re installing a
+package.  &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; is a package, for example.&lt;/p&gt;
+
+&lt;p&gt;Both scripts and packages are important for reproducibility, but it’s important to know when to
+use each.  Some rules of thumb:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If you want a bit of code to be usable across multiple
+projects, put it in a package.&lt;/li&gt;
+  &lt;li&gt;If you just want someone else to be able to run your exact code,
+a script might be better.
+Of course, these are just general suggestions, and there will always be exceptions.  Use your
+best judgement!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;checkpoint-install-toymir&quot;&gt;Checkpoint: install toymir&lt;/h4&gt;
+&lt;p&gt;In the &lt;code class=&quot;highlighter-rouge&quot;&gt;ismir2018-oss-tutorial&lt;/code&gt; folder, type&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ls -lR
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;to see the contents of the repository.&lt;/p&gt;
+
+&lt;p&gt;Next, in the same folder, install the package for development by saying&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install -e .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; program to place the current package (&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;, referenced by &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;) in the Python environment.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;-e&lt;/code&gt; flag means that files will not be copied over, so any changes you make to the code will be immediately reflected in the
+environment.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-how-do-packages-work&quot;&gt;So how do packages work?&lt;/h3&gt;
+
+&lt;p&gt;In its simplest form, a package can be defined from a single source file (e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;PACKAGE&amp;gt;.py&lt;/code&gt;), but it is more common to split even simple packages into &lt;em&gt;modules&lt;/em&gt;.
+Python packages mirror the file and directory structure of the source code to keep things organized.  For example, our toy package looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir/
+    __init__.py
+    toymir.py
+    version.py
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The package is called &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;, and you would use it in a script by saying&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;toymir&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;When Python encounters the &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; command, it will locate &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt; in its search path,
+and look for either &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt;.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
+Typically, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; files are minimal, and only contain comments and other import functions
+necessary to initialize the package.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/xUNda4s9GLe2jkE7QI/giphy.gif&quot; alt=&quot;loading all the imports&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; might look like:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.version&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__version__&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;These lines are executed when &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt; is executed, and in turn, import the
+rest of the modules within the package.
+The first line brings in only one variable (&lt;code class=&quot;highlighter-rouge&quot;&gt;__version__&lt;/code&gt;) from the &lt;code class=&quot;highlighter-rouge&quot;&gt;version.py&lt;/code&gt; module.
+Importing the variable directly in &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; makes it accessible to the user as
+&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.__version__&lt;/code&gt;, which is the convention for specifying version numbers in Python packages.&lt;/p&gt;
+
+&lt;p&gt;The second line imports all variables, classes, and functions defined in the &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt; module.
+After saying &lt;code class=&quot;highlighter-rouge&quot;&gt;import toymir&lt;/code&gt;, a user can access functions as &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.hz_to_midi()&lt;/code&gt; (for
+example).&lt;/p&gt;
+
+&lt;p&gt;Modules can also have sub-structure, with nested folders, each including their own &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt;
+files.  In general, it’s a good idea to limit submodules to not get too deep, if only because users don’t like typing long strings to access functions!&lt;/p&gt;
+
+&lt;h3 id=&quot;relative-and-absolute-imports&quot;&gt;Relative and absolute imports&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/RjoLWhQBFEcHS/giphy.gif&quot; alt=&quot;Which package do i load?&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You may have noticed that the import lines above look funny.  You might be used to seeing
+so-called &lt;em&gt;absolute&lt;/em&gt; import
+statements like &lt;code class=&quot;highlighter-rouge&quot;&gt;import numpy&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;from scipy.signal import convolve1d&lt;/code&gt;, but what’s all this
+period business in &lt;code class=&quot;highlighter-rouge&quot;&gt;from .toymir import *&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;This is a special convention to make sure that Python does not get confused about where imports
+come from.  Imagine there was already a package installed on the system called
+&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;. Then &lt;code class=&quot;highlighter-rouge&quot;&gt;from toymir import *&lt;/code&gt; from within &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; could be
+ambiguous!  Saying &lt;code class=&quot;highlighter-rouge&quot;&gt;from .toymir import *&lt;/code&gt; tells Python: &lt;em&gt;the toymir.py you’re looking for is in this
+folder&lt;/em&gt;.  This is critical when you have common submodule names like &lt;code class=&quot;highlighter-rouge&quot;&gt;utils&lt;/code&gt;, and avoiding
+unintentional recursive imports when the submodule shares the package name (like in our case
+here).&lt;/p&gt;
+
+&lt;p&gt;Similarly, if you need to go up a level in the package structure, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;..&lt;/code&gt;.  For
+example, if you had &lt;code class=&quot;highlighter-rouge&quot;&gt;submodule/even_more_functions.py&lt;/code&gt; depends on something defined in
+&lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt;, it could be imported (within &lt;code class=&quot;highlighter-rouge&quot;&gt;even_more_functions.py&lt;/code&gt;) as&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;..toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;needed_function_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
+
+&lt;p&gt;Go into &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir/__init__.py&lt;/code&gt; and change the second import from&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.toymir&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;to&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toymir&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you’ve done that and saved the result, start &lt;code class=&quot;highlighter-rouge&quot;&gt;ipython&lt;/code&gt;, and import &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt;.
+Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.midi_to_hz&lt;/code&gt;, the function should now be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.toymir.midi_to_hz&lt;/code&gt;.
+Verify this by running&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.midi_to_hz(40)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;which should fail with &lt;code class=&quot;highlighter-rouge&quot;&gt;AttributeError&lt;/code&gt;.  Next, run&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toymir.toymir.midi_to_hz(40)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;should return &lt;code class=&quot;highlighter-rouge&quot;&gt;82.4068...&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once you’re done, reset the repository to a clean state (undoing your change) by saying:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --hard HEAD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;including-data&quot;&gt;Including data&lt;/h3&gt;
+&lt;p&gt;Sometimes, packages need to include data as well as code.
+The tool to do this is called &lt;code class=&quot;highlighter-rouge&quot;&gt;pkg_resources&lt;/code&gt;.  Typically, a package will provide functions to
+make it easy for a user to access any bundled data, or load it directly if the data is necessary
+for internal use by the package (e.g., model parameters).&lt;/p&gt;
+
+&lt;h3 id=&quot;the-installer&quot;&gt;The installer&lt;/h3&gt;
+&lt;p&gt;Finally, outside of the package directory (but still in the repository), you’ll see &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;.
+This is the script that is executed when the package is installed and/or packaged, and should
+contain all the necessary metadata (including dependencies and included data files) for
+successful installation.&lt;/p&gt;
+
+&lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
+
+&lt;p&gt;Ready to keep going?  Onward to &lt;a href=&quot;part-5&quot;&gt;Part 5&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;eager-for-more&quot;&gt;Eager for more?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/V9egT5cvtvhdu/giphy.gif&quot; alt=&quot;Bonus round!&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;best-practices-for-awesome-packages&quot;&gt;Best practices for awesome packages&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;numpydoc&lt;/code&gt; format for your documentation strings.  We’ll see more of that in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html&quot;&gt;Part 6&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Allow the user to seed your random number generators.  This is critical for reproducibility.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Provide functions, not classes.
+    &lt;ul&gt;
+      &lt;li&gt;Internal classes are okay, but don’t make users learn object hierarchies!&lt;/li&gt;
+      &lt;li&gt;If you do need classes, don’t extend from other packages.  Wrap them instead.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Specify your dependency versions!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Keep a change-log in your documentation, and include the dates!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tips-and-tricks-for-successful-scripts&quot;&gt;Tips and tricks for successful scripts&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Always seed your random number generator!  You don’t want different results if you re-run it
+next week, right?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you have an experiment that consists of multiple sequential stages, make separate scripts
+and prefix them with numbers: &lt;code class=&quot;highlighter-rouge&quot;&gt;01-preprocess.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;02-train.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;03-evaluate.py&lt;/code&gt;, etc.  Be
+sure to document how to use your scripts in a README file!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; package to handle command-line arguments nicely!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;tqdm&lt;/code&gt; for cool progress bars!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+<summary>Hello &amp;amp; welcome to Part 4!  This is where we get into the code and start making changes.</summary>
+</entry>
+<entry>
+<title>Part 5:  Tests</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html" rel="alternate" type="text/html" title="Part 5:  Tests" />
+<published>2018-08-13T15:16:46-04:00</published>
+<updated>2018-08-13T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html">&lt;p&gt;Hello &amp;amp; welcome to Part 5!  This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.&lt;/p&gt;
 
 &lt;h2 id=&quot;why-shall-we-test-our-code&quot;&gt;Why Shall We Test Our Code?&lt;/h2&gt;
 
@@ -263,17 +522,17 @@ Date:   &amp;lt;today&amp;gt;
 
 &lt;h2 id=&quot;fix-a-test&quot;&gt;Fix a Test&lt;/h2&gt;
 
-&lt;p&gt;Let’s start by working through fixing a failing test, and commiting the results to our repository.&lt;/p&gt;
+&lt;p&gt;Let’s start by working through fixing a failing test, and committing the results to our repository.&lt;/p&gt;
 
 &lt;p&gt;Start by making a new branch, with &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b fix-failing-test&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Then open up &lt;code class=&quot;highlighter-rouge&quot;&gt;tests/test_shablona.py&lt;/code&gt;, uncomment the two functions that start with &lt;code class=&quot;highlighter-rouge&quot;&gt;test_hz_to_midi&lt;/code&gt;, and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Then open up &lt;code class=&quot;highlighter-rouge&quot;&gt;tests/test_toymir.py&lt;/code&gt;, uncomment the two functions that start with &lt;code class=&quot;highlighter-rouge&quot;&gt;test_hz_to_midi&lt;/code&gt;, and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;The test failed, oh no!&lt;/p&gt;
 
 &lt;p&gt;So, that test is testing a function that we’ve commented out.&lt;/p&gt;
 
-&lt;p&gt;You can find the function in &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona.py&lt;/code&gt; - go ahead and uncomment the code that’s there, and then the test will pass!&lt;/p&gt;
+&lt;p&gt;You can find the function in &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir.py&lt;/code&gt; - go ahead and uncomment the code that’s there, and then the test will pass!&lt;/p&gt;
 
 &lt;p&gt;Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;hz_to_period&lt;/code&gt; function for reference.&lt;/p&gt;
 
@@ -283,17 +542,19 @@ Date:   &amp;lt;today&amp;gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+pytest
+{% endhighlight %}&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pytest&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;You should see:
+{% highlight bash %}
+platform darwin – Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
+rootdir: /Users/thorkell/Code/bmcfee/ismir2018-oss-tutorial, inifile:
+collected 5 items&lt;/p&gt;
 
-&lt;p&gt;You should see:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;platform darwin &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
-rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
-collected 5 items
-
-tests/test_shablona.py .....          	                        &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;100%]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;tests/test_toymir.py …..          	                        [100%]
+{% endhighlight %}&lt;/p&gt;
 
 &lt;h2 id=&quot;get-travis-working&quot;&gt;Get Travis Working&lt;/h2&gt;
 
@@ -301,7 +562,7 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;Travis is controlled by a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt;.  This file tells the Travis servers what to do with your code - in our case, just run the tests.&lt;/p&gt;
 
-&lt;p&gt;We’ve written the file for you.  Let’s take a quick look at it.  The big &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; block handles the gruntwork of installing conda, updating it, and setting up our environment.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;script&lt;/code&gt; block is what Travis runs.  We currently just run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We’ve written the file for you.  Let’s take a quick look at it.  The big &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; block handles the grunt-work of installing conda, updating it, and setting up our environment.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;script&lt;/code&gt; block is what Travis runs.  We currently just run &lt;code class=&quot;highlighter-rouge&quot;&gt;pytest&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s modify this to run &lt;a href=&quot;http://flake8.pycqa.org/en/latest/index.html&quot;&gt;Flake8&lt;/a&gt; as well.  Flake8 checks your code and your code style, to make sure that you’re writing code that is both more correct, and easy to read.&lt;/p&gt;
 
@@ -319,11 +580,12 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h4 id=&quot;checkpoint-1&quot;&gt;Checkpoint&lt;/h4&gt;
 
-&lt;p&gt;You’ve seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the &lt;code class=&quot;highlighter-rouge&quot;&gt;shablona&lt;/code&gt; directory, and then:&lt;/p&gt;
+&lt;p&gt;You’ve seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the &lt;code class=&quot;highlighter-rouge&quot;&gt;toymir&lt;/code&gt; directory, and then:&lt;/p&gt;
 
-&lt;p&gt;Run:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;flake8&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Run:
+{% highlight bash %}
+flake8
+{% endhighlight %}&lt;/p&gt;
 
 &lt;p&gt;You should see no output, indicating that things work!&lt;/p&gt;
 
@@ -334,7 +596,18 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve added two tests, and gotten comfortable running pytest.  Furthermore, we’ve enabled Travis, so that our tests always run when we push code to GitHub.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html&quot;&gt;Part 6&lt;/a&gt;, we’ll set up our documentation so that it builds automatically, and write some new docs.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.</summary></entry><entry><title type="html">Part 6: Documentation</title><link href="http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html" rel="alternate" type="text/html" title="Part 6:  Documentation" /><published>2018-08-12T15:16:46-04:00</published><updated>2018-08-12T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/12/part-6</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/12/part-6.html">&lt;p&gt;Hello &amp;amp; welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.&lt;/p&gt;
+&lt;p&gt;We’ve added two tests, and gotten comfortable running pytest.  Furthermore, we’ve enabled Travis, so that our tests always run when we push code to GitHub.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html&quot;&gt;Part 6&lt;/a&gt;, we’ll set up our documentation so that it builds automatically, and write some new docs.&lt;/p&gt;
+
+</content>
+<summary>Hello &amp;amp; welcome to Part 5!  This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.</summary>
+</entry>
+<entry>
+<title>Part 6:  Documentation</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html" rel="alternate" type="text/html" title="Part 6:  Documentation" />
+<published>2018-08-12T15:16:46-04:00</published>
+<updated>2018-08-12T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html">&lt;p&gt;Hello &amp;amp; welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.&lt;/p&gt;
 
 &lt;h2 id=&quot;build-some-docs&quot;&gt;Build Some Docs&lt;/h2&gt;
 
@@ -342,7 +615,7 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;We’re going to use a thing called Sphinx to generate our documentation from the comments we leave in our code.  Sphinx is really complicated and powerful, but we’ll be using it in a pretty simple way.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and take a look around.  You’ll see a bunch of Sphnix boilerplate code.  The exact code here is not something you should worry about!  Instead, run &lt;code class=&quot;highlighter-rouge&quot;&gt;make html&lt;/code&gt; – this will generate all your documentation for you, in &lt;code class=&quot;highlighter-rouge&quot;&gt;_build/html&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into the &lt;code class=&quot;highlighter-rouge&quot;&gt;doc&lt;/code&gt; folder, and take a look around.  You’ll see a bunch of Sphinx boilerplate code.  The exact code here is not something you should worry about!  Instead, run &lt;code class=&quot;highlighter-rouge&quot;&gt;make html&lt;/code&gt; – this will generate all your documentation for you, in &lt;code class=&quot;highlighter-rouge&quot;&gt;_build/html&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -382,11 +655,11 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;Lucky for us, there is a web service called &lt;a href=&quot;https://readthedocs.org/&quot;&gt;ReadTheDocs&lt;/a&gt; that does exactly that.  It works like Travis CI – when you merge new code to GitHub, ReadTheDocs will build and display your documentation for you.  You can look at an example from one of our project &lt;a href=&quot;https://amen.readthedocs.io/en/latest/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Due to a bunch of techincal hoo-hoorah, ReadTheDocs won’t let each of you build your own verison of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.&lt;/p&gt;
+&lt;p&gt;Due to a bunch of technical hoo-hoorah, ReadTheDocs won’t let each of you build your own version of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.&lt;/p&gt;
 
-&lt;p&gt;Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select &lt;code class=&quot;highlighter-rouge&quot;&gt;bmcfee/toymir&lt;/code&gt;, rather than &lt;code class=&quot;highlighter-rouge&quot;&gt;your-user-name/toymir&lt;/code&gt;.  Then create the PR as normal from there.&lt;/p&gt;
+&lt;p&gt;Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select &lt;code class=&quot;highlighter-rouge&quot;&gt;bmcfee/ismir2018-oss-tutorial&lt;/code&gt;, rather than &lt;code class=&quot;highlighter-rouge&quot;&gt;your-user-name/ismir2018-oss-tutorial&lt;/code&gt;.  Then create the PR as normal from there.&lt;/p&gt;
 
-&lt;p&gt;(If you’re doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs][appendix-1], so you can make your own docs!]&lt;/p&gt;
+&lt;p&gt;(If you’re doing this tutorial later, you should take a look at our &lt;a href=&quot;appendix-1&quot;&gt;appendix on how to set up Read The Docs&lt;/a&gt;, so you can make your own docs!)&lt;/p&gt;
 
 &lt;h4 id=&quot;checkpoint-2&quot;&gt;Checkpoint&lt;/h4&gt;
 
@@ -406,7 +679,18 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/08/appendix-1.html&quot;&gt;Part 7&lt;/a&gt;, we’ll talk about Jupyter notebooks, and takea  tour of the Python ecosystem.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello &amp;amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary></entry><entry><title type="html">Part 7: Ecosystem</title><link href="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html" rel="alternate" type="text/html" title="Part 7:  Ecosystem" /><published>2018-08-11T15:16:46-04:00</published><updated>2018-08-11T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/11/part-7</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/11/part-7.html">&lt;p&gt;Hello, it’s Part 7!  We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.&lt;/p&gt;
+&lt;p&gt;We’ve added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix-1.html&quot;&gt;Part 7&lt;/a&gt;, we’ll talk about Jupyter notebooks, and take a tour of the Python ecosystem.&lt;/p&gt;
+
+</content>
+<summary>Hello &amp;amp; welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.</summary>
+</entry>
+<entry>
+<title>Part 7:  Ecosystem</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/11/part-7.html" rel="alternate" type="text/html" title="Part 7:  Ecosystem" />
+<published>2018-08-11T15:16:46-04:00</published>
+<updated>2018-08-11T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/11/part-7</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/11/part-7.html">&lt;p&gt;Hello, it’s Part 7!  We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.&lt;/p&gt;
 
 &lt;p&gt;Unlike the first six parts, this will be much more interactive and, after we get one thing running, will be without checkpoints.  Let’s go!&lt;/p&gt;
 
@@ -459,7 +743,18 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve gotten Jupyter working, added some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  Read on to Part 8 for the last section and next steps!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello, it’s Part 7! We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.</summary></entry><entry><title type="html">Part 8: Next Steps</title><link href="http://localhost:4000/shablona/tutorial/2018/08/10/part-8.html" rel="alternate" type="text/html" title="Part 8:  Next Steps" /><published>2018-08-10T15:16:46-04:00</published><updated>2018-08-10T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/10/part-8</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/10/part-8.html">&lt;p&gt;Hello, it’s Part 8, which is the last part!  Hooray!  We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.&lt;/p&gt;
+&lt;p&gt;We’ve gotten Jupyter working, added some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  Read on to Part 8 for the last section and next steps!&lt;/p&gt;
+
+</content>
+<summary>Hello, it’s Part 7!  We’ve gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.</summary>
+</entry>
+<entry>
+<title>Part 8:  Next Steps</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/10/part-8.html" rel="alternate" type="text/html" title="Part 8:  Next Steps" />
+<published>2018-08-10T15:16:46-04:00</published>
+<updated>2018-08-10T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/10/part-8</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/10/part-8.html">&lt;p&gt;Hello, it’s Part 8, which is the last part!  Hooray!  We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.&lt;/p&gt;
 
 &lt;h2 id=&quot;software-engineering-resources&quot;&gt;Software Engineering Resources&lt;/h2&gt;
 
@@ -485,12 +780,28 @@ tests/test_shablona.py .....          	                        &lt;span class=&q
 
 &lt;p&gt;We did … just about everything!&lt;/p&gt;
 
-&lt;p&gt;We went over installing things in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/16/part-1.html&quot;&gt;Part 1&lt;/a&gt;, and setting up web servives in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;.  &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt; covered git and version control, and &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/13/part-4.html&quot;&gt;Part 4&lt;/a&gt; went over Python and Python module structure.  Testing was covered in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-5.html&quot;&gt;Part 5&lt;/a&gt;, and documention in &lt;a href=&quot;https://bmcfee.github.io/shablona/tutorial/2018/08/11/part-6.html&quot;&gt;Part 6&lt;/a&gt;.  Finally, [Part 7][part-8] introduced the wider Python ecosystem, and this is Part 8.&lt;/p&gt;
+&lt;p&gt;We went over installing things in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/16/part-1.html&quot;&gt;Part 1&lt;/a&gt;, and setting up web servives in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html&quot;&gt;Part 2&lt;/a&gt;.  &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html&quot;&gt;Part 3&lt;/a&gt; covered git and version control, and &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html&quot;&gt;Part 4&lt;/a&gt; went over Python and Python module structure.  Testing was covered in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-5.html&quot;&gt;Part 5&lt;/a&gt;, and documentation in &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html&quot;&gt;Part 6&lt;/a&gt;.  Finally, &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/10/part-7.html&quot;&gt;Part 7&lt;/a&gt; introduced the wider Python ecosystem, and this is Part 8.&lt;/p&gt;
 
-&lt;p&gt;Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello, it’s Part 8, which is the last part! Hooray! We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.</summary></entry><entry><title type="html">Appendix 1: Read The Docs</title><link href="http://localhost:4000/shablona/tutorial/2018/08/08/appdendix-1.html" rel="alternate" type="text/html" title="Appendix 1:  Read The Docs" /><published>2018-08-08T15:16:46-04:00</published><updated>2018-08-08T15:16:46-04:00</updated><id>http://localhost:4000/shablona/tutorial/2018/08/08/appdendix-1</id><content type="html" xml:base="http://localhost:4000/shablona/tutorial/2018/08/08/appdendix-1.html">&lt;p&gt;This is the Appendix!  It covers a few things we didn’t cover in much detail in much more detail (or links to documentation for the same)&lt;/p&gt;
+&lt;p&gt;Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!&lt;/p&gt;
+
+</content>
+<summary>Hello, it’s Part 8, which is the last part!  Hooray!  We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.</summary>
+</entry>
+<entry>
+<title>Appendix 1:  Read The Docs</title>
+<link href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/08/appdendix-1.html" rel="alternate" type="text/html" title="Appendix 1:  Read The Docs" />
+<published>2018-08-08T15:16:46-04:00</published>
+<updated>2018-08-08T15:16:46-04:00</updated>
+<id>http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/08/appdendix-1</id>
+<content type="html" xml:base="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/08/appdendix-1.html">&lt;p&gt;This is the Appendix!  It covers a few things we didn’t cover in much detail in much more detail (or links to documentation for the same)&lt;/p&gt;
 
 &lt;h2 id=&quot;read-the-docs&quot;&gt;Read The Docs&lt;/h2&gt;
 
 &lt;h2 id=&quot;git--version-control&quot;&gt;Git &amp;amp; Version Control&lt;/h2&gt;
 
-&lt;h2&gt;??&lt;/h2&gt;</content><author><name></name></author><summary type="html">This is the Appendix! It covers a few things we didn’t cover in much detail in much more detail (or links to documentation for the same)</summary></entry></feed>
+&lt;h2&gt;??&lt;/h2&gt;
+
+</content>
+<summary>This is the Appendix!  It covers a few things we didn’t cover in much detail in much more detail (or links to documentation for the same)</summary>
+</entry>
+</feed>

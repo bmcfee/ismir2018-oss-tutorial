@@ -71,4 +71,4 @@ We've installed everything we'll need on our machines.  In [Part 2][tutorial-par
 [wsl-download]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [conda-download]: https://docs.anaconda.com/anaconda/install/
 [git-download]: https://git-scm.com/downloads 
-[tutorial-part-2]: https://bmcfee.github.io/shablona/tutorial/2018/08/15/part-2.html 
+[tutorial-part-2]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-2.html 
