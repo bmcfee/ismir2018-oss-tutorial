@@ -160,10 +160,12 @@ Ready to keep going?  Onward to [Part 5](part-5)!
 
 ## Eager for more?
 
+![Bonus round!](https://media.giphy.com/media/V9egT5cvtvhdu/giphy.gif)
+
 ### Best practices for awesome packages
 
 - Raise exceptions, not asserts.  Asserts give the user no chance to diagnose what went wrong!
-- Use `numpydoc` format for your documentation strings.
+- Use `numpydoc` format for your documentation strings.  We'll see more of that in [Part 6][tutorial-part-6].
 - Allow the user to seed your random number generators.  This is critical for reproducibility.
 - Provide functions, not classes.
     - Internal classes are okay, but don't make users learn object hierarchies!
@@ -185,4 +187,5 @@ Ready to keep going?  Onward to [Part 5](part-5)!
 - Use `tqdm` for cool progress bars!
 
 
+[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html 
 
