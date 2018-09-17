@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hello &amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code." />
 <meta property="og:description" content="Hello &amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code." />
-<link rel="canonical" href="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html" />
-<meta property="og:url" content="http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html" />
+<link rel="canonical" href="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html" />
+<meta property="og:url" content="http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html" />
 <meta property="og:site_name" content="Open Source and Reproducible MIR Research" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-13T15:16:46-04:00" />
 <script type="application/ld+json">
-{"description":"Hello &amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.","@type":"BlogPosting","url":"http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html","headline":"Part 5: Tests","dateModified":"2018-08-13T15:16:46-04:00","datePublished":"2018-08-13T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/shablona/tutorial/2018/08/13/part-5.html"},"@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html"},"url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html","headline":"Part 5: Tests","dateModified":"2018-08-13T15:16:46-04:00","datePublished":"2018-08-13T15:16:46-04:00","description":"Hello &amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/shablona/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/shablona/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
+<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/shablona/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/ismir2018-oss-tutorial/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -30,7 +30,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/shablona/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/ismir2018-oss-tutorial/about/">About</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -57,17 +57,17 @@
 
 <h2 id="fix-a-test">Fix a Test</h2>
 
-<p>Let’s start by working through fixing a failing test, and commiting the results to our repository.</p>
+<p>Let’s start by working through fixing a failing test, and committing the results to our repository.</p>
 
 <p>Start by making a new branch, with <code class="highlighter-rouge">git checkout -b fix-failing-test</code>.</p>
 
-<p>Then open up <code class="highlighter-rouge">tests/test_shablona.py</code>, uncomment the two functions that start with <code class="highlighter-rouge">test_hz_to_midi</code>, and then run <code class="highlighter-rouge">pytest</code>.</p>
+<p>Then open up <code class="highlighter-rouge">tests/test_toymir.py</code>, uncomment the two functions that start with <code class="highlighter-rouge">test_hz_to_midi</code>, and then run <code class="highlighter-rouge">pytest</code>.</p>
 
 <p>The test failed, oh no!</p>
 
 <p>So, that test is testing a function that we’ve commented out.</p>
 
-<p>You can find the function in <code class="highlighter-rouge">shablona.py</code> - go ahead and uncomment the code that’s there, and then the test will pass!</p>
+<p>You can find the function in <code class="highlighter-rouge">toymir.py</code> - go ahead and uncomment the code that’s there, and then the test will pass!</p>
 
 <p>Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the <code class="highlighter-rouge">hz_to_period</code> function for reference.</p>
 
@@ -84,10 +84,10 @@
 <p>You should see:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">platform darwin <span class="nt">--</span> Python 3.6.5, pytest-3.7.2, py-1.5.4, pluggy-0.7.1
-rootdir: /Users/thorkell/Code/bmcfee/shablona, inifile:
+rootdir: /Users/thorkell/Code/bmcfee/ismir2018-oss-tutorial, inifile:
 collected 5 items
 
-tests/test_shablona.py .....          	                        <span class="o">[</span>100%]</code></pre></figure>
+tests/test_toymir.py .....          	                        <span class="o">[</span>100%]</code></pre></figure>
 
 <h2 id="get-travis-working">Get Travis Working</h2>
 
@@ -95,7 +95,7 @@ tests/test_shablona.py .....          	                        <span class="o">[
 
 <p>Travis is controlled by a file called <code class="highlighter-rouge">.travis.yml</code>.  This file tells the Travis servers what to do with your code - in our case, just run the tests.</p>
 
-<p>We’ve written the file for you.  Let’s take a quick look at it.  The big <code class="highlighter-rouge">install</code> block handles the gruntwork of installing conda, updating it, and setting up our environment.  The <code class="highlighter-rouge">script</code> block is what Travis runs.  We currently just run <code class="highlighter-rouge">pytest</code>.</p>
+<p>We’ve written the file for you.  Let’s take a quick look at it.  The big <code class="highlighter-rouge">install</code> block handles the grunt-work of installing conda, updating it, and setting up our environment.  The <code class="highlighter-rouge">script</code> block is what Travis runs.  We currently just run <code class="highlighter-rouge">pytest</code>.</p>
 
 <p>Let’s modify this to run <a href="http://flake8.pycqa.org/en/latest/index.html">Flake8</a> as well.  Flake8 checks your code and your code style, to make sure that you’re writing code that is both more correct, and easy to read.</p>
 
@@ -113,7 +113,7 @@ tests/test_shablona.py .....          	                        <span class="o">[
 
 <h4 id="checkpoint-1">Checkpoint</h4>
 
-<p>You’ve seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the <code class="highlighter-rouge">shablona</code> directory, and then:</p>
+<p>You’ve seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the <code class="highlighter-rouge">toymir</code> directory, and then:</p>
 
 <p>Run:</p>
 
@@ -128,15 +128,15 @@ tests/test_shablona.py .....          	                        <span class="o">[
 
 <h2 id="success">Success!</h2>
 
-<p>We’ve added two tests, and gotten comfortable running pytest.  Furthermore, we’ve enabled Travis, so that our tests always run when we push code to GitHub.  In <a href="https://bmcfee.github.io/shablona/tutorial/2018/08/12/part-6.html">Part 6</a>, we’ll set up our documentation so that it builds automatically, and write some new docs.</p>
+<p>We’ve added two tests, and gotten comfortable running pytest.  Furthermore, we’ve enabled Travis, so that our tests always run when we push code to GitHub.  In <a href="https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html">Part 6</a>, we’ll set up our documentation so that it builds automatically, and write some new docs.</p>
 
 
-  </div><a class="u-url" href="/shablona/tutorial/2018/08/13/part-5.html" hidden></a>
+  </div><a class="u-url" href="/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/shablona/"></data>
+  <data class="u-url" href="/ismir2018-oss-tutorial/"></data>
 
   <div class="wrapper">
 
@@ -145,10 +145,10 @@ tests/test_shablona.py .....          	                        <span class="o">[
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Open Source and Reproducible MIR Research</li><li><a class="u-email" href="mailto:brian.mcfee@nyu.edu">brian.mcfee@nyu.edu</a></li></ul>
+          <li class="p-name">Open Source and Reproducible MIR Research</li><li><a class="u-email" href="mailto:brian.mcfee@nyu.edu, thorkell@spotify.com">brian.mcfee@nyu.edu, thorkell@spotify.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/bmcfee"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#github"></use></svg> <span class="username">bmcfee</span></a></li><li><a href="https://www.twitter.com/functiontelechy"><svg class="svg-icon"><use xlink:href="/shablona/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">functiontelechy</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/bmcfee"><svg class="svg-icon"><use xlink:href="/ismir2018-oss-tutorial/assets/minima-social-icons.svg#github"></use></svg> <span class="username">bmcfee</span></a></li><li><a href="https://www.twitter.com/functiontelechy"><svg class="svg-icon"><use xlink:href="/ismir2018-oss-tutorial/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">functiontelechy</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
