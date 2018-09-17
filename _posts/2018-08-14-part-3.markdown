@@ -36,7 +36,7 @@ nothing to commit, working directory clean
 
 ## Install Things with Conda
 
-Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different indepenent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need ... and then have a different environment for a different project, with different packages installed!
+Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different independent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need ... and then have a different environment for a different project, with different packages installed!
 
 This may sound like overkill, but it is very helpful in the long run.  You'll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.
 
@@ -151,4 +151,4 @@ It also means that the online, "deployed" version of master is your primary vers
 We've used git to check out code, modify it, and commit our modifications.  We've also used conda to install the code we need, in an environment that is specific to this project.  In [Part 4][tutorial-part-4], we'll get into the details of our Python code and how it all fits together.
 
 [github-flow]: https://guides.github.com/introduction/flow/
-[tutorial-part-4]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-4.html 
+[tutorial-part-4]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html 

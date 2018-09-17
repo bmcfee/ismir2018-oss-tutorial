@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 <link href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://localhost:4000/ismir2018-oss-tutorial/" rel="alternate" type="text/html" />
-<updated>2018-09-17T13:41:08-04:00</updated>
+<updated>2018-09-17T13:44:20-04:00</updated>
 <id>http://localhost:4000/ismir2018-oss-tutorial/</id>
 <subtitle>The goal of this tutorial is to provide hands-on,  practical training for MIR researchers to learn modern tools  for improving the quality of their research software.</subtitle>
 <entry>
@@ -176,7 +176,7 @@ nothing to commit, working directory clean
 
 &lt;h2 id=&quot;install-things-with-conda&quot;&gt;Install Things with Conda&lt;/h2&gt;
 
-&lt;p&gt;Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different indepenent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need … and then have a different environment for a different project, with different packages installed!&lt;/p&gt;
+&lt;p&gt;Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different independent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need … and then have a different environment for a different project, with different packages installed!&lt;/p&gt;
 
 &lt;p&gt;This may sound like overkill, but it is very helpful in the long run.  You’ll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.&lt;/p&gt;
 
@@ -290,7 +290,7 @@ Date:   &lt;today&gt;&lt;/today&gt;&lt;/Your&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;success&quot;&gt;Success!&lt;/h2&gt;
 
-&lt;p&gt;We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/15/part-4.html&quot;&gt;Part 4&lt;/a&gt;, we’ll get into the details of our Python code and how it all fits together.&lt;/p&gt;
+&lt;p&gt;We’ve used git to check out code, modify it, and commit our modifications.  We’ve also used conda to install the code we need, in an environment that is specific to this project.  In &lt;a href=&quot;https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/13/part-4.html&quot;&gt;Part 4&lt;/a&gt;, we’ll get into the details of our Python code and how it all fits together.&lt;/p&gt;
 
 </content>
 <summary>Hello &amp;amp; welcome to Part 3!  This is where we’ll start to use the various things you’ve installed to work with the code.</summary>
