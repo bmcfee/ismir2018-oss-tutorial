@@ -72,26 +72,19 @@ Then, open up Travis, (`https://travis-ci.org/<your-github-username>/ismir2018-o
 Visit your page on Travis.  You should see your tests running on Travis!
 
 
-## Update Travis
+## Wait, the tests failed?
 
-Cool, so our tests are passing!  But what will it look like when our tests fail on Travis?  Let's find out!
+Ah, how come our tests failed?  We know that our tests are working, so maybe it is this new Flake8 thing!  Run `flake8` locally, and see what happens.
 
-Open up `some file`, and add `import sys` to it.  This is a valid statement, but Flake8 won't allow unused imports.  Commit this to a new branch, and push it to GitHub.
+Turns out that Flake8 will not allow unused imports!  And our `import seaborn` in `toymir.py` is never used.
 
-Travis will start running your tests ... and Flake8 will complain!  If this were someone contributing code to your repository, you could reply to them and say something like "Great work, please fix the flake8 issues and then we can merge it!"
+This is very easy to fix – on the same branch, remove that line, and the run our tests and `flake8` again.  Everything should pass!  Once it does, commit and push the change, and watch things pass on Travis.
 
-We just wanted to see what happens when tests failed, so feel free to delete that import, commit the change, and merge the branch on GitHub.
 
 #### Checkpoint
 
-You've seen your tests run on Travis, and had a test branch fail on GitHub!  You should also have flake8 working locally.  cd to the `toymir` directory, and then:
+You've seen your tests run on Travis, and have merged the passing code into master!
 
-Run:
-{% highlight bash %}
-flake8
-{% endhighlight %}
-
-You should see no output, indicating that things work!
 
 **Gotchas:**
 - Rarely, your tests will pass locally but fail on Travis.  This is super frustrating, and is usually caused by there being a difference between your local environment and the Travis environment.
