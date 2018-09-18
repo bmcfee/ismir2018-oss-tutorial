@@ -28,9 +28,9 @@ Rad, so we know how to make our docs, this is great.  But where do all those wor
 
 It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!  Let's make a branch (`git checkout -b update-docs`), and write some documentation.
 
-Find `some function` in `some file` - you'll see that it does not have any documentation.  Take a look at `other-function` - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.
+Find a function called `midi_to_hz` in `toymir/freq.py` - you'll see that it does not have any documentation.  Take a look at `hz_to_period` - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.
 
-Based on this example, add a docstring to `the first function`.  Once you're happy with your docs, run `make html` again, to generate your new docs!
+Based on this example, add a docstring to `midi_to_hz`.  Once you're happy with your docs, run `make html` again, to generate your new docs!
 
 #### Checkpoint
 
