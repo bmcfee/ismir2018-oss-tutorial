@@ -15,9 +15,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-12T15:16:46-04:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html"},"url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html","headline":"Part 6: Documentation","dateModified":"2018-08-12T15:16:46-04:00","datePublished":"2018-08-12T15:16:46-04:00","description":"Hello &amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.","@context":"http://schema.org"}</script>
+{"description":"Hello &amp; welcome to Part 6! This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.","@type":"BlogPosting","url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html","headline":"Part 6: Documentation","dateModified":"2018-08-12T15:16:46-04:00","datePublished":"2018-08-12T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="" /></head>
+<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/ismir2018-oss-tutorial/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
@@ -70,7 +70,7 @@
 
 <p>Rad, so we know how to make our docs, this is great.  But where do all those words come from?</p>
 
-<p>It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!</p>
+<p>It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!  Let’s make a branch (<code class="highlighter-rouge">git checkout -b update-docs</code>), and write some documentation.</p>
 
 <p>Find <code class="highlighter-rouge">some function</code> in <code class="highlighter-rouge">some file</code> - you’ll see that it does not have any documentation.  Take a look at <code class="highlighter-rouge">other-function</code> - you’ll see that it has a detailed description of how it works, what parameters it takes, and what it returns.</p>
 
@@ -87,7 +87,7 @@
   <li>A working webpage, with your new docstring!</li>
 </ul>
 
-<h2 id="update-some-docs--read-the-docs">Update Some Docs / Read The Docs</h2>
+<h2 id="read-the-docs">Read The Docs</h2>
 
 <p>So now our local documentation is updated.  You are probably thinking that it is not much good to have local documentation – if only there were some way to put our documentation on the Internet in an easy way!</p>
 
@@ -95,7 +95,7 @@
 
 <p>Due to a bunch of technical hoo-hoorah, ReadTheDocs won’t let each of you build your own version of the documentation for this module … but our original repository can.  So, we’re going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.</p>
 
-<p>Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select <code class="highlighter-rouge">bmcfee/ismir2018-oss-tutorial</code>, rather than <code class="highlighter-rouge">your-user-name/ismir2018-oss-tutorial</code>.  Then create the PR as normal from there.</p>
+<p>Those documentation changes you made are still unmerged.  Commit your changes to your branch, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select <code class="highlighter-rouge">bmcfee/ismir2018-oss-tutorial</code>, rather than <code class="highlighter-rouge">your-user-name/ismir2018-oss-tutorial</code>.  Then create the PR as normal from there.</p>
 
 <p>(If you’re doing this tutorial later, you should take a look at our <a href="appendix-1">appendix on how to set up Read The Docs</a>, so you can make your own docs!)</p>
 
@@ -113,7 +113,7 @@
 
 <p>Finally, there’s LICENSE.md.  It turns out that if f you publish code to GitHub without an explicit license, it is not open source.</p>
 
-<p>We <em>highly</em> recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called <code class="highlighter-rouge">LICENSE.md</code> in your repository.  You can take a look at https://choosealicense.com to help you pick one - we recommend the MIT license, ourselves.</p>
+<p>We <em>highly</em> recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called <code class="highlighter-rouge">LICENSE.md</code> in your repository.  You can take a look at <a href="https://choosealicense.com/">https://choosealicense.com</a> to help you pick one - we recommend the MIT license, ourselves.</p>
 
 <h2 id="success">Success!</h2>
 

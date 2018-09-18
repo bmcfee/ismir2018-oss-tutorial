@@ -15,9 +15,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-14T15:16:46-04:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html"},"url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html","headline":"Part 3: Working with the Code","dateModified":"2018-08-14T15:16:46-04:00","datePublished":"2018-08-14T15:16:46-04:00","description":"Hello &amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.","@context":"http://schema.org"}</script>
+{"description":"Hello &amp; welcome to Part 3! This is where we’ll start to use the various things you’ve installed to work with the code.","@type":"BlogPosting","url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html","headline":"Part 3: Working with the Code","dateModified":"2018-08-14T15:16:46-04:00","datePublished":"2018-08-14T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="" /></head>
+<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/ismir2018-oss-tutorial/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
@@ -156,7 +156,7 @@ tests/test_ismir2018-oss-tutorial.py .....          	                        <sp
 
 <p>We fixed a bug, hooray!  But we’ve only fixed our local version.  Let’s commit this to our local git repository, and then update the version on GitHub.</p>
 
-<p>First, make a new branch to work on. Working in a branch means that we can do whatever we want without breaking our main code.  Do <code class="highlighter-rouge">git branch update-conda-env</code>.</p>
+<p>First, make a new branch to work on. Working in a branch means that we can do whatever we want without breaking our main code.  Do <code class="highlighter-rouge">git checkout -b update-conda-env</code>.</p>
 
 <p>Next, add and commit your files:  <code class="highlighter-rouge">git add requirements.txt</code>, then <code class="highlighter-rouge">git commit -m "Add pandas to requirements.txt"</code></p>
 
@@ -195,7 +195,7 @@ tests/test_ismir2018-oss-tutorial.py .....          	                        <sp
 Author: &lt;Your Name&gt; &lt;your-email@your-server&gt;
 Date:   &lt;today&gt;
 
-    Add pandas to requirements.txt</code></pre></figure>
+Add pandas to requirements.txt</code></pre></figure>
 
 <p>We’ve just gone over the basic git and GitHub workflow that you should, in general, stick with: make a branch, make some changes, run tests, commit, push, merge, clean up.</p>
 

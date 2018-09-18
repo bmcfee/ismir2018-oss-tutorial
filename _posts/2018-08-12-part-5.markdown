@@ -20,7 +20,7 @@ Let's start by working through fixing a failing test, and committing the results
 
 Start by making a new branch, with `git checkout -b fix-failing-test`.
 
-Then open up `tests/test_toymir.py`, uncomment the two functions that start with `test_hz_to_midi`, and then run `pytest`.
+Then open up `toymir/tests/test_toymir.py`, uncomment the two functions that start with `test_hz_to_midi`, and then run `pytest -v`.
 
 The test failed, oh no!
 
@@ -32,13 +32,13 @@ Great!  You should also write a new test to verify that this function works corr
 
 Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.
 
-Once `pytest` shows that both tests are passing, commit your changes, merge on github, and then pull the results back to your local.
+Once `pytest -v` shows that both tests are passing, commit your changes, merge on github, and then pull the results back to your local.
 
 #### Checkpoint
 
 Run:
 {% highlight bash %}
-pytest
+pytest -v
 {% endhighlight %}
 
 You should see:
@@ -61,7 +61,7 @@ We've written the file for you.  Let's take a quick look at it.  The big `instal
 
 Let's modify this to run [Flake8][flake8] as well.  Flake8 checks your code and your code style, to make sure that you're writing code that is both more correct, and easy to read.
 
-All you need to do is add `flake8` below the call to `pytest`, then commit and push your code.
+Make a branch wih `git checkout -b add-flake8` – then, all you need to do is add `flake8` below the call to `pytest`, then commit and push your code.
 
 Then, open up Travis, and you can see your tests run!
 
@@ -71,7 +71,7 @@ Open up `some file`, and add `import sys` to it.  This is a valid statement, but
 
 Travis will start running your tests ... and Flake8 will complain!  If this were someone contributing code to your repository, you could reply to them and say something like "Great work, please fix the flake8 issues and then we can merge it!"
 
-We just wanted to see what happens when tests failed, so feel free to delete that branch, and then move on.
+We just wanted to see what happens when tests failed, so feel free to delete that import, commit the change, and merge the branch on GitHub.
 
 #### Checkpoint
 
