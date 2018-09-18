@@ -55,7 +55,7 @@ tests/test_toymir.py .....          	                        [100%]
 
 We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new branches to GitHub.  This is useful because it means that you can't forget to run your tests – and it means that other people's PRs will have tests run against them.
 
-The first thing we need to do is to activate your repositoroy, so that Travis will run your tests.  Visit `https://travis-ci.org/profile/<your-github-user-name>`.  You should see a list of repositories.  Press the toggle for this repo, and things will be activated!
+The first thing we need to do is to activate your repository, so that Travis will run your tests.  Visit `https://travis-ci.org/profile/<your-github-user-name>`.  You should see a list of repositories.  Press the toggle for this repo, and things will be activated!
 
 Travis is controlled by a file called `.travis.yml`.  This file tells the Travis servers what to do with your code - in our case, just run the tests.
 
