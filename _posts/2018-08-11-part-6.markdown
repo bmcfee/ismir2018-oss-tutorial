@@ -34,7 +34,7 @@ Based on this example, add a docstring to `midi_to_hz`.  Once you're happy with 
 
 #### Checkpoint
 
-- Open `_build/html/index.html` in a web browser. !!needs exact path to new page!!
+- Open `_build/html/api.html` in a web browser.
 
 You should see:
 - A working webpage, with your new docstring!
