@@ -126,7 +126,7 @@ tests/test_ismir2018-oss-tutorial.py .....          	                        [10
 
 We fixed a bug, hooray!  But we've only fixed our local version.  Let's commit this to our local git repository, and then update the version on GitHub.
 
-First, make a new branch to work on. Working in a branch means that we can do whatever we want without breaking our main code.  Do `git branch update-conda-env`.
+First, make a new branch to work on. Working in a branch means that we can do whatever we want without breaking our main code.  Do `git checkout -b update-conda-env`.
 
 Next, add and commit your files:  `git add requirements.txt`, then `git commit -m "Add pandas to requirements.txt"`
 
@@ -162,7 +162,7 @@ commit fc48577568d259f361a2e5f28267500ff2d4405f
 Author: <Your Name> <your-email@your-server>
 Date:   <today>
 
-    Add pandas to requirements.txt
+Add pandas to requirements.txt
 {% endhighlight %}
 
 We've just gone over the basic git and GitHub workflow that you should, in general, stick with: make a branch, make some changes, run tests, commit, push, merge, clean up.

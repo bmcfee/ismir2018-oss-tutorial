@@ -15,9 +15,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-13T15:16:46-04:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html"},"url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html","headline":"Part 5: Tests","dateModified":"2018-08-13T15:16:46-04:00","datePublished":"2018-08-13T15:16:46-04:00","description":"Hello &amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.","@context":"http://schema.org"}</script>
+{"description":"Hello &amp; welcome to Part 5! This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.","@type":"BlogPosting","url":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html","headline":"Part 5: Tests","dateModified":"2018-08-13T15:16:46-04:00","datePublished":"2018-08-13T15:16:46-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ismir2018-oss-tutorial/tutorial/2018/08/13/part-5.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="" /></head>
+<link rel="stylesheet" href="/ismir2018-oss-tutorial/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/ismir2018-oss-tutorial/feed.xml" title="Open Source and Reproducible MIR Research" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/ismir2018-oss-tutorial/">Open Source and Reproducible MIR Research</a><nav class="site-nav">
@@ -61,7 +61,7 @@
 
 <p>Start by making a new branch, with <code class="highlighter-rouge">git checkout -b fix-failing-test</code>.</p>
 
-<p>Then open up <code class="highlighter-rouge">tests/test_toymir.py</code>, uncomment the two functions that start with <code class="highlighter-rouge">test_hz_to_midi</code>, and then run <code class="highlighter-rouge">pytest</code>.</p>
+<p>Then open up <code class="highlighter-rouge">toymir/tests/test_toymir.py</code>, uncomment the two functions that start with <code class="highlighter-rouge">test_hz_to_midi</code>, and then run <code class="highlighter-rouge">pytest -v</code>.</p>
 
 <p>The test failed, oh no!</p>
 
@@ -73,13 +73,13 @@
 
 <p>Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.</p>
 
-<p>Once <code class="highlighter-rouge">pytest</code> shows that both tests are passing, commit your changes, merge on github, and then pull the results back to your local.</p>
+<p>Once <code class="highlighter-rouge">pytest -v</code> shows that both tests are passing, commit your changes, merge on github, and then pull the results back to your local.</p>
 
 <h4 id="checkpoint">Checkpoint</h4>
 
 <p>Run:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pytest</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pytest <span class="nt">-v</span></code></pre></figure>
 
 <p>You should see:</p>
 
@@ -99,7 +99,7 @@ tests/test_toymir.py .....          	                        <span class="o">[</
 
 <p>Let’s modify this to run <a href="http://flake8.pycqa.org/en/latest/index.html">Flake8</a> as well.  Flake8 checks your code and your code style, to make sure that you’re writing code that is both more correct, and easy to read.</p>
 
-<p>All you need to do is add <code class="highlighter-rouge">flake8</code> below the call to <code class="highlighter-rouge">pytest</code>, then commit and push your code.</p>
+<p>Make a branch wih <code class="highlighter-rouge">git checkout -b add-flake8</code> – then, all you need to do is add <code class="highlighter-rouge">flake8</code> below the call to <code class="highlighter-rouge">pytest</code>, then commit and push your code.</p>
 
 <p>Then, open up Travis, and you can see your tests run!</p>
 
@@ -109,7 +109,7 @@ tests/test_toymir.py .....          	                        <span class="o">[</
 
 <p>Travis will start running your tests … and Flake8 will complain!  If this were someone contributing code to your repository, you could reply to them and say something like “Great work, please fix the flake8 issues and then we can merge it!”</p>
 
-<p>We just wanted to see what happens when tests failed, so feel free to delete that branch, and then move on.</p>
+<p>We just wanted to see what happens when tests failed, so feel free to delete that import, commit the change, and merge the branch on GitHub.</p>
 
 <h4 id="checkpoint-1">Checkpoint</h4>
 

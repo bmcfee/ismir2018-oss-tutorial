@@ -26,7 +26,7 @@ You should see:
 
 Rad, so we know how to make our docs, this is great.  But where do all those words come from?
 
-It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!
+It turns out that Sphinx reads from comments that are formatted in a certain way.  This is cool because it means we can write good comments in our code, and have those comments automatically turn into our docs!  Let's make a branch (`git checkout -b update-docs`), and write some documentation.
 
 Find `some function` in `some file` - you'll see that it does not have any documentation.  Take a look at `other-function` - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.
 
@@ -40,7 +40,7 @@ You should see:
 - A working webpage, with your new docstring!
 
 
-## Update Some Docs / Read The Docs
+##  Read The Docs
 
 So now our local documentation is updated.  You are probably thinking that it is not much good to have local documentation – if only there were some way to put our documentation on the Internet in an easy way!
 
@@ -48,7 +48,7 @@ Lucky for us, there is a web service called [ReadTheDocs][readthedocs] that does
 
 Due to a bunch of technical hoo-hoorah, ReadTheDocs won't let each of you build your own version of the documentation for this module ... but our original repository can.  So, we're going to combine this step with sending a pull request to our original repository, so you can see how ReadTheDocs works.
 
-Those documentation changes you made are still unmerged.  Make a new branch, commit your changes, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select `bmcfee/ismir2018-oss-tutorial`, rather than `your-user-name/ismir2018-oss-tutorial`.  Then create the PR as normal from there.
+Those documentation changes you made are still unmerged.  Commit your changes to your branch, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select `bmcfee/ismir2018-oss-tutorial`, rather than `your-user-name/ismir2018-oss-tutorial`.  Then create the PR as normal from there.
 
 (If you're doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs](appendix-1), so you can make your own docs!)
 
@@ -65,14 +65,17 @@ In general, your README should provided an overview of your project, how to inst
 
 Finally, there's LICENSE.md.  It turns out that if f you publish code to GitHub without an explicit license, it is not open source.
 
-We _highly_ recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called `LICENSE.md` in your repository.  You can take a look at https://choosealicense.com to help you pick one - we recommend the MIT license, ourselves.
+We _highly_ recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called `LICENSE.md` in your repository.  You can take a look at [https://choosealicense.com][choose-a-license] to help you pick one - we recommend the MIT license, ourselves.
+
+GitHub will also probably ask you for things like a Code of Conduct, guidelines for contributors, issue templates, and so on.  These are important, but are outside the scope of this tutorial!
 
 ## Success!
 
-We've added some documentation, and set up ReadTheDocs so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In [Part 7][tutorial-part-7], we'll talk about Jupyter notebooks, and take a tour of the Python ecosystem.
+We've added some documentation, and seen how ReadTheDocs can be used so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In [Part 7][tutorial-part-7], we'll talk about Jupyter notebooks, and take a tour of the Python ecosystem.
 
 [librosa-github]: https://github.com/librosa/librosa
 [tutorial-part-7]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-7.html
 [readthedocs]: https://readthedocs.org/
 [amen-docs]: https://amen.readthedocs.io/en/latest/
+[choose-a-license]: https://choosealicense.com/
 [tutorial-part-7]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix-1.html

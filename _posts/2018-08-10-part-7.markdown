@@ -53,8 +53,9 @@ OK, now let's take a look at some things!  We're going to cover the following mo
 
 ## Success!
 
-We've gotten Jupyter working, added some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  Read on to Part 8 for the last section and next steps!
+We've gotten Jupyter working, added some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  Read on to [Part 8][part-8] for the last section and next steps!
 
+[part-8]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/10/part-8.html
 [numpy]: http://www.numpy.org/
 [scipy]: https://www.scipy.org/
 [matplotlib]: https://matplotlib.org
