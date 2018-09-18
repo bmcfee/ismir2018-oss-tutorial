@@ -55,6 +55,8 @@ tests/test_toymir.py .....          	                        [100%]
 
 We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new branches to GitHub.  This is useful because it means that you can't forget to run your tests – and it means that other people's PRs will have tests run against them.
 
+The first thing we need to do is to activate your repository, so that Travis will run your tests.  Visit `https://travis-ci.org/profile/<your-github-user-name>`.  You should see a list of repositories.  Press the toggle for this repo, and things will be activated!
+
 Travis is controlled by a file called `.travis.yml`.  This file tells the Travis servers what to do with your code - in our case, just run the tests.
 
 We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the grunt-work of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
@@ -63,7 +65,14 @@ Let's modify this to run [Flake8][flake8] as well.  Flake8 checks your code and 
 
 Make a branch wih `git checkout -b add-flake8` – then, all you need to do is add `flake8` below the call to `pytest`, then commit and push your code.
 
-Then, open up Travis, and you can see your tests run!
+Then, open up Travis, (`https://travis-ci.org/<your-github-username>/ismir2018-oss-tutorial`) and you can see your tests run!
+
+#### Checkpoint
+
+Visit your page on Travis.  You should see your tests running on Travis!
+
+
+## Update Travis
 
 Cool, so our tests are passing!  But what will it look like when our tests fail on Travis?  Let's find out!
 
