@@ -62,9 +62,9 @@ Run:
 git --version
 {% endhighlight %}
 
-You should see:
+You should see (or a higher version):
 {% highlight bash %}
-git version 2.7.4
+git version 2.15.0
 {% endhighlight %}
 
 ## Success!
