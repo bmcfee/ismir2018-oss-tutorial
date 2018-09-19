@@ -15,7 +15,7 @@ Visit `https://github.com/bmcfee/ismir2018-oss-tutorial`, and press the **Fork**
 
 Now, visit `https://github.com/<your-username>/ismir2018-oss-tutorial`, and press the **Clone** button.  Make sure to select **Clone with SSH**, and then copy the string that looks like `git@github:<your-username>/ismir2018-oss-tutorial.git`
 
-Then, in your terminal, go to wherever you keep your code, and do `git clone <that string>`.  This will do a lot of stuff!  Once it is done, you should see a directory called `ismir2018-oss-tutorial`.  
+Then, in your terminal, go to wherever you keep your code, and do `git clone <that string>`.  This will copy the code to your machine!  Once it is done, you should see a directory called `ismir2018-oss-tutorial`.  
 
 `cd` into that directory, then do `ls`.  You should see the same files that you see on GitHub!
 
@@ -36,15 +36,17 @@ nothing to commit, working directory clean
 
 ## Install Things with Conda
 
-Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different independent environments, each of which can have different things installed.  So, for example, you can have one environment for this project and install the things that you need ... and then have a different environment for a different project, with different packages installed!
+Conda, like we said earlier, is both a package manager and an environment manager.  A package manager just installs things for you.  An environment manager is a bit more complex – it keeps track of different independent environments, each of which can have different things installed.
+So, for example, you can have one environment for this project and install the things that you need ... and then have a different environment for a different project, with different packages installed
 
 This may sound like overkill, but it is very helpful in the long run.  You'll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.
 
-So, let's make one and install the code that we need!  To create an environment for this tutorial, do  `conda create --name ismir-2018`.  You'll see that environment has been created at `/Users/<your-user>/miniconda3/envs/ismir-2018-tutorial`!  Hooray!  To turn it on do `conda activate ismir-2018-tutorial`.
+So, let's make one and install the code that we need!  To create an environment for this tutorial, do  `conda create --name ismir-2018`.  You'll see that environment has been created at `/Users/<your-user>/miniconda3/envs/ismir-2018-tutorial` (or some path very much like that).
+Hooray!  To turn it on do `conda activate ismir-2018-tutorial`.
 
 This means that any Python code you install with conda or pip will only be installed in this environment.  If you want to get out of this environment, just run `source deactivate` – but don't run it now!
 
-For now, we're going to install all the stuff we need.  Run `conda install --file requirements.txt`.  Lots of things should happen!
+For now, we're going to install all the stuff we need.  Run `conda install --file requirements.txt`.  This will install all the packages listed in requirements.txt.
 
 #### Checkpoint
 
@@ -82,7 +84,7 @@ Run:
 ./scripts/test_tutorial_install.sh
 {% endhighlight %}
 
-You should see:
+You should see something very much like:
 {% highlight bash %}
 Checking git and conda
 git version 2.7.4
@@ -124,7 +126,7 @@ tests/test_ismir2018-oss-tutorial.py .....          	                        [10
 
 ## Save Our Work
 
-We fixed a bug, hooray!  But we've only fixed our local version.  Let's commit this to our local git repository, and then update the version on GitHub.
+We fixed a bug, hooray!  But we've only fixed our local version.  Let's commit this to our local git repository, and then update our code on GitHub.
 
 First, make a new branch to work on. Working in a branch means that we can do whatever we want without breaking our main code.  Do `git checkout -b update-conda-env`.
 
@@ -140,7 +142,9 @@ We want to get in the habit of keeping our online work up to date with our local
 
 Hooray, you've made a Pull Request!  Pull Requests (PRs) are the best way to contribute code to a project.  You can review & comment on the proposed changes before merging them, or request that things be improved.
 
-🙏 Here's an important aside:  when discussing code in PRs, please be nice!  It's really easy for a neutral comment to be read as mean, and it's really easy to alienate people by being mean  You should do your best to very polite and kind when dealing with people on GitHub (and probably on computers in general). 
+🙏🙏 🙏  Here's an important aside:  when discussing code in PRs, please be nice!  It's really easy for a neutral comment to be read as mean, and it's really easy to alienate people by being mean.
+
+You should do your best to very polite and kind when dealing with people on GitHub (and probably on computers in general). 🙏 🙏 🙏 
 
 With that said, let's merge our PR!  This will add the changes from your branch to the `master` branch.
 - Press **Merge**.  GitHub will merge your commit into master.  
@@ -167,9 +171,9 @@ Add seaborn to requirements.txt
 
 We've just gone over the basic git and GitHub workflow that you should, in general, stick with: make a branch, make some changes, run tests, commit, push, merge, clean up.
 
-This means that you never have untested code in master, and it means that master is always functional.  This is called "Continuous Integration", or "Continuous Delivery".  There are whole books about why this is a good idea, but you can read [a good summary of the GitHub version of it here][github-flow].
+This means that you never have untested code in master, and it means that master is always functional.  It also means that the online, "deployed" version of master is your primary version, and that you (and maybe many other collaborators) just have a local version that you're working on.
 
-It also means that the online, "deployed" version of master is your primary version, and you just have a local version that you're working on.
+We'll come back to why this method is useful when we talk about tests.  If you like, you can read [more about this way of working with code on GitHub][github-flow].
 
 ## Success!
 
