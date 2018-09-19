@@ -14,6 +14,8 @@ Tests make your life easier and give you confidence in your code.  Software is c
 
 Writing tests slows you down in the short term, but speeds things up in the long term.  Further, as someone who is writing scientific code, tests make sure that your work can be easily reproduced.
 
+Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.  We'll see an example of this next.
+
 ## Fix a Test
 
 Let's start by working through fixing a failing test, and committing the results to our repository.
@@ -22,15 +24,14 @@ Start by making a new branch, with `git checkout -b fix-failing-test`.
 
 Then open up `toymir/tests/test_toymir.py`, uncomment the two functions that start with `test_hz_to_midi`, and then run `pytest -v`.
 
-The test failed, oh no!
+🔥💥🔥💥🔥 The tests failed, oh no! 🔥💥🔥💥🔥
 
-So, that test is testing a function that we've commented out.
+It turns out that those tests are testing a function that we've commented out.
 
-You can find the function in `toymir.py` - go ahead and uncomment the code that's there, and then the test will pass!
+You can find the function in `toymir.py` - go ahead and uncomment the code that's there, and then the tests will pass!
 
 Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the `hz_to_period` function for reference.
 
-Philosophically, each test should test one thing.  This makes it easier to ensure that we can see what has broken when a test breaks.
 
 Once `pytest -v` shows that both tests are passing, commit your changes, merge on github, and then pull the results back to your local.
 
@@ -53,13 +54,13 @@ tests/test_toymir.py .....          	                        [100%]
 
 ## Get Travis Working
 
-We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new branches to GitHub.  This is useful because it means that you can't forget to run your tests – and it means that other people's PRs will have tests run against them.
+We set up our Travis account in Part 2!  Travis is a service that runs your tests when you push new code to GitHub.  This is useful because it means that you can't forget to run your tests – and it means that other people's Pull Requests  will have tests run against them.
 
 The first thing we need to do is to activate your repository, so that Travis will run your tests.  Visit `https://travis-ci.org/profile/<your-github-user-name>`.  You should see a list of repositories.  Press the toggle for this repo, and things will be activated!
 
 Travis is controlled by a file called `.travis.yml`.  This file tells the Travis servers what to do with your code - in our case, just run the tests.
 
-We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the grunt-work of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
+We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the gruntwork of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
 
 Let's modify this to run [Flake8][flake8] as well.  Flake8 checks your code and your code style, to make sure that you're writing code that is both more correct, and easy to read.
 
@@ -78,7 +79,7 @@ Ah, how come our tests failed?  We know that our tests are working, so maybe it 
 
 Turns out that Flake8 will not allow unused imports!  And our `import seaborn` in `toymir.py` is never used.
 
-This is very easy to fix – on the same branch, remove that line, and the run our tests and `flake8` again.  Everything should pass!  Once it does, commit and push the change, and watch things pass on Travis.
+This is very easy to fix – on the same branch, remove that line, and the run our tests and `flake8` again.  Everything should pass!  Once it does, commit and push the change, and watch things pass on Travis.  Once the tests pass on Travis, merge things to master.
 
 
 #### Checkpoint
@@ -92,7 +93,7 @@ You've seen your tests run on Travis, and have merged the passing code into mast
 
 ## Success!
 
-We've added two tests, and gotten comfortable running pytest.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
+We've added two tests, and gotten comfortable running `pytest`.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
 
 [tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html 
 [flake8]: http://flake8.pycqa.org/en/latest/index.html
