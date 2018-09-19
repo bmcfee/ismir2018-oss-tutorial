@@ -22,7 +22,7 @@ No command line here either - you should be able to visit [ReadTheDocs][readthed
 
 For the next step, you'll need a repository of your own that is _not_ a fork of another repository that is on Read The Docs.  One way to do this would be to make a brand-new repository on GitHub (maybe name it `your-github-username-rtd-test`?), and then manually copy the code from this repository into it.
 
-Once you've got that repository, visit [https://readthedocs.org/dashboard][readthedocs-dashboard].  Click on the **Import a Project** button, and find your project in the list of repositories.  Press the big **+** button next to your new repo, and you'll be taken to an import page.  You can leave the defaults as-is and just press **Next**.  This will take you to th eproject page, and you should see the words `Webhook successfully added.`  If so, this means that Read The Docs will build your docs the next time you push code!
+Once you've got that repository, visit [https://readthedocs.org/dashboard][readthedocs-dashboard].  Click on the **Import a Project** button, and find your project in the list of repositories.  Press the big **+** button next to your new repo, and you'll be taken to an import page.  You can leave the defaults as-is and just press **Next**.  This will take you to th eproject page, and you should see the words `Webhook successfully added.`  If so, this means that Read The Docs will build your docs the next time you push a change to your code to GitHub!
 
 #### Checkpoint
 No command line here - change some trivial thing in your documentation, push the code to GitHub, and you should be able to view your documents on Read The Docs.
