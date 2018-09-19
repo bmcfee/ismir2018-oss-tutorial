@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Open Source and Reproducible MIR Research
-email: brian.mcfee@nyu.edu, thorkell@spotify.com
+email: brian.mcfee@nyu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   The goal of this tutorial is to provide hands-on, 
   practical training for MIR researchers to learn modern tools 
