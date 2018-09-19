@@ -20,9 +20,13 @@ ReadTheDocs will also ask you to confirm your email, so open up your email clien
 #### Checkpoint
 No command line here either - you should be able to visit [ReadTheDocs][readthedocs-main] and see your GitHub username in the upper-right to indicate that you're logged in.
 
+## Sending Code to Read The Docs
+
 For the next step, you'll need a repository of your own that is _not_ a fork of another repository that is on Read The Docs.  One way to do this would be to make a brand-new repository on GitHub (maybe name it `your-github-username-rtd-test`?), and then manually copy the code from this repository into it.
 
-Once you've got that repository, visit [https://readthedocs.org/dashboard][readthedocs-dashboard].  Click on the **Import a Project** button, and find your project in the list of repositories.  Press the big **+** button next to your new repo, and you'll be taken to an import page.  You can leave the defaults as-is and just press **Next**.  This will take you to th eproject page, and you should see the words `Webhook successfully added.`  If so, this means that Read The Docs will build your docs the next time you push a change to your code to GitHub!
+Once you've got that repository, visit [https://readthedocs.org/dashboard][readthedocs-dashboard].  Click on the **Import a Project** button, and find your project in the list of repositories.  Press the big **+** button next to your new repo, and you'll be taken to an import page.  You can leave the defaults as-is and just press **Next**.  This will take you to the project page, and you should see the words `Webhook successfully added.`
+
+This means that Read The Docs will build your docs the next time you push a change to your code to GitHub!
 
 #### Checkpoint
 No command line here - change some trivial thing in your documentation, push the code to GitHub, and you should be able to view your documents on Read The Docs.
@@ -30,7 +34,8 @@ No command line here - change some trivial thing in your documentation, push the
 
 ## Git & Version Control
 
-There's lots of room to understand more about git and GitHub, in terms of theory and in terms of practice.  If you want to learn more, we'd recommend spending some time working with git in a test project to get a feel for how it works.  In terms of concepts, the next thing to learn after what we presented is probably what `merge` and `rebase` do, and how they differ.  
+There's lots of room to understand more about git and GitHub.  If you want to learn more, we'd recommend spending some time working with git in a test project to get a feel for how it works.  In terms of concepts, the next thing to learn after what we presented is probably what `merge` and `rebase` do, and how they differ.  
+
 Some resources you could look at are:
 - [Software Carpentry on Git][swc-git]
 - [Merge vs Rebase][merge-vs-rebase]
