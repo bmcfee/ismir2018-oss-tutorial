@@ -9,11 +9,11 @@ Welcome!  This part of the tutorial will cover installing the tools that you'll 
 A special note for Windows users: we _highly_ recommend that you install the [Windows System for Linux][wsl-download], and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
 While you're welcome to use Powershell, we can't guarantee that we'll be able to help you.
 
-## Install Conda
+## Install Anaconda
 
 ![conda](https://cdn-images-1.medium.com/max/1920/1*y3tLpsCpNj-ev4v7jO-C5g.png)
 
-Conda is a package manager for Python code and lower-level code that supports Python.
+Conda is a package manager for Python code and for lower-level code that supports Python.
 Anaconda is a version of Conda that comes with lots and lots of pre-installed packages for scientific computing.
 We're going to use Anaconda so we don't have to go digging for obscure Fortran and C libraries.
 
@@ -53,7 +53,7 @@ Linux users, you may already have git installed - please make sure that you're o
 
 Windows users, please use your Linux install, and install the Linux version!  (We'll stop reminding you about this soon, we promise.)
 
-We recommend against using a graphical interface for git – mostly because we won't be able to help you with it in this tutorial!
+We recommend against using a graphical interface for git – mostly because we won't be able to help you with it in this tutorial.
 
 #### Checkpoint
 
