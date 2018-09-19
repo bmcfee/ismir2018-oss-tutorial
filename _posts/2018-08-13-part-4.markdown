@@ -23,7 +23,7 @@ The first thing to understand is that Python allows two different use cases: *sc
 - A **package** is a way of bundling up pieces of code for use by other packages and scripts in the
 future.
 
-When you say `pip install <SOMETHING>` or `conda install <SOMETHING>`, you're installing a
+When you say `pip install <some-package-name>` or `conda install <some-package-name>`, you're installing a
 package.  `numpy` is a package, for example.
 
 
@@ -58,7 +58,7 @@ This way, you can work on the code as a developer without having to reinstall it
 
 ### So how do packages work?
 
-In its simplest form, a package can be defined from a single source file (e.g., `<PACKAGE>.py`), but it is more common to split even simple packages into *modules*.
+In its simplest form, a package can be defined from a single source file (e.g., `<package>.py`), but it is more common to split even simple packages into *modules*.
 Python packages mirror the file and directory structure of the source code to keep things organized.  For example, our toy package looks like:
 ```
 toymir/
@@ -73,6 +73,7 @@ import toymir
 ```
 When Python encounters the `import` command, it will locate `toymir` in its search path,
 and look for either `toymir.py` or `toymir/__init__.py`.
+
 The `__init__.py` convention is magical: it is always the first thing loaded, and can contain any arbitrary python code.
 Typically, `__init__.py` files are minimal, and only contain comments and other import functions
 necessary to initialize the package.
@@ -111,15 +112,15 @@ Select `hz_to_period` and press enter: this should leave `toymir.hz_to_period` o
 
 Now, add a `?` to the end of the line, so it reads `toymir.hz_to_period?` and press `<ENTER>`.
 This will bring up the documentation for the `hz_to_period` function, which you can quit by hitting `q`.
-IF you add two `??` instead of one, it will bring up both the documentation and the source code (if available).
-This can be quite handy for quickly getting a feel for how a function works!
+If you add two `??` instead of one, it will bring up both the documentation and the source code (if available).
+This is handy for quickly getting a feel for how a function works!
 
 
 ### Relative and absolute imports
 
 ![Which package do i load?](https://media.giphy.com/media/RjoLWhQBFEcHS/giphy.gif)
 
-You may have noticed that the import lines above look funny.  You might be used to seeing
+You may have noticed that the import lines in `__init__.py` above look funny.  You might be used to seeing
 so-called *absolute* import
 statements like `import numpy`, or `from scipy.signal import convolve1d`, but what's all this
 period business in `from .freq import *`?
@@ -146,7 +147,7 @@ from . import freq
 
 Once you've done that and saved the result, start `ipython`, and import `toymir`.
 Instead of `toymir.hz_to_period`, the function should now be located at `toymir.freq.hz_to_period`.
-Verify this by running
+Verify this by running:
 ```
 toymir.hz_to_period(40)
 ```
@@ -192,13 +193,14 @@ Ready to keep going?  Onward to [Part 5](part-5)!
 
 - Allow the user to seed your random number generators.  This is critical for reproducibility.
 
+- Keep a change-log in your documentation, and include the dates!
+
+- Specify your dependency versions!
+
 - Provide functions, not classes.
     - Internal classes are okay, but don't make users learn object hierarchies!
     - If you do need classes, don't extend from other packages.  Wrap them instead.
 
-- Specify your dependency versions!
-
-- Keep a change-log in your documentation, and include the dates!
 
 ### Tips and tricks for successful scripts
 
