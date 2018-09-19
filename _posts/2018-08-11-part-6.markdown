@@ -50,7 +50,7 @@ Due to a bunch of technical hoo-hoorah, ReadTheDocs won't let each of you build 
 
 Those documentation changes you made are still unmerged.  Commit your changes to your branch, and push it to GitHub.  Make a pull request, but!  When selecting what to make a pull request against, select `bmcfee/ismir2018-oss-tutorial`, rather than `your-user-name/ismir2018-oss-tutorial`.  Then create the PR as normal from there.
 
-(If you're doing this tutorial later, you should take a look at our [appendix on how to set up Read The Docs](appendix-1), so you can make your own docs!)
+(If you're doing this tutorial later, you should take a look at our [appendix for how to set up Read The Docs](tutorial-appendix), so you can make your own docs!)
 
 #### Checkpoint
 
@@ -78,4 +78,4 @@ We've added some documentation, and seen how ReadTheDocs can be used so that our
 [readthedocs]: https://readthedocs.org/
 [amen-docs]: https://amen.readthedocs.io/en/latest/
 [choose-a-license]: https://choosealicense.com/
-[tutorial-part-7]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix-1.html
+[tutorial-appendix]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix.html
