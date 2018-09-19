@@ -8,7 +8,7 @@ This is the webpage for the [Open Source and Reproducible MIR Research tutorial]
 
 The goal of the tutorial is to provide hands-on, practical training for MIR researchers to learn modern tools for improving the quality of their research software - version control, testing, test automation, and so on.
 
-You can follow the tutorial by working through each part, starting with [Part 1][part-one] and ending with Part 8.
+You can follow the tutorial by working through each of our eight parts, [starting with Part 1][part-one].
 
 If you'd like to run this tutorial, or base your own work off of it, you can find the [source for this webpage][website-source] on GitHub.  Our slides can also be found [here][slides], and are licensed [CC BY-SA][creative-commons].
 

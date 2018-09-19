@@ -32,7 +32,7 @@ Finally, if you want to learn more about DSP and audio processing, you could tak
 
 We did ... just about everything!
 
-We went over installing things in [Part 1][part-1], and setting up web servives in [Part 2][part-2].  [Part 3][part-3] covered git and version control, and [Part 4][part-4] went over Python and Python module structure.  Testing was covered in [Part 5][part-5], and documentation in [Part 6][part-6].  Finally, [Part 7][part-7] introduced the wider Python ecosystem, and this is Part 8.
+We went over installing things in [Part 1][part-1], and setting up web servives in [Part 2][part-2].  [Part 3][part-3] covered git and version control, and [Part 4][part-4] went over Python and Python module structure.  Testing was covered in [Part 5][part-5], and documentation in [Part 6][part-6].  Finally, [Part 7][part-7] introduced the wider Python ecosystem, and this is Part 8.  There's also [the Appendix][tutorial-appendix].
 
 Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!
 
@@ -68,3 +68,4 @@ Thanks for coming along for the ride, and please feel free to ask us questions o
 [part-5]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-5.html 
 [part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html 
 [part-7]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/10/part-7.html 
+[tutorial-appendix]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/08/appendix.html

@@ -44,7 +44,7 @@ We won't get to using Travis for a little bit, but let's get the setup out of th
 
 Visit [Travis][travis-main], and make an account by pressing the **Sign In With GitHub** button.
 
-You'll be asked to authorize Travis to use your Github account.  Do so, and you'll get redirected to your profile screen.  On your profile screen, press the **Activate** button to finish connecting Travis to you GitHub code.
+You'll be asked to authorize Travis to use your Github account.  Do so, and you'll get redirected to your profile screen.  On your profile screen, press the **Activate** button to finish connecting Travis to your GitHub code.
 
 You'll be taken to a GitHub page - just press **Approve & Install**!
 
@@ -58,8 +58,8 @@ We've set up the various web services we'll need!  Next is [Part 3][tutorial-par
 
 ### A Note About The Internet
 
-All of the services we've go over are on the internet.  There are local tools that can do the same sorts of things that out of the scope of this tutorial.
-If you need to keep you code secret, they might be right for you.  In general, we recommend using web services like the above because they're much less hassle to set up.
+All of the services we've gone over are on the Internet.  There are local tools (e.g. [Jenkins][jenkins]) that can do the same sorts of things that out of the scope of this tutorial.
+If you need to keep your code secret, they might be right for you.  In general, we recommend using web services like the above because they're much less hassle to set up.
 
 [python-download]: https://www.python.org/downloads
 [github-main]: https://github.com
@@ -69,4 +69,4 @@ If you need to keep you code secret, they might be right for you.  In general, w
 [travis-main]: https://travis-ci.org
 [readthedocs-main]: https://readthedocs.org
 [tutorial-part-3]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/14/part-3.html 
-
+[jenkins]: https://jenkins.io/
