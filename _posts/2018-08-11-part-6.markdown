@@ -63,7 +63,7 @@ We've got formal documentation working, hooray!  You should also look at two oth
 
 In general, your README should provided an overview of your project, how to install it, and maybe give one or two very simple examples.  The [librosa][librosa-github] README is a good example.
 
-Finally, there's LICENSE.md.  It turns out that if f you publish code to GitHub without an explicit license, it is not open source.
+Finally, there's LICENSE.md.  It turns out that if you publish code to GitHub without an explicit license, it is not open source.
 
 We _highly_ recommend open source, and we highly recommend choosing an open-source license and applying it to your code.  This is as simple as creating a file called `LICENSE.md` in your repository.  You can take a look at [https://choosealicense.com][choose-a-license] to help you pick one - we recommend the MIT license, ourselves.
 
@@ -71,7 +71,7 @@ GitHub will also probably ask you for things like a Code of Conduct, guidelines 
 
 ## Success!
 
-We've added some documentation, and seen how ReadTheDocs can be used so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In [Part 7][tutorial-part-7], we'll talk about Jupyter notebooks, and take a tour of the Python ecosystem.
+We've added some documentation, and seen how ReadTheDocs can be used so that our docs will always be available on the Internet!  We also talked about READMEs and licensing.  In [Part 7][tutorial-part-7], we'll talk about Jupyter notebooks, and take a tour of the Python MIR ecosystem.
 
 [librosa-github]: https://github.com/librosa/librosa
 [tutorial-part-7]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-7.html
