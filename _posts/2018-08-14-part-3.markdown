@@ -41,10 +41,10 @@ So, for example, you can have one environment for this project and install the t
 
 This may sound like overkill, but it is very helpful in the long run.  You'll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.
 
-So, let's make one and install the code that we need!  To create an environment for this tutorial, do  `conda create --name ismir-2018`.  You'll see that environment has been created at `/Users/<your-user>/miniconda3/envs/ismir-2018-tutorial` (or some path very much like that).
-Hooray!  To turn it on do `conda activate ismir-2018-tutorial`.
+So, let's make one and install the code that we need!  To create an environment for this tutorial, do  `conda create --name ismir-2018`.  You'll see that environment has been created at `/Users/<your-user>/anaconda3/envs/ismir-2018` (or some path very much like that).
+Hooray!  To turn it on do `conda activate ismir-2018`.
 
-This means that any Python code you install with conda or pip will only be installed in this environment.  If you want to get out of this environment, just run `source deactivate` – but don't run it now!
+This means that any Python code you install with conda or pip will only be installed in this environment.  If you want to get out of this environment, just run `conda deactivate` – but don't run it now!
 
 For now, we're going to install all the stuff we need.  Run `conda install --file requirements.txt`.  This will install all the packages listed in requirements.txt.
 
@@ -99,7 +99,7 @@ Success! Everything appears to be installed!
 
 So we've installed all the packages we'll need.  Let's run the tests.  Tests make sure that your code is doing what your think it is doing – making sure that 2 + 2 in fact comes out to 4.
 
-You can find the test code in the `tests/` folder, and we'll talk more about testing later in the tutorial.  For now, just run the tests with `pytest -v`.
+You can find the test code in the `toymir/tests/` folder, and we'll talk more about testing later in the tutorial.  For now, just run the tests with `pytest -v`.
 
 💥🔥💥🔥💥🔥💥🔥💥🔥💥 _OH NO EVERYTHING FAILED!_ 💥🔥💥🔥💥🔥💥🔥💥🔥💥
 
