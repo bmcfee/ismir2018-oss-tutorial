@@ -60,11 +60,11 @@ The first thing we need to do is to activate your repository, so that Travis wil
 
 Travis is controlled by a file called `.travis.yml`.  This file tells the Travis servers what to do with your code - in our case, just run the tests.
 
-We've written the file for you.  Let's take a quick look at it.  The big `install` block handles the gruntwork of installing conda, updating it, and setting up our environment.  The `script` block is what Travis runs.  We currently just run `pytest`.
+We've written the file for you.  Let's take a quick look at it.  The `install` block handles the gruntwork of installing everything, and the `script` block is what Travis runs.  We currently just run `pytest`.
 
 Let's modify this to run [Flake8][flake8] as well.  Flake8 checks your code and your code style, to make sure that you're writing code that is both more correct, and easy to read.
 
-Make a branch wih `git checkout -b add-flake8` – then, all you need to do is add `flake8` below the call to `pytest`, then commit and push your code.
+Make a branch wih `git checkout -b add-flake8` – then, all you need to do is uncomment that `flake8` line above the call to `pytest`, then commit and push your code. (Don't worry about all the arguments to flake8 for now!)
 
 Then, open up Travis, (`https://travis-ci.org/<your-github-username>/ismir2018-oss-tutorial`) and you can see your tests run!
 
