@@ -4,7 +4,17 @@ title:  "Part 8:  Next Steps"
 date:   2018-08-10 15:16:46 -0400
 categories: tutorial
 ---
-Hello, it's Part 8, which is the last part!  Hooray!  We wanted to end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.
+Hello, it's Part 8, which is the last part!  Hooray!  We wanted to recap how this relates to academia, and end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.
+
+## How Else Might This Relate to ISMIR & Academia Again?
+
+So in addition to making your time writing software calmer, more relaxing, and more stable, here are some other usecases you can move on to:
+
+- You can tag each version of your paper or thesis in [git and on GitHub][git-tagging] as it gets submitted, revised, and accepted!
+- You can [export your entire conda environment][conda-env] so that people can easily reproduce it and easily run your code!
+- You can use [Zenodo to make DOIs (unique, citiable identifiers)][zenodo] that will make it easier to cite your software!
+
+There's also an entire other tutorial about handling the data that goes with your software and machine learning software ... which we really don't have space to get into, but the same sorts of principles apply!
 
 
 ## Software Engineering Resources
@@ -13,7 +23,7 @@ Hello, it's Part 8, which is the last part!  Hooray!  We wanted to end by listin
 
 [So You Want To Be A Wizard][wizard] is a fantastic distillation of how to work with computers and how to get better at them, by the amazing [Julia Evans][jvns].
 
-[Learn Python The Hard Way][the-hard-way] teaches Python starting from 0, and goes up to a fairly advanced level.  The books cost money, but have free samples!
+[Learn Python The Hard Way][the-hard-way] teaches Python starting from 0, and goes up to a fairly advanced level.  The books cost money, but has free samples!
 
 [This project][mini-kep] has a good overview of Python testing practices, and this thread has [even more testing resources][twitter-testing].
 
@@ -36,6 +46,9 @@ We went over installing things in [Part 1][part-1], and setting up web servives 
 
 Thanks for coming along for the ride, and please feel free to ask us questions over the rest of the conference!
 
+[git-tagging]: https://git-scm.com/book/en/v2/Git-Basics-Tagging
+[conda-env]: https://conda.io/docs/user-guide/tasks/manage-environments.html
+[zenodo]: https://zenodo.org/
 
 [software-carpentry]: https://software-carpentry.org/
 [mir]: https://musicinformationretrieval.com/
