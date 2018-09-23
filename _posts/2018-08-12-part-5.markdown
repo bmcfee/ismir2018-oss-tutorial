@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Part 5:  Tests"
-date:   2018-08-13 15:16:46 -0400
+date:   2018-08-12 15:16:46 -0400
 categories: tutorial
 ---
 Hello & welcome to Part 5!  This is the section about testing, why testing is important, how to do it, and how to set up your repository to run your tests automatically when you push new code.
@@ -95,5 +95,5 @@ You've seen your tests run on Travis, and have merged the passing code into mast
 
 We've added two tests, and gotten comfortable running `pytest`.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
 
-[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html 
+[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html
 [flake8]: http://flake8.pycqa.org/en/latest/index.html

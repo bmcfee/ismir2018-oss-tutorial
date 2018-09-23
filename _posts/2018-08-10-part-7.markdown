@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Part 7:  Ecosystem"
-date:   2018-08-11 15:16:46 -0400
+date:   2018-08-10 15:16:46 -0400
 categories: tutorial
 ---
 Hello, it's Part 7!  We've gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.  
@@ -55,7 +55,7 @@ OK, now let's take a look at some things!  We're going to cover the following mo
 
 We've gotten Jupyter working, mentioned some caveats about Jupyter, and taken a tour of part of the Python MIR ecosystem.  We're basically done!  Read on to [Part 8][part-8] for the last section and next steps.
 
-[part-8]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/10/part-8.html
+[part-8]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/09/part-8.html
 [numpy]: http://www.numpy.org/
 [scipy]: https://www.scipy.org/
 [matplotlib]: https://matplotlib.org
