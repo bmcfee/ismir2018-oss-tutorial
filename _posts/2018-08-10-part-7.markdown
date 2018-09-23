@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Part 7:  Ecosystem"
-date:   2018-08-11 15:16:46 -0400
+date:   2018-08-10 15:16:46 -0400
 categories: tutorial
 ---
 Hello, it's Part 7!  We've gotten everything working - this part of the tutorial will be a whirlwind tour of some of the scientific Python ecosystem.  

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Part 6:  Documentation"
-date:   2018-08-12 15:16:46 -0400
+date:   2018-08-11 15:16:46 -0400
 categories: tutorial
 ---
 Hello & welcome to Part 6!  This section is about documentation, how to set up our documentation, and how to hows our documentation for free on the internet.

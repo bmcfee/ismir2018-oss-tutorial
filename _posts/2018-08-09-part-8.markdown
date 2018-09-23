@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Part 8:  Next Steps"
-date:   2018-08-10 15:16:46 -0400
+date:   2018-08-09 15:16:46 -0400
 categories: tutorial
 ---
 Hello, it's Part 8, which is the last part!  Hooray!  We wanted to recap how this relates to academia, and end by listing some other worthwhile resources, for both writing excellent software and for doing excellent MIR.

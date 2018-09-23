@@ -4,7 +4,7 @@ title:  "Part 1:  Installing Tools"
 date:   2018-08-16 15:16:46 -0400
 categories: tutorial
 ---
-Welcome!  This part of the tutorial will cover installing the tools that you'll need to have on your laptop:  the Conda package manager, and the git version control system.
+Welcome!  This part of the tutorial will cover installing the tools that you'll need to have on your laptop:  the Conda package manager, and the git version control system.  You can find the slides for this tutorial [here][tutorial-slides]!
 
 A special note for Windows users: we _highly_ recommend that you install the [Windows System for Linux][wsl-download], and Ubuntu.  You can then do the rest of this tutorial as a Linux user!
 While you're welcome to use Powershell, we can't guarantee that we'll be able to help you.
@@ -71,6 +71,7 @@ git version 2.15.0
 
 We've installed everything we'll need on our machines.  In [Part 2][tutorial-part-2], we'll set up the various web apps and accounts that we'll need.
 
+[tutorial-slides]: https://docs.google.com/presentation/d/1VsBJqdirun0o5fP5wFDmIO_gNEWDfjFuhcE-ReugZ2A/edit
 [python-download]: https://www.python.org/downloads/
 [wsl-download]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 [conda-download]: https://docs.anaconda.com/anaconda/install/
