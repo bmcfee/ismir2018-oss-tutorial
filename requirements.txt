@@ -4,3 +4,4 @@ jupyter
 sphinx
 flake8
 seaborn
+scikt-ln
