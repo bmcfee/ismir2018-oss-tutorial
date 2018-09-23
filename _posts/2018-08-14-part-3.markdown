@@ -42,7 +42,7 @@ So, for example, you can have one environment for this project and install the t
 This may sound like overkill, but it is very helpful in the long run.  You'll often find that different projects have clashing requirements, and maintaining one environment per project will prevent this from getting out of hand.
 
 So, let's make one and install the code that we need!  To create an environment for this tutorial, do  `conda create --name ismir-2018`.  You'll see that environment has been created at `/Users/<your-user>/anaconda3/envs/ismir-2018` (or some path very much like that).
-Hooray!  To turn it on do `conda activate ismir-2018-tutorial`.
+Hooray!  To turn it on do `conda activate ismir-2018`.
 
 This means that any Python code you install with conda or pip will only be installed in this environment.  If you want to get out of this environment, just run `conda deactivate` – but don't run it now!
 
@@ -106,6 +106,10 @@ You can find the test code in the `toymir/tests/` folder, and we'll talk more ab
 Phew, ok, this is not actually a big deal at all.  Failing tests are usually a good sign, becaue they mean that your tests found a bug or a problem.  Let's look at the error message that pytest is showing, and see if we can fix it.
 
 Ah, this does not look so bad.  We're missing a package called `seaborn`.  We could just install it with conda, but we want to fix this problem for the long term.  So, open up that requirements.txt file, and add the line `seaborn` at the bottom, and the save it.  Then re-run `conda install --file requirements.txt`, and then run the tests again.
+
+**Gotchas:**
+- If you get odd test results, or if running Python code shows odd behaviour, make sure that everything is installed in the `ismir-2018` conda environment!  Try doing `which pytest`, for example, and making sure that it is running out of your environment's directory. (Something like `/Users/<your-user>/anaconda3/envs/ismir-2018`)
+
 
 #### Checkpoint
 
