@@ -3,3 +3,4 @@ matplotlib
 jupyter
 sphinx
 flake8
+seaborn
