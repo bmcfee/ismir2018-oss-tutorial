@@ -3,4 +3,4 @@ matplotlib
 jupyter
 sphinx
 flake8
-iankim! ( ͡° ͜ʖ ͡°)
+ian wonil kim! ( ͡° ͜ʖ ͡°)
