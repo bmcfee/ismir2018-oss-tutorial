@@ -1,5 +1,6 @@
 import numpy as np
-import seaborn # trap to make tests fail!
+# import seaborn  # trap to make tests fail!
+
 
 def midi_to_hz(notes):
     """Hello Part 6!  You should add documentation to this function.
@@ -37,12 +38,12 @@ def hz_to_midi(frequencies):
     # Oh hey, it's Part 5!  You could uncomment this implementation,
     # and then the tests will pass!
 
-    # less_than_zero = (np.asanyarray(frequencies) <= 0).any()
+    less_than_zero = (np.asanyarray(frequencies) <= 0).any()
 
-    # if less_than_zero:
-    #     raise ValueError('Cannot convert a frequency of zero or less to a period.')
+    if less_than_zero:
+        raise ValueError('Cannot convert a frequency of zero or less to a period.')
 
-    # return 12 * (np.log2(np.asanyarray(frequencies)) - np.log2(440.0)) + 69
+    return 12 * (np.log2(np.asanyarray(frequencies)) - np.log2(440.0)) + 69
 
 
 def hz_to_period(frequencies):
