@@ -138,6 +138,8 @@ Next, add and commit your files:  `git add requirements.txt`, then `git commit -
 
 Rad!  We've saved our work locally.  To push your code to GitHub, do `git push origin update-conda-env`.
 
+(You can think of all this git and GitHub magic like you are mailing something to a friend.  `git checkout -b` creates the letter you're going to mail.  `git add` selects what you're going to put into your letter.  `git commit` puts the changes into your letter, and then `git push` sends your paper to the post office.)
+
 We want to get in the habit of keeping our online work up to date with our local work.  So let's go look at GitHub, and merge this branch there.
 - Visit GitHub, and find your fork of this repository:  https://github.com/<your-github-username>/ismir2018-oss-tutorial/branches
 - You'll see a list of branches - select **update-conda-env**.
@@ -153,7 +155,7 @@ We want to get in the habit of keeping our online work up to date with our local
 
 - After this, you'll be taken to a nice web form.  Put in the reasons for your changes, and press **Create Pull Request**.
 
-Hooray, you've made a Pull Request!  Pull Requests (PRs) are the best way to contribute code to a project.  You can review & comment on the proposed changes before merging them, or request that things be improved.
+Hooray, you've made a Pull Request!  Pull Requests (PRs) are the best way to contribute code to a project.  You can review & comment on the proposed changes before merging them, or request that things be improved.  To finish the mail metaphor, a Pull Request is like adding some notes to your letter about what it is supposed to do and why you are sending it.
 
 🙏🙏 🙏  Here's an important aside:  when discussing code in PRs, please be nice!  It's really easy for a neutral comment to be read as mean, and it's really easy to alienate people by being mean.
 
