@@ -142,7 +142,16 @@ We want to get in the habit of keeping our online work up to date with our local
 - Visit GitHub, and find your fork of this repository:  https://github.com/<your-github-username>/ismir2018-oss-tutorial/branches
 - You'll see a list of branches - select **update-conda-env**.
 - You'll see a small button that says **New pull request**.  Press it!
-- This will take you to a nice web form.  Put in the reasons for your changes, and press **Create Pull Request**.
+- You'll get taken to a page that says **Comparing changes**, and should see a dropdown that says **Base fork: bmcfee/ismir2018-oss-tutorial**, like the below image.
+- __You need to change this!__
+
+![My helpful screenshot](/ismir2018-oss-tutorial/assets/incorrect_merge.png)
+
+- You need to select this dropdown and change it to point to your fork, with your username, like the below image:
+
+![My helpful screenshot](/ismir2018-oss-tutorial/assets/correct_merge.png)
+
+- After this, you'll be taken to a nice web form.  Put in the reasons for your changes, and press **Create Pull Request**.
 
 Hooray, you've made a Pull Request!  Pull Requests (PRs) are the best way to contribute code to a project.  You can review & comment on the proposed changes before merging them, or request that things be improved.
 
