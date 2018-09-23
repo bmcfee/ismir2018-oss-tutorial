@@ -51,10 +51,10 @@ then
     echo "Error!  You're missing scipy, a Python package."
 fi
 
-python -c "import sklearn"
+python -c "import pytest"
 if [ $? -ne 0 ]
 then
-    echo "Error!  You're missing sklearn, a Python package."
+    echo "Error!  You're missing pytest, a Python package."
 fi
 
 python -c "import sphinx"
