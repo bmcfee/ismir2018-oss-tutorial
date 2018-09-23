@@ -13,7 +13,7 @@ def midi_to_hz(notes):
     Returns
     -------
     hz : frequencies as output
-  
+
     """
 
   return 440.0 * (2.0 ** ((np.asanyarray(notes) - 69.0) / 12.0))
