@@ -46,8 +46,6 @@ Visit [Travis][travis-main], and make an account by pressing the **Sign In With 
 
 You'll be asked to authorize Travis to use your Github account.  Do so, and you'll get redirected to your profile screen.  On your profile screen, press the **Activate** button to finish connecting Travis to your GitHub code.
 
-You'll be taken to a GitHub page - just press **Approve & Install**!
-
 #### Checkpoint
 
 No command line here - you should be able to visit [Travis][travis-main], and see your name in the upper-right to indicate that you're logged in.
