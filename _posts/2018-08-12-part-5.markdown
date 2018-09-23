@@ -95,5 +95,5 @@ You've seen your tests run on Travis, and have merged the passing code into mast
 
 We've added two tests, and gotten comfortable running `pytest`.  Furthermore, we've enabled Travis, so that our tests always run when we push code to GitHub.  In [Part 6][tutorial-part-6], we'll set up our documentation so that it builds automatically, and write some new docs.
 
-[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html 
+[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html
 [flake8]: http://flake8.pycqa.org/en/latest/index.html

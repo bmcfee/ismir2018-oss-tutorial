@@ -178,7 +178,7 @@ successful installation.
 ## Success!
 
 
-Ready to keep going?  Onward to [Part 5](part-5)!
+Ready to keep going?  Onward to [Part 5][part-5]!
 
 
 ## Eager for more?
@@ -215,6 +215,6 @@ Ready to keep going?  Onward to [Part 5](part-5)!
 
 - Use `tqdm` for cool progress bars!
 
-
-[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-6.html 
+[tutorial-part-5]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/12/part-5.html
+[tutorial-part-6]: https://bmcfee.github.io/ismir2018-oss-tutorial/tutorial/2018/08/11/part-6.html
 
