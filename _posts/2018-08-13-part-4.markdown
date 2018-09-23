@@ -178,7 +178,7 @@ successful installation.
 ## Success!
 
 
-Ready to keep going?  Onward to [Part 5][part-5]!
+Ready to keep going?  Onward to [Part 5][tutorial-part-5].
 
 
 ## Eager for more?
