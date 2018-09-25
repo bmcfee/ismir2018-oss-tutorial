@@ -30,7 +30,7 @@ It turns out that Sphinx reads from comments that are formatted in a certain way
 
 Find a function called `midi_to_hz` in `toymir/freq.py` - you'll see that it does not have any documentation.  Take a look at `hz_to_period` - you'll see that it has a detailed description of how it works, what parameters it takes, and what it returns.
 
-Based on this example, add a docstring to `midi_to_hz`.  Once you're happy with your docs, run `make html` again, to generate your new docs!
+Based on this example, add a docstring to `midi_to_hz`.  Once you're happy with your docs, run `make html` from the `doc` folder again, to generate your new docs!
 
 #### Checkpoint
 

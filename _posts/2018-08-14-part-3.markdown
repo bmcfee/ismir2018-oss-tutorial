@@ -48,6 +48,9 @@ This means that any Python code you install with conda or pip will only be insta
 
 For now, we're going to install all the stuff we need.  Run `conda install --file requirements.txt`.  This will install all the packages listed in requirements.txt.
 
+**Gotchas:**
+- If you see an big error message that starts with `CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.`, don't worry!  The error message contains a few potential commands to fix things – running the `echo ". ~/anaconda/etc/profile.d/conda.sh" >> ~/.bash_profile` command and then opening a new terminal window should solve the problem.  (And if you're on zsh or fish, you'll have to put that command in the appropriate place.)
+
 #### Checkpoint
 
 Run:
@@ -147,11 +150,11 @@ We want to get in the habit of keeping our online work up to date with our local
 - You'll get taken to a page that says **Comparing changes**, and should see a dropdown that says **Base fork: bmcfee/ismir2018-oss-tutorial**, like the below image.
 - __You need to change this!__
 
-![My helpful screenshot](/ismir2018-oss-tutorial/assets/incorrect_merge.png)
+![Incorrect merge](/ismir2018-oss-tutorial/assets/incorrect_merge.png)
 
-- You need to select this dropdown and change it to point to your fork, with your username, like the below image:
+- You need to select this dropdown and change it to point to your fork, with your username.  Once you've done this, it should look like the below image:
 
-![My helpful screenshot](/ismir2018-oss-tutorial/assets/correct_merge.png)
+![Correct merge](/ismir2018-oss-tutorial/assets/correct_merge.png)
 
 - After this, you'll be taken to a nice web form.  Put in the reasons for your changes, and press **Create Pull Request**.
 
@@ -180,6 +183,8 @@ You should see something like this:
 commit fc48577568d259f361a2e5f28267500ff2d4405f
 Author: <Your Name> <your-email@your-server>
 Date:   <today>
+
+Merge pull request #1 from <your-username>/update-conda-env
 
 Add seaborn to requirements.txt
 {% endhighlight %}
