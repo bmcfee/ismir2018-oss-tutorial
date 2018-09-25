@@ -48,6 +48,9 @@ This means that any Python code you install with conda or pip will only be insta
 
 For now, we're going to install all the stuff we need.  Run `conda install --file requirements.txt`.  This will install all the packages listed in requirements.txt.
 
+**Gotchas:**
+- If you see an big error message that starts with `CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.`, don't worry!  The error message contains a few potential commands to fix things – running the `echo ". ~/anaconda/etc/profile.d/conda.sh" >> ~/.bash_profile` command and then opening a new terminal window should solve the problem.  (And if you're on zsh or fish, you'll have to put that command in the appropriate place.)
+
 #### Checkpoint
 
 Run:
