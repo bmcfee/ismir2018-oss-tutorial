@@ -33,7 +33,7 @@ You can find the function in `toymir.py` - go ahead and uncomment the code that'
 Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the `hz_to_period` function for reference.
 
 
-Once `pytest -v` shows that both tests are passing, commit your changes, merge on github, and then pull the results back to your local.
+Once `pytest -v` shows that all tests are passing, commit your changes, merge on github, and then pull the results back to your local.
 
 #### Checkpoint
 
