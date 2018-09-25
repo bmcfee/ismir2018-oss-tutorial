@@ -75,11 +75,11 @@ Visit your page on Travis.  You should see your tests running on Travis!
 
 ## Wait, the tests failed?
 
-Ah, how come our tests failed?  We know that our tests are working, so maybe it is this new Flake8 thing!  Run `flake8` locally, and see what happens.
+Ah, how come our tests failed?  We know that our tests are working, so maybe it is this new Flake8 thing!  Run `flake8 toymir/` locally, and see what happens.
 
 Turns out that Flake8 will not allow unused imports!  And our `import seaborn` in `freq.py` is never used.
 
-This is very easy to fix – on the same branch, remove that line, and the run our tests and `flake8` again.  Everything should pass!  Once it does, commit and push the change, and watch things pass on Travis.  Once the tests pass on Travis, merge things to master.
+This is very easy to fix – on the same branch, remove that line, and the run our tests and `flake8 toymir/` again.  Everything should pass!  Once it does, commit and push the change, and watch things pass on Travis.  Once the tests pass on Travis, merge things to master.
 
 
 #### Checkpoint
