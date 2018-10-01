@@ -80,22 +80,19 @@ freetype                  2.9.1                hb4e5f40_0
 Just when you thought you had done all the checkpoints!
 
 We want to stop here quickly and make sure of everything, so we wrote a little test script that makes sure that everything is installed.
-In the `scripts` folder, you'll find a file called `test_tutorial_install.sh`.  
+In the `scripts` folder, you'll find a file called `test_tutorial_install.py`.
 
 Run:
 {% highlight bash %}
-./scripts/test_tutorial_install.sh
+python scripts/test_tutorial_install.py
 {% endhighlight %}
 
 You should see something very much like:
 {% highlight bash %}
-Checking git and conda
-git version 2.7.4
-conda 4.5.11
-Checking Python version
-Python 3.6.5 :: Anaconda, Inc.
-Checking Python packages ...
-Success! Everything appears to be installed!
+git version 2.15.0
+Python 3.7.0
+Conda installed and set in environment.
+Success!  Everything has installed correctly. 😊😊😊
 {% endhighlight %}
 
 ## Run the Tests
