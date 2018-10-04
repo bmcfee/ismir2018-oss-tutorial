@@ -1,21 +1,21 @@
 import numpy as np
-import seaborn  # trap to make tests fail!
+# import seaborn  # trap to make tests fail!
 
 
 def midi_to_hz(notes):
-    """Get frequencies in Hz for given MIDI note number(s) 
+    """ Get frequencies in Hz for given MIDI note number(s)
 
     Parameters
     ----------
     note_nums     : number or np.ndarray [shape=(n,), dtype=float]
         MIDI notes to convert
-    
+
 
     Returns
     -------
     frequencies   : float or np.ndarray [shape=(n,), dtype=float]
         frequencies to MIDI
-    
+
 
     Examples
     --------
