@@ -4,6 +4,7 @@ sudo: false
 env:
   global:
     - PIP_DEPS="pytest coveralls pytest-cov flake8"
+    - CONDA_EXE='' # Hacky fix to make Travis not complain
 
 python:
   - '3.5'
@@ -16,7 +17,7 @@ install:
 - travis_retry pip install -e .
 
 script:
-#  - flake8 --ignore N802,N806,E501 `find . -name \*.py | grep -v setup.py | grep -v version.py | grep -v __init__.py | grep -v /doc/`
+- flake8 --ignore N802,N806,E501 `find . -name \*.py | grep -v setup.py | grep -v version.py | grep -v __init__.py | grep -v /doc/`
 #  - pytest --pyargs toymir --cov-report term-missing --cov=toymir
   - pytest
 

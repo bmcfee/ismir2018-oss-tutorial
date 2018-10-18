@@ -1,6 +1,5 @@
 import pytest
 import numpy as np
-
 import toymir
 
 
@@ -32,6 +31,7 @@ def test_hz_to_midi_array():
 def test_hz_to_midi_exception_when_lteq_zero():
     with pytest.raises(ValueError):
         toymir.hz_to_midi(0)
+
 
 def test_hz_to_period_float():
     expected = 0.1
