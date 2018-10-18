@@ -28,7 +28,7 @@ Then open up `toymir/tests/test_toymir.py`, uncomment the two functions that sta
 
 It turns out that those tests are testing a function that we've commented out.
 
-You can find the function in `toymir.py` - go ahead and uncomment the code that's there, and then the tests will pass!
+You can find the function in `toymir/freq.py` - go ahead and uncomment the code that's there, and then the tests will pass!
 
 Great!  You should also write a new test to verify that this function works correctly for when the input or some part of it is less than or equal to 0.  The correct functionality should be that it throws an exception.  You can look at the `hz_to_period` function for reference.
 
