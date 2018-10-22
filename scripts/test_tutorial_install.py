@@ -1,17 +1,16 @@
 import os
 
-commands = [
-        'git --version',
-        'python --version',
-        'python -c "import flake8"',
-        'python -c "import jupyter"',
-        'python -c "import jupyter"',
-        'python -c "import matplotlib"',
-        'python -c "import numpy"',
-        'python -c "import scipy"',
-        'python -c "import pytest"',
-        'python -c "import sphinx"',
-        ]
+commands = ['git --version',
+            'python --version',
+            'python -c "import flake8"',
+            'python -c "import jupyter"',
+            'python -c "import jupyter"',
+            'python -c "import matplotlib"',
+            'python -c "import numpy"',
+            'python -c "import scipy"',
+            'python -c "import pytest"',
+            'python -c "import sphinx"',
+            ]
 
 # Check everything except conda
 success_flag = True
