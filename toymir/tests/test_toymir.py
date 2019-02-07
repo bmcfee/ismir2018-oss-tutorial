@@ -29,6 +29,9 @@ def test_hz_to_midi_array():
 
 
 # Hello!  You could add the missing test for test_hz_to_midi here!
+def test_hz_to_midi_throws_if_zero_or_less():
+    with pytest.raises(ValueError):
+        toymir.hz_to_midi(0)
 
 
 def test_hz_to_period_float():
