@@ -2,7 +2,29 @@ import numpy as np
 
 
 def midi_to_hz(notes):
-    """Hello Part 6!  You should add documentation to this function.
+    """Get frequencies for given MIDI note numbers.
+
+    Parameters
+    ----------
+    notes     : number or np.ndarray [shape=(n,), dtype=float]
+        MIDI notes to convert
+
+    Returns
+    -------
+    frequencies   : float or np.ndarray [shape=(n,), dtype=float]
+        resultant frequencies
+
+    Examples
+    --------
+    >>> midi_to_hz(34.506)
+    60
+
+    >>> midi_to_hz([ 45.,  57.,  69.])
+    array([110, 220, 440])
+
+    See Also
+    --------
+    hz_to_midi
     """
 
     return 440.0 * (2.0 ** ((np.asanyarray(notes) - 69.0) / 12.0))
