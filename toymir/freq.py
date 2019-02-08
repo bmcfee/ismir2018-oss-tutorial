@@ -3,9 +3,14 @@ import numpy as np
 
 
 def midi_to_hz(notes):
-    """Hello Part 6!  You should add documentation to this function.
+    
+    """Adding some documentation to this function as part of Part 6.
     """
-
+    ----------
+    notes   : float or np.asanyarray(notes) 
+        notes to convert
+    Returns
+    -------
     return 440.0 * (2.0 ** ((np.asanyarray(notes) - 69.0) / 12.0))
 
 
