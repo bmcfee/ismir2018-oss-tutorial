@@ -1,0 +1,31 @@
+Metadata-Version: 1.2
+Name: toymir
+Version: 0.1.dev0
+Summary: toymir: a toy package for learning about OSS in MIR
+Home-page: http://github.com/bmcfee/ismir2018-oss-tutorial
+Author: Brian McFee
+Author-email: brian.mcfee@nyu.edu
+Maintainer: Brian McFee
+Maintainer-email: brian.mcfee@nyu.edu
+License: MIT
+Description: 
+        
+        toymir
+        ========
+        toymir is a small Python package for use in the ISMIR 2018 tutorial on
+        open source software and reproducibility.
+        
+        It is based on the Shablona_ package, developed by Ariel Rokem at the
+        University of Washington eScience Institute.
+        
+        .. _Shablona: https://github.com/uwescience/shablona
+        
+Platform: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires: numpy
