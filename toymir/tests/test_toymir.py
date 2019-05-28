@@ -28,7 +28,7 @@ def test_hz_to_midi_array():
     assert np.allclose(toymir.hz_to_midi([220.0, 440.0, 880.0]), expected)
 
 
-# Hello!  You could add the missing test for test_hz_to_midi here!
+# Hello! You could add the missing test for test_hz_to_midi here!
 
 
 def test_hz_to_period_float():
