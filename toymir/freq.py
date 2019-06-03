@@ -4,8 +4,14 @@ import numpy as np
 
 def midi_to_hz(notes):
     """Hello Part 6!  You should add documentation to this function.
-    """
+Parameters
+--------
+notes: whatever kind of note this takes in 
 
+Returns
+--------
+whatever kind of variable it returns... doesn't seem very intuitive    
+"""
     return 440.0 * (2.0 ** ((np.asanyarray(notes) - 69.0) / 12.0))
 
 
