@@ -20,12 +20,12 @@ for command in commands:
         success_flag = False
         print("Failure!  %s failed" % command)
 
-# Check conda because its magic setup does not let us just run it.
-if not os.environ['CONDA_EXE'] or not os.environ['CONDA_PYTHON_EXE']:
-    print('Install check failed!  Conda is not installed correctly!')
-    success_flag = False
-else:
-    print('Conda installed and set in environment.')
+# # Check conda because its magic setup does not let us just run it.
+# if not os.environ['CONDA_EXE'] or not os.environ['CONDA_PYTHON_EXE']:
+#     print('Install check failed!  Conda is not installed correctly!')
+#     success_flag = False
+# else:
+#     print('Conda installed and set in environment.')
 
 # Final results
 if success_flag is False:
