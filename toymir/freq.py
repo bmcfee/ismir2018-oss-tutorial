@@ -1,5 +1,5 @@
 import numpy as np
-import seaborn  # trap to make tests fail!
+# import seaborn  # trap to make tests fail!
 
 
 def midi_to_hz(notes):
