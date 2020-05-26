@@ -5,3 +5,5 @@ sphinx
 numpydoc
 flake8
 pytest
+seaborn
+
