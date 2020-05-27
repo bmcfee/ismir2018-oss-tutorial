@@ -4,6 +4,7 @@ import numpy as np
 import toymir
 
 
+
 def test_midi_to_hz_float():
     expected = 440.0
     assert toymir.midi_to_hz(69) == expected
@@ -26,6 +27,7 @@ def test_hz_to_midi_float():
 def test_hz_to_midi_array():
     expected = [57, 69, 81]
     assert np.allclose(toymir.hz_to_midi([220.0, 440.0, 880.0]), expected)
+
 
 def test_hz_to_period_throws_of_zero_or_less():
     with pytest.raises(ValueError):
