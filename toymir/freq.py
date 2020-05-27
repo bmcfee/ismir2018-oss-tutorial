@@ -1,7 +1,6 @@
 import numpy as np
 
 
-
 def midi_to_hz(notes):
     """Hello Part 6!  You should add documentation to this function.
     """
