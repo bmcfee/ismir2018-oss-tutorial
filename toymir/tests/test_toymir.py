@@ -4,7 +4,6 @@ import numpy as np
 import toymir
 
 
-
 def test_midi_to_hz_float():
     expected = 440.0
     assert toymir.midi_to_hz(69) == expected
