@@ -1,8 +1,5 @@
 language: python
-"os": [
-    "windows"
-  ]
-sudo: false
+sudo: true
 
 env:
   global:
