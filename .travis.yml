@@ -6,8 +6,8 @@ env:
     - PIP_DEPS="pytest coveralls pytest-cov flake8"
 
 python:
-  - '3.5'
-  - '3.6'
+#  - '3.5'
+#  - '3.6'
   - '3.7'
 
 
