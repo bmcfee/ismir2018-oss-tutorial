@@ -1,0 +1,14 @@
+README.md
+setup.py
+toymir/__init__.py
+toymir/freq.py
+toymir/version.py
+toymir.egg-info/PKG-INFO
+toymir.egg-info/SOURCES.txt
+toymir.egg-info/dependency_links.txt
+toymir.egg-info/requires.txt
+toymir.egg-info/top_level.txt
+toymir/data/ortho.csv
+toymir/data/para.csv
+toymir/tests/__init__.py
+toymir/tests/test_toymir.py

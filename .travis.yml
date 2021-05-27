@@ -1,13 +1,14 @@
 language: python
-sudo: false
+sudo: true
 
 env:
   global:
     - PIP_DEPS="pytest coveralls pytest-cov flake8"
 
 python:
-  - '3.5'
-  - '3.6'
+#  - '3.5'
+#  - '3.6'
+  - '3.7'
 
 
 install:
@@ -16,8 +17,8 @@ install:
 - travis_retry pip install -e .
 
 script:
-#  - flake8 --ignore N802,N806,E501 `find . -name \*.py | grep -v setup.py | grep -v version.py | grep -v __init__.py | grep -v /doc/`
-#  - pytest --pyargs toymir --cov-report term-missing --cov=toymir
+  - flake8 --ignore N802,N806,E501 `find . -name \*.py | grep -v setup.py | grep -v version.py | grep -v __init__.py | grep -v /doc/`
+  - pytest --pyargs toymir --cov-report term-missing --cov=toymir
   - pytest
 
 # Hey, this block (and the above arguments to pytest )
