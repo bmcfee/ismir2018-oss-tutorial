@@ -1,4 +1,7 @@
 language: python
+"os": [
+    "windows"
+  ]
 sudo: false
 
 env:
