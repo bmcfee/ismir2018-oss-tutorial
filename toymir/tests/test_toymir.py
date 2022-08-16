@@ -18,18 +18,19 @@ def test_midi_to_hz_array():
 # These are the two tests you should uncomment!
 
 
-# def test_hz_to_midi_float():
-#     expected = 69
-#     assert toymir.hz_to_midi(440.0) == expected
+def test_hz_to_midi_float():
+    expected = 69
+    assert toymir.hz_to_midi(440.0) == expected
 
 
-# def test_hz_to_midi_array():
-#     expected = [57, 69, 81]
-#    assert np.allclose(toymir.hz_to_midi([220.0, 440.0, 880.0]), expected)
+def test_hz_to_midi_array():
+    expected = [57, 69, 81]
+    assert np.allclose(toymir.hz_to_midi([220.0, 440.0, 880.0]), expected)
 
 
-# Hello!  You could add the missing test for test_hz_to_midi here!
-
+def test_hz_to_midi_throws_if_zero_or_less():
+    with pytest.raises(ValueError):
+        toymir.hz_to_midi(0)
 
 def test_hz_to_period_float():
     expected = 0.1
